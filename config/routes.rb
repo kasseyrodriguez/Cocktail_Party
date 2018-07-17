@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root to: 'welcome#home'
 
   get 'bartenders', to: 'welcome#bartenders'
-
+  get 'login', to: 'welcome#login'
+  get 'signup', to: 'welcome#signup'
 end
