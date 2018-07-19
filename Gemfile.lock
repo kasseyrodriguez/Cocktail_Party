@@ -86,10 +86,6 @@ GEM
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
     libv8 (6.7.288.46.1)
-<<<<<<< HEAD
-    libv8 (6.7.288.46.1-x86_64-linux)
-=======
->>>>>>> be214ac99a76f353296f61681f1ca8aa5162b696
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
