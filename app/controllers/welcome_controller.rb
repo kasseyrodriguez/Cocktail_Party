@@ -9,4 +9,8 @@ class WelcomeController < ApplicationController
     def not_proper_age
     end
   
+
+
+
+
 end
