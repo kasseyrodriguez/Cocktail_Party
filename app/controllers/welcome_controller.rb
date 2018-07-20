@@ -5,5 +5,8 @@ class WelcomeController < ApplicationController
 
     def users
     end
+
+    def not_proper_age
+    end
   
 end
