@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'welcome/bartenders'
   get 'welcome/users'
   get 'welcome/not_proper_age'
+  get 'welcome/search'
 
 
 end
