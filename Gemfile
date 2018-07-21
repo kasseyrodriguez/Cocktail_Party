@@ -5,6 +5,7 @@ ruby '2.5.1'
 
 gem 'devise'
 
+gem 'faker', '~> 1.6', '>= 1.6.6'
 gem 'react_on_rails'
 gem 'devise'
 
