@@ -33,8 +33,6 @@ class App extends React.Component {
   render () {
     const { results } = this.state;
     return (
-
-
           <div>
             <h1>Hello World!</h1>
             <input
