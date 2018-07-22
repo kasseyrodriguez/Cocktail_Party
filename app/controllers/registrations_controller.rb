@@ -25,7 +25,7 @@ end
         elsif resource.bartender
             welcome_bartenders_path 
         else
-            welcome_users_path
+            root_path
         end
     end
 
