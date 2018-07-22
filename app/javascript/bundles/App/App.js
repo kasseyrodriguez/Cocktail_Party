@@ -3,6 +3,7 @@ import axios from 'axios';
 
 
 class App extends React.Component {
+
   state = {
            possibleResults: [],
            results: []
@@ -18,11 +19,15 @@ class App extends React.Component {
 
   handleSearch = (event) => {
     const { possibleResults } = this.state;
+    let bartenders = possibleResults.filter((user) => {
+          return user.bartender === true
+        });
+
     const searchText = event.target.value;
     const regexp = new RegExp(searchText, 'i');
     let results = [];
     if( searchText.trim() !== '' ){
-      results = possibleResults.filter((result) => {
+      results = bartenders.filter((result) => {
         return regexp.test(result.name)
       })
       this.setState({ results });
@@ -31,6 +36,8 @@ class App extends React.Component {
     }
   }
   render () {
+
+
     const { results } = this.state;
     return (
           <div>
