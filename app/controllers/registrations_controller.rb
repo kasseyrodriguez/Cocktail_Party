@@ -13,11 +13,12 @@ def update
  @user.mixologist= data["mixologist"]
  @user.gender = data["gender"]
  @user.save
- redirect_to welcome_bartender_profile_path
+#  bartender_profile(@user)
+ redirect_to @user
 end
 
 
-    
+  
 
 
     def after_sign_up_path_for(resource)
