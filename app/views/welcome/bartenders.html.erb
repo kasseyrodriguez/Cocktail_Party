@@ -7,8 +7,10 @@
 
       <%= form_for(resource, as: resource_name, url: user_registration_path(resource_name), html: {method: :patch}) do |f| %>
 
-
-           
+        <div class="md-form indigo-text">
+          <%= f.text_field :gender, autofocus: true, autocomplete: "gender", class: "form-control" %>
+          <%= f.label :gender, class: "font-weight-light" %>
+        </div>
 
          <div class="md-form indigo-text">
           <%= f.text_field :rate, autofocus: true, autocomplete: "rate", class: "form-control" %>
@@ -46,6 +48,7 @@
         <div class="text-center mt-4">
           <%= f.submit "Submit", class: 'btn btn-indigo' %>
         </div>
+
       <% end %>
     </div>
   </div>
