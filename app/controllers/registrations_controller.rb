@@ -12,6 +12,7 @@ def update
  @user.flair = data["flair"]
  @user.mixologist= data["mixologist"]
  @user.gender = data["gender"]
+ @user.bio = data["bio"]
  @user.save
  redirect_to @user
 end
