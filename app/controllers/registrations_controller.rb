@@ -8,6 +8,7 @@ def update
  @user.rate= data["rate"]
  @user.home_address= data["home_address"]
  @user.travel_radius= data["travel_radius"]
+ @user.standard = data["flair"]
  @user.flair = data["flair"]
  @user.mixologist= data["mixologist"]
  @user.gender = data["gender"]
