@@ -19,15 +19,15 @@
     home_address: Faker::Address.street_address,
     flair: nil,
     mixologist: nil,
-    standard: nil,
+    standard: nil
   })
 end
 
-if User.where(bartender: true)
-  User.update({
-  rate: rand(10..40),
-  standard: [true, false].sample,
-  flair: [true, false].sample,
-  mixologist: [true, false].sample
- })
+User.where(bartender: true).each do |user|
+  user.update(
+    rate: rand(10..40),
+    standard: [true, false].sample,
+    flair: [true, false].sample,
+    mixologist: [true, false].sample
+  )
 end
