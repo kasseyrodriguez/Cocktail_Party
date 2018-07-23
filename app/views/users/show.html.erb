@@ -1,0 +1,40 @@
+<%= link_to 'Home', root_path%> 
+
+<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+
+
+
+<h1>Bartender profile/bio</h1>
+
+
+
+<p>
+Gender:
+  <%= @user.gender %>
+</p>
+
+<p>
+Rate:
+
+  <%= @user.rate %>
+</p>
+
+
+
+<p>
+Type of bartender:
+
+  <%= if @user.standard 
+        p "standard"
+        end
+      if @user.flair
+        p "flair"
+        end
+      if @user.mixologist
+       p "mixologist"
+       end
+       %>
+</p>
+
+
+
