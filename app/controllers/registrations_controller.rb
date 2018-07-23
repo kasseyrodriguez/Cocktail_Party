@@ -13,7 +13,6 @@ def update
  @user.mixologist= data["mixologist"]
  @user.gender = data["gender"]
  @user.save
-#  bartender_profile(@user)
  redirect_to @user
 end
 
