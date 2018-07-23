@@ -1,13 +1,22 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+
 class App extends React.Component {
-  state = {
-    possibleResults: [],
-    results: [],
-    bartenderList: [],
-    value: "Standard"
-  };
+  constructor(){
+    super()
+
+    this.state = {
+      possibleResults: [],
+      results: [],
+      bartenderList: [],
+      value: "Standard",
+      filters: []
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.setGender = this.setGender.bind(this)
+  }
 
   componentDidMount() {
     axios
@@ -39,18 +48,19 @@ class App extends React.Component {
     }
   };
 
+
   handleChange(event) {
     this.setState({ value: event.target.value });
-    if (event.target.value === "flair") {
-      let flairBartenders = this.state.bartenderList.filter(user => {
+    if (event.target.value === "flair" && this.setGender === "Male") {
+      let maleflairBartenders = this.state.bartenderList.filter(user => {
         return user.flair === true;
       });
-      this.setState({ results: flairBartenders });
-    } else if (event.target.value === "mixologist") {
-      let mixologist = this.state.bartenderList.filter(user => {
+      this.setState({ results: maleflairBartenders });
+    } else if (event.target.value === "mixologist" && this.setGender === "Female") {
+      let femaleMixologist = this.state.bartenderList.filter(user => {
         return user.mixologist === true;
       });
-      this.setState({ results: mixologist });
+      this.setState({ results: femaleMixologist });
     } else {
       let standard = this.state.bartenderList.filter(user => {
         return user.standard === true;
@@ -75,30 +85,29 @@ class App extends React.Component {
 
   render() {
     const { results } = this.state;
-    this.handleChange = this.handleChange.bind(this);
 
     return (
       <div>
         <h1>Choose A Bartender</h1>
         <h4>Let Cocktail Party help you find a Bartender in your area!</h4>
-        <input type="search" onChange={this.handleSearch} />
+        <input type="search" onChange={this.handleSearch} placeholder="Search for a Bartender" />
         <label>Bartender Type:</label>
-        <select value={this.state.value} onChange={this.handleChange}>
+        <select name="type" value={this.state.value} onChange={this.handleChange}>
           <option value="standard">Standard</option>
           <option value="flair">Flair</option>
           <option value="mixologist">Mixologist</option>
         </select>
-        <div onChange={this.setGender.bind(this)}>
+        <div onChange={this.setGender}>
           <input type="radio" value="Male" name="gender" /> Male
           <input type="radio" value="Female" name="gender" /> Female
         </div>
         <label>Ratings:</label>
-        <select id="rating" value={this.state.value} onChange={this.handleChange}>
-          <option value="5"></option>
-          <option value="4"></option>
-          <option value="3"></option>
-          <option value="2"></option>
-          <option value="1"></option>
+        <select id="rating" name="rating" value={this.state.value} onChange={this.handleChange}>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
         </select>
         <ul>
           {results.map((result, i) => {
