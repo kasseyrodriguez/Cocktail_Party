@@ -6,6 +6,7 @@
 
 <h1>Bartender profile/bio</h1>
 
+<%= image_tag(@user.picture) %>
 <p>
 Name:
   <%= @user.name %>
@@ -26,6 +27,8 @@ Rate:
 
   <%= @user.rate %>
 </p>
+
+
 
 
 <%# this part not working properly, must fix later%>
