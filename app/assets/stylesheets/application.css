@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
  html,
  body,
  header,
@@ -41,3 +42,10 @@
       background-color: #24355C;
     }
   }
+
+
+select#rating option[value="5"]  {
+   background-image: url(images/drink-glass-5.png);
+
+ }
+
