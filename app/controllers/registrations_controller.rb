@@ -13,6 +13,7 @@ def update
  @user.mixologist= data["mixologist"]
  @user.gender = data["gender"]
  @user.bio = data["bio"]
+ @user.rating = data["rating"]
  @user.picture.attach(data["picture"])
  @user.save
  redirect_to @user
