@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
 
-    def bartenders
+    def edit_bartenders
     end
 
   
