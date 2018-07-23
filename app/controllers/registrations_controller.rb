@@ -26,7 +26,7 @@ end
         if not resource.proper_age 
             welcome_not_proper_age_path
         elsif resource.bartender
-            welcome_bartenders_path 
+            edit_bartenders_path 
         else
             root_path
         end
