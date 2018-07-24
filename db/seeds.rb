@@ -29,6 +29,6 @@ User.where(bartender: true).each do |user|
     standard: [true, false].sample,
     flair: [true, false].sample,
     mixologist: [true, false].sample,
-    rating: (1..5)
+    rating: rand(1..5)
   )
 end

@@ -36,22 +36,22 @@ class App extends React.Component {
   handleChange(event) {
     let results = []
     let regexp = new RegExp(this.refs.searchTxt.value, "i");
-    console.log(this.refs.searchTxt.value)
+    // console.log(this.refs.searchTxt.value)
     let filter = {
       type: this.refs.dropdown.value,
-      gender: this.refs.maleBtn.checked ? 'male' : 'female'
+      gender: this.refs.maleBtn.checked ? 'male' : 'female',
+      rating: this.refs.ratingNumber.value
     }
     console.log(filter)
     results = this.state.bartenderList.filter(user => {
-      return user[filter.type] === true && user.gender === filter.gender && regexp.test(user.name);
+      return user[filter.type] === true && user.gender === filter.gender && regexp.test(user.name)  && user.rating == filter.rating ;
     });
-    console.log(results)
+    // console.log(results)
     this.setState({ results: results });
   }
 
   render() {
     const { results } = this.state;
-
     return (
       <div>
         <h1>Choose A Bartender</h1>
@@ -69,7 +69,7 @@ class App extends React.Component {
         </div>
         <label>Ratings:</label>
 
-        <select id="rating" name="rating" value={this.state.value} onChange={this.handleChange}>
+        <select name="rating" onChange={this.handleChange} ref="ratingNumber">
           <option value="5">5</option>
           <option value="4">4</option>
           <option value="3">3</option>
@@ -81,7 +81,7 @@ class App extends React.Component {
             return (
               <li key={i}>
                 <a href={result.location}>
-                  Name: {result.name} Gender: {result.gender} Mixologist: {result.mixologist.toString()} Flair: {result.flair.toString()}  Standard: {result.standard.toString()}
+                  Name: {result.name} Gender: {result.gender} Mixologist: {result.mixologist.toString()} Flair: {result.flair.toString()}  Standard: {result.standard.toString()} Rating: {result.rating}
                 </a>
               </li>
             );
