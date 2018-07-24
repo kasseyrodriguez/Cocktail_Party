@@ -14,7 +14,44 @@
  *= require_self
  */
 
+<<<<<<< HEAD
+.five-cups{
+  background-image: url("https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png");
+}
+=======
+ html,
+ body,
+ header,
+ #intro {
+     height: 100%;
+ }
+ 
+ #intro {
+     background: url("mint_julep.jpg")no-repeat center center fixed;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+ }
+
+ .top-nav-collapse {
+    background-color: #24355C;
+  }
+  @media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
+  @media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
+
+
 select#rating option[value="5"]  {
    background-image: url(images/drink-glass-5.png);
 
  }
+
+>>>>>>> 12b91765f3c8e3d321200d103fded1481179377d

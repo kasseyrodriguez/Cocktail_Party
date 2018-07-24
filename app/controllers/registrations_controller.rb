@@ -12,6 +12,9 @@ def update
  @user.flair = data["flair"]
  @user.mixologist= data["mixologist"]
  @user.gender = data["gender"]
+ @user.bio = data["bio"]
+ @user.rating = data["rating"]
+ @user.picture.attach(data["picture"])
  @user.save
  redirect_to @user
 end
@@ -21,10 +24,11 @@ end
 
 
     def after_sign_up_path_for(resource)
+        @user = current_user
         if not resource.proper_age 
             welcome_not_proper_age_path
         elsif resource.bartender
-            welcome_bartenders_path 
+            welcome_edit_bartenders_path 
         else
             root_path
         end
