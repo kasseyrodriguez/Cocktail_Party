@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   devise_for :users, controllers: {registrations: :registrations}
   resources :search, only: [:index]
   resources :users, only: [:show]
