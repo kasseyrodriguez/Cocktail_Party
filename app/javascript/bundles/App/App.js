@@ -82,8 +82,7 @@ class App extends React.Component {
           <input type="radio" value="Female" name="gender"/> Female
         </div>
         <label>Ratings:</label>
-
-        <select name="rating" onChange={this.handleChange} ref="ratingNumber">
+       <select name="rating" onChange={this.handleChange} ref="ratingNumber">
           <option value="5">5</option>
           <option value="4">4</option>
           <option value="3">3</option>
