@@ -24,6 +24,7 @@ end
 
 
     def after_sign_up_path_for(resource)
+        @user = current_user
         if not resource.proper_age 
             welcome_not_proper_age_path
         elsif resource.bartender
