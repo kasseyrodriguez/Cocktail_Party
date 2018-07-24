@@ -14,27 +14,27 @@
 
 
         <div class="md-form indigo-text">
-          <%= f.text_field :gender, autofocus: true, autocomplete: "gender", class: "form-control" %>
+          <%= f.text_field :gender, autofocus: true, autocomplete: "gender", class: "form-control", value: current_user.gender %>
           <%= f.label :gender, class: "font-weight-light" %>
         </div>
 
          <div class="md-form indigo-text">
-          <%= f.text_field :rate, autofocus: true, autocomplete: "rate", class: "form-control" %>
+          <%= f.text_field :rate, autofocus: true, autocomplete: "rate", class: "form-control", value: current_user.rate %>
           <%= f.label :rate, class: "font-weight-light" %>
         </div>
 
         <div class="md-form indigo-text">
-          <%= f.text_field :home_address, autofocus: true, autocomplete: "home_address", class: "form-control" %>
+          <%= f.text_field :home_address, autofocus: true, autocomplete: "home_address", class: "form-control", value: current_user.home_address %>
           <%= f.label :home_address, class: "font-weight-light" %>
         </div>
 
 
            <div class="md-form indigo-text">
-          <%= f.text_field :travel_radius, autofocus: true, autocomplete: "travel_radius", class: "form-control" %>
+          <%= f.text_field :travel_radius, autofocus: true, autocomplete: "travel_radius", class: "form-control", value: current_user.travel_radius %>
           <%= f.label :travel_radius, class: "font-weight-light" %>
         </div>
         <div class="md-form indigo-text">
-          <%= f.text_field :rating, autofocus: true, autocomplete: "travel_radius", class: "form-control" %>
+          <%= f.text_field :rating, autofocus: true, autocomplete: "travel_radius", class: "form-control", value: current_user.rating %>
           <%= f.label :rating, class: "font-weight-light" %>
         </div>
         
@@ -57,7 +57,7 @@
        </div> 
 
    <div class="md-form indigo-text">
-          <%= f.text_field :bio, autofocus: true, autocomplete: "travel_radius", class: "form-control" %>
+          <%= f.text_field :bio, autofocus: true, autocomplete: "travel_radius", class: "form-control" , value: current_user.bio%>
           <%= f.label :bio, class: "font-weight-light" %>
         </div>
        
