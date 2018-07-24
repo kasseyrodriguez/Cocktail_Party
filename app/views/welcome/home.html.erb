@@ -25,23 +25,21 @@
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">            
             <div class="container">
-                <a class="navbar-brand" href="#">
-                    <%= image_tag 'drink-glass.png', size: '50x50', alt: "logo" %>
-                            Cocktail Party
+                <a class="navbar-brand">
+                    <%= image_tag 'side-view-logo.png', width: "50%", alt: "logo" %>
                 </a>
         <!-- Collapse button -->
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                </div>
         <!-- Collapsible content -->
                 <div class="collapse navbar-collapse" id="basicExampleNav">
                 <!-- Links -->
                     <ul class="navbar-nav mr-auto smooth-scroll">
                         <li class="nav-item">
-                            <a class="nav-link"
-                            <%= link_to 'Home', root_path%>                             
-                            </a>
+                            <a class="nav-link"<%= link_to 'Home', root_path %></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#best-features">Features</a>
@@ -50,24 +48,17 @@
                             <a class="nav-link" href="#contact">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"
-                            <%= link_to "Log In", new_session_path(resource_name) %>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
-                            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-                            </a>
+                            <a class="nav-link"<%= link_to "Log In", new_session_path(resource_name) %></a>
                         </li>
                     </ul>
                 </div>
-            </div>
         </nav>
         <!--/.Navbar-->
         <!--Mask-->
+
         <div id="intro" class="view">
            <video id="bgvid" playsinline autoplay muted loop>
-                <source src="https://s25.aconvert.com/convert/p3r68-cdx67/9c9ih-7fdj1.mp4" type="video/mp4">
+                <source src="bartender.mp4" type="video/mp4">
             </video>
             <div class="mask rgba-black-strong">
                 <div class="container d-flex align-items-center justify-content-center h-100">
