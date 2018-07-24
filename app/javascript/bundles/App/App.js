@@ -82,6 +82,8 @@ class App extends React.Component {
               <li key={i}>
                 <a href={result.location}>
                   Name: {result.name} Gender: {result.gender} Mixologist: {result.mixologist.toString()} Flair: {result.flair.toString()}  Standard: {result.standard.toString()} Rating: {result.rating}
+                  <br/>
+                  Bio: {result.bio}
                 </a>
               </li>
             );
