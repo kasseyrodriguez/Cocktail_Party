@@ -32,10 +32,24 @@ class App extends React.Component {
       });
   }
 
+  handleSearch = event => {
+    const searchText = event.target.value;
+    const regexp = new RegExp(searchText, "i");
+    let results = [];
+    if (searchText.trim() !== "") {
+      results = this.state.bartenderList.filter(result => {
+        return regexp.test(result.name);
+      });
+      this.setState({ results });
+    } else {
+      this.setState({ results: [] });
+    }
+  };
+
 
   handleChange(event) {
     let results = []
-    let regexp = new RegExp(this.refs.searchTxt.value, "i");
+    // let regexp = new RegExp(this.refs.searchTxt.value, "i");
     // console.log(this.refs.searchTxt.value)
     let filter = {
       type: this.refs.dropdown.value,
@@ -44,7 +58,7 @@ class App extends React.Component {
     }
     console.log(filter)
     results = this.state.bartenderList.filter(user => {
-      return user[filter.type] === true && user.gender === filter.gender && regexp.test(user.name)  && user.rating == filter.rating ;
+      return user[filter.type] === true && user.gender === filter.gender && user.rating == filter.rating ;
     });
     // console.log(results)
     this.setState({ results: results });
@@ -56,7 +70,7 @@ class App extends React.Component {
       <div>
         <h1>Choose A Bartender</h1>
         <h4>Let Cocktail Party help you find a Bartender in your area!</h4>
-        <input type="search" onChange={this.handleChange} placeholder="Search for a Bartender" ref="searchTxt"/>
+        <input type="search" onChange={this.handleSearch} placeholder="Search for a Bartender"/>
         <label>Bartender Type:</label>
         <select name="type" onChange={this.handleChange} ref="dropdown">
           <option value="standard">Standard</option>
