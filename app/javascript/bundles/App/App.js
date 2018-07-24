@@ -41,16 +41,16 @@ class App extends React.Component {
 
   handleChange(event) {
     this.setState({ value: event.target.value });
-    if (event.target.value === "flair") {
-      let flairBartenders = this.state.bartenderList.filter(user => {
+    if (event.target.value === "flair" && this.setGender === "Male") {
+      let maleflairBartenders = this.state.bartenderList.filter(user => {
         return user.flair === true;
       });
-      this.setState({ results: flairBartenders });
-    } else if (event.target.value === "mixologist") {
-      let mixologist = this.state.bartenderList.filter(user => {
+      this.setState({ results: maleflairBartenders });
+    } else if (event.target.value === "mixologist" && this.setGender === "Female") {
+      let femaleMixologist = this.state.bartenderList.filter(user => {
         return user.mixologist === true;
       });
-      this.setState({ results: mixologist });
+      this.setState({ results: femaleMixologist });
     } else {
       let standard = this.state.bartenderList.filter(user => {
         return user.standard === true;
@@ -94,18 +94,18 @@ class App extends React.Component {
         </div>
         <label>Ratings:</label>
         <select id="rating" value={this.state.value} onChange={this.handleChange}>
-          <option value="5"></option>
-          <option value="4"></option>
-          <option value="3"></option>
-          <option value="2"></option>
-          <option value="1"></option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
         </select>
         <ul>
           {results.map((result, i) => {
             return (
               <li key={i}>
                 <a href={result.location}>
-                  Name: {result.name} Gender: {result.gender}
+                  Name: {result.name} Gender: {result.gender} Mixologist: {result.mixologist.toString()} Flair: {result.flair.toString()} Standard: {result.standard.toString()}
                 </a>
               </li>
             );
