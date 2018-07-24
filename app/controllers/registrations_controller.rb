@@ -8,12 +8,19 @@ def update
  @user.rate= data["rate"]
  @user.home_address= data["home_address"]
  @user.travel_radius= data["travel_radius"]
- @user.standard = data["flair"]
+ @user.standard = data["standard"]
  @user.flair = data["flair"]
  @user.mixologist= data["mixologist"]
  @user.gender = data["gender"]
  @user.bio = data["bio"]
  @user.rating = data["rating"]
+ @user.monday = data["monday"]
+ @user.tuesday= data["tuesday"]
+ @user.wednesday = data["wednesday"]
+ @user.thursday = data["thursday"]
+ @user.friday = data["friday"]
+ @user.saturday = data["saturday"]
+ @user.sunday = data["sunday"]
  @user.picture.attach(data["picture"])
  @user.save
  redirect_to @user
