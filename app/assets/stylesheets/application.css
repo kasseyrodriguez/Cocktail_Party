@@ -14,11 +14,6 @@
  *= require_self
  */
 
-<<<<<<< HEAD
-.five-cups{
-  background-image: url("https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png");
-}
-=======
  html,
  body,
  header,
@@ -44,7 +39,7 @@
   height: auto;
   z-index: -100;
   transform: translateX(-50%) translateY(-50%);
-background: url('mint_julep.jpg')center;
+background: url('bartender.mp4')center;
 background-size: cover;
 transition: 1s opacity;
 }
@@ -70,4 +65,3 @@ select#rating option[value="5"]  {
 
  }
 
->>>>>>> 12b91765f3c8e3d321200d103fded1481179377d
