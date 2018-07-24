@@ -9,6 +9,7 @@
     "moment": "^2.22.2",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
+    "react-chat-widget": "^2.1.4",
     "react-dom": "^16.4.1",
     "react-on-rails": "11.0.9"
   },
