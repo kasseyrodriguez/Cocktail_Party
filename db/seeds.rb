@@ -29,6 +29,8 @@ User.bartender.each do |bartender|
     standard: [true, false].sample,
     flair: [true, false].sample,
     mixologist: [true, false].sample,
+    rating: rand(3..5),
+    bio: "Hi my name is #{user.name} and I have been a bartender for 10 years. I currently live in Miami and my rate is #{user.rate} Feel free to message me so we can discuss more information."
     rating: rand(1..5),
     bio: "Hi my name is #{bartender.name} and I have been a bartender for 10 years. I currently live in Miami and my rate is #{bartender.rate} Feel free to message me so we can discuss more information."
   )
