@@ -10,24 +10,22 @@ class App extends React.Component {
       possibleResults: [],
       results: [],
       bartenderList: [],
-      value: "Standard",
+      value: "",
       filters: []
     };
-
     this.handleChange = this.handleChange.bind(this);
-    this.setGender = this.setGender.bind(this)
   }
 
   componentDidMount() {
     axios
       .get("/search.json")
       .then(response => {
-        this.setState({ possibleResults: response.data });
-        const { possibleResults } = this.state;
-        let bartenders = possibleResults.filter(user => {
+        // this.setState({ possibleResults: response.data });
+        // const { possibleResults } = this.state;
+        let bartenders = response.data.filter(user => {
           return user.bartender === true;
         });
-        this.setState({ bartenderList: bartenders });
+        this.setState({ bartenderList: bartenders, results: bartenders });
       })
       .catch(error => {
         console.log(error);
@@ -50,59 +48,42 @@ class App extends React.Component {
 
 
   handleChange(event) {
-    this.setState({ value: event.target.value });
-    if (event.target.value === "flair" && this.setGender === "Male") {
-      let maleflairBartenders = this.state.bartenderList.filter(user => {
-        return user.flair === true;
-      });
-      this.setState({ results: maleflairBartenders });
-    } else if (event.target.value === "mixologist" && this.setGender === "Female") {
-      let femaleMixologist = this.state.bartenderList.filter(user => {
-        return user.mixologist === true;
-      });
-      this.setState({ results: femaleMixologist });
-    } else {
-      let standard = this.state.bartenderList.filter(user => {
-        return user.standard === true;
-      });
-      this.setState({ results: standard });
+    let results = []
+    // let regexp = new RegExp(this.refs.searchTxt.value, "i");
+    // console.log(this.refs.searchTxt.value)
+    let filter = {
+      type: this.refs.dropdown.value,
+      gender: this.refs.maleBtn.checked ? 'male' : 'female',
+      rating: this.refs.ratingNumber.value
     }
-  }
-
-  setGender(event) {
-    if (event.target.value === "Male") {
-      let maleBartenders = this.state.bartenderList.filter(user => {
-        return user.gender === "male";
-      });
-      this.setState({ results: maleBartenders });
-    } else {
-      let femaleBartenders = this.state.bartenderList.filter(user => {
-        return user.gender === "female";
-      });
-      this.setState({ results: femaleBartenders });
-    }
+    console.log(filter)
+    results = this.state.bartenderList.filter(user => {
+      return user[filter.type] === true && user.gender === filter.gender && user.rating == filter.rating ;
+    });
+    // console.log(results)
+    this.setState({ results: results });
   }
 
   render() {
     const { results } = this.state;
-
     return (
       <div>
         <h1>Choose A Bartender</h1>
         <h4>Let Cocktail Party help you find a Bartender in your area!</h4>
-        <input type="search" onChange={this.handleSearch} placeholder="Search for a Bartender" />
+        <input type="search" onChange={this.handleSearch} placeholder="Search for a Bartender"/>
         <label>Bartender Type:</label>
-        <select name="type" value={this.state.value} onChange={this.handleChange}>
+        <select name="type" onChange={this.handleChange} ref="dropdown">
           <option value="standard">Standard</option>
           <option value="flair">Flair</option>
           <option value="mixologist">Mixologist</option>
         </select>
-        <div onChange={this.setGender}>
-          <input type="radio" value="Male" name="gender" /> Male
-          <input type="radio" value="Female" name="gender" /> Female
+        <div onChange={this.handleChange}>
+          <input type="radio" value="Male" name="gender" ref="maleBtn"/> Male
+          <input type="radio" value="Female" name="gender"/> Female
         </div>
         <label>Ratings:</label>
-        <select id="rating" name="rating" value={this.state.value} onChange={this.handleChange}>
+
+        <select name="rating" onChange={this.handleChange} ref="ratingNumber">
           <option value="5">5</option>
           <option value="4">4</option>
           <option value="3">3</option>
@@ -114,7 +95,9 @@ class App extends React.Component {
             return (
               <li key={i}>
                 <a href={result.location}>
-                  Name: {result.name} Gender: {result.gender}
+                  Name: {result.name} Gender: {result.gender} Mixologist: {result.mixologist.toString()} Flair: {result.flair.toString()}  Standard: {result.standard.toString()} Rating: {result.rating}
+                  <br/>
+                  Bio: {result.bio}
                 </a>
               </li>
             );

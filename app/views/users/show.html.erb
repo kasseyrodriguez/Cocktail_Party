@@ -1,4 +1,4 @@
-<%= link_to 'Home', root_path%> 
+<%= link_to 'Home', root_path%>
 
 <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
 
@@ -6,7 +6,6 @@
 
 <h1>Bartender profile/bio</h1>
 
-<%= image_tag(@user.picture) %>
 <p>
 Name:
   <%= @user.name %>
@@ -39,12 +38,11 @@ Rate:
 
 
 
-
 <%# this part not working properly, must fix later%>
 <p>
 Type of bartender:
 
-  <%= if @user.standard 
+  <%= if @user.standard
         p "standard"
         end    %>
      <%= if @user.flair
@@ -54,9 +52,8 @@ Type of bartender:
        p "mixologist"
        end
        %>
-   
-</p>
 
+</p>
 
 
         <td><%= link_to 'Edit', welcome_edit_bartenders_path%></td>
