@@ -39,6 +39,20 @@ class App extends React.Component {
     }
   };
 
+  setGender = event => {
+    if (event.target.value === "Male") {
+      let maleBartenders = this.state.bartenderList.filter(user => {
+        return user.gender === "male";
+      });
+      this.setState({ results: maleBartenders });
+    } else {
+      let femaleBartenders = this.state.bartenderList.filter(user => {
+        return user.gender === "female";
+      });
+      this.setState({ results: femaleBartenders });
+    }
+  }
+
   handleChange(event) {
     this.setState({ value: event.target.value });
     if (event.target.value === "flair" && this.setGender === "Male") {
@@ -59,19 +73,6 @@ class App extends React.Component {
     }
   }
 
-  setGender(event) {
-    if (event.target.value === "Male") {
-      let maleBartenders = this.state.bartenderList.filter(user => {
-        return user.gender === "male";
-      });
-      this.setState({ results: maleBartenders });
-    } else {
-      let femaleBartenders = this.state.bartenderList.filter(user => {
-        return user.gender === "female";
-      });
-      this.setState({ results: femaleBartenders });
-    }
-  }
 
   render() {
     const { results } = this.state;
