@@ -1,52 +1,33 @@
-import React from "react";
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import React, { Component } from "react";
 
-const handleLogout = () => {
-  let link = document.createElement('a');
-  link.setAttribute('href', '/users/sign_out');
-  link.setAttribute('rel', 'nofollow');
-  link.setAttribute('data-method', 'delete');
-  document.body.appendChild(link);
-  link.click();
+class NavigationBar extends Component {
+  render() {
+    return (
+      <header>
+
+      <nav class="navbar navbar-expand-lg navbar-dark black">
+          <img src="https://i.imgur.com/K9kB96S.png" alt="logo" width="300"/>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+              <ul class="navbar-nav nav-flex-icons">
+                  <li class="nav-item">
+                      <a class="nav-link"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link"><i class="fa fa-instagram"></i></a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+
+  </header>
+    );
+  }
 }
-
-// const muiTheme = getMuiTheme({
-//   palette: {
-//     textColor: Colors.darkBlack,
-//     primaryColor: Colors.white,
-//     primary2Color: Colors.indigo700,
-//     accent1Color: Colors.redA200,
-//     pickerHeaderColor: Colors.darkBlack,
-//     alternateTextColor: Colors.redA200
-//    }
-//  })
-
-
-const NavigationBar = (props) => {
-  return(
-    <AppBar position="static">
-      <Toolbar>
-        <Typography variant="title" color="inherit"  style={{flexGrow: 1}}>
-          <img src="https://i.imgur.com/N1Iwx9P.png" alt="logo" width="300"/>
-        </Typography>
-        <Typography
-         variant="subheading"
-         color="inherit"
-       >
-        <p>Hi!</p>
-       </Typography>
-       <Button
-          color="inherit"
-          onClick={ handleLogout }
-        >
-          Logout
-        </Button>
-      </Toolbar>
-    </AppBar>
-  );
-}
-
 export default NavigationBar;

@@ -30,6 +30,13 @@ User.bartender.each do |bartender|
     flair: [true, false].sample,
     mixologist: [true, false].sample,
     rating: rand(3..5),
+    monday: [true,false].sample,
+    tuesday: [true,false].sample,
+    wednesday: [true,false].sample,
+    thursday: [true,false].sample,
+    friday: [true,false].sample,
+    saturday: [true,false].sample,
+    sunday: [true,false].sample,
     bio: "Hi my name is #{bartender.name} and I have been a bartender for 10 years. I currently live in Miami and my rate is #{bartender.rate} Feel free to message me so we can discuss more information."
   )
 end
