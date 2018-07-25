@@ -75,6 +75,7 @@
         </div>
     </footer>
 
+ <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
 
 <%= yield %>
     <!-- JQuery -->
@@ -88,3 +89,4 @@
     <script> $(function(){ $('.nav-tabs a:first').tab('show'); }); </script>
   </body>
 </html>
+

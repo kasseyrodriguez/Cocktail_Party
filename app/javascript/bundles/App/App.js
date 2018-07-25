@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+import NavigationBar from "./components/NavigationBar";
+
+
+// import { Button } from "semantic-ui";
 
 class App extends React.Component {
   constructor(){
@@ -32,10 +36,24 @@ class App extends React.Component {
       });
   }
 
+  handleSearch = event => {
+    const searchText = event.target.value;
+    const regexp = new RegExp(searchText, "i");
+    let results = [];
+    if (searchText.trim() !== "") {
+      results = this.state.bartenderList.filter(result => {
+        return regexp.test(result.name);
+      });
+      this.setState({ results });
+    } else {
+      this.setState({ results: [] });
+    }
+  };
+
 
   handleChange(event) {
     let results = []
-    let regexp = new RegExp(this.refs.searchTxt.value, "i");
+    // let regexp = new RegExp(this.refs.searchTxt.value, "i");
     // console.log(this.refs.searchTxt.value)
     let filter = {
       type: this.refs.dropdown.value,
@@ -44,7 +62,7 @@ class App extends React.Component {
     }
     console.log(filter)
     results = this.state.bartenderList.filter(user => {
-      return user[filter.type] === true && user.gender === filter.gender && regexp.test(user.name)  && user.rating == filter.rating ;
+      return user[filter.type] === true && user.gender === filter.gender && user.rating == filter.rating ;
     });
     // console.log(results)
     this.setState({ results: results });
@@ -54,9 +72,10 @@ class App extends React.Component {
     const { results } = this.state;
     return (
       <div>
+        <NavigationBar />
         <h1>Choose A Bartender</h1>
         <h4>Let Cocktail Party help you find a Bartender in your area!</h4>
-        <input type="search" onChange={this.handleChange} placeholder="Search for a Bartender" ref="searchTxt"/>
+        <input type="search" onChange={this.handleSearch} className="searchbar"placeholder="Search for a Bartender"/>
         <label>Bartender Type:</label>
         <select name="type" onChange={this.handleChange} ref="dropdown">
           <option value="standard">Standard</option>
@@ -79,13 +98,23 @@ class App extends React.Component {
         <ul>
           {results.map((result, i) => {
             return (
-              <li key={i}>
+              <table>
+                <tbody>
+                <li key={i}>
+                <tr>
                 <a href={result.location}>
-                  Name: {result.name} Gender: {result.gender} Mixologist: {result.mixologist.toString()} Flair: {result.flair.toString()}  Standard: {result.standard.toString()} Rating: {result.rating}
-                  <br/>
-                  Bio: {result.bio}
+                  <td>Name: {result.name}</td>
+                  <td>Gender: {result.gender}</td>
+                  <td>Mixologist: {result.mixologist}</td>
+                  <td>Flair: {result.flair}</td>
+                  <td>Standard: {result.standard}</td>
+                  <td>Rating: {result.rating}</td>
+                  <td>Bio: {result.bio}</td>
                 </a>
-              </li>
+                </tr>
+                </li>
+              </tbody>
+            </table>
             );
           })}
         </ul>
