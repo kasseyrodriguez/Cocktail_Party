@@ -12,17 +12,8 @@ Name:
 </p>
 
 <p>
-Rating:
-
-  <%= @user.rating %>
-</p>
-
-
-
-
-<p>
-Bio:
-  <%= @user.bio %>
+Picture:
+<%= image_tag(@user.picture) %>
 </p>
 
 <p>
@@ -34,6 +25,22 @@ Gender:
 Rate:
 
   <%= @user.rate %>
+</p>
+
+
+
+<p>
+Rating:
+
+  <%= @user.rating %>
+</p>
+
+
+
+
+<p>
+Bio:
+  <%= @user.bio %>
 </p>
 
 
