@@ -3,8 +3,8 @@ class SearchController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        @results = User.all
-        @results.map do |result|
+        results = User.all
+        @results = results.map do |result|
           result.attributes.merge(
             location: send("#{result.class.name.downcase}_path", result)
           )

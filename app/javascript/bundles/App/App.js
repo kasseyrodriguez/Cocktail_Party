@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+import NavigationBar from "./components/NavigationBar";
+
+
+// import { Button } from "semantic-ui";
 
 class App extends React.Component {
   constructor(){
@@ -68,9 +72,10 @@ class App extends React.Component {
     const { results } = this.state;
     return (
       <div>
+        <NavigationBar />
         <h1>Choose A Bartender</h1>
         <h4>Let Cocktail Party help you find a Bartender in your area!</h4>
-        <input type="search" onChange={this.handleSearch} placeholder="Search for a Bartender"/>
+        <input type="search" onChange={this.handleSearch} className="searchbar"placeholder="Search for a Bartender"/>
         <label>Bartender Type:</label>
         <select name="type" onChange={this.handleChange} ref="dropdown">
           <option value="standard">Standard</option>
@@ -92,13 +97,23 @@ class App extends React.Component {
         <ul>
           {results.map((result, i) => {
             return (
-              <li key={i}>
+              <table>
+                <tbody>
+                <li key={i}>
+                <tr>
                 <a href={result.location}>
-                  Name: {result.name} Gender: {result.gender} Mixologist: {result.mixologist.toString()} Flair: {result.flair.toString()}  Standard: {result.standard.toString()} Rating: {result.rating}
-                  <br/>
-                  Bio: {result.bio}
+                  <td>Name: {result.name}</td>
+                  <td>Gender: {result.gender}</td>
+                  <td>Mixologist: {result.mixologist.toString()}</td>
+                  <td>Flair: {result.flair.toString()}</td>
+                  <td>Standard: {result.standard.toString()}</td>
+                  <td>Rating: {result.rating}</td>
+                  <td>Bio: {result.bio}</td>
                 </a>
-              </li>
+                </tr>
+                </li>
+              </tbody>
+            </table>
             );
           })}
         </ul>
