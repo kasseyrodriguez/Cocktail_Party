@@ -105,9 +105,9 @@ class App extends React.Component {
                 <a href={result.location}>
                   <td>Name: {result.name}</td>
                   <td>Gender: {result.gender}</td>
-                  <td>Mixologist: {result.mixologist.toString()}</td>
-                  <td>Flair: {result.flair.toString()}</td>
-                  <td>Standard: {result.standard.toString()}</td>
+                  <td>Mixologist: {result.mixologist}</td>
+                  <td>Flair: {result.flair}</td>
+                  <td>Standard: {result.standard}</td>
                   <td>Rating: {result.rating}</td>
                   <td>Bio: {result.bio}</td>
                 </a>
