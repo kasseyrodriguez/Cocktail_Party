@@ -20,13 +20,14 @@
  header,
  #intro {
      height: 100%;
+     margin: 0;
  }
 
 
  #intro {
      background: url("mint_julep.jpg")no-repeat center center fixed;
 
- 
+
  /* #intro {
      background: url("bartender.jpg")no-repeat center center fixed;
 
@@ -36,7 +37,7 @@
      background-size:100% 100%
  } */
 
- video { 
+ video {
   position: fixed;
   top: 50%;
   left: 50%;
