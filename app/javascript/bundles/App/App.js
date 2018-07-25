@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-
-import NavigationBar from "./components/NavigationBar";
-
-
-// import { Button } from "semantic-ui";
+import NavigationBar from './components/NavigationBar';
+import Jumbotron from './components/Jumbotron'
 
 class App extends React.Component {
   constructor(){
@@ -60,19 +57,23 @@ class App extends React.Component {
       gender: this.refs.maleBtn.checked ? 'male' : 'female',
       rating: this.refs.ratingNumber.value
     }
-    console.log(filter)
+    if (filter.type === "all") {
+      this.setState({results: this.state.bartenderList})
+    } else {
     results = this.state.bartenderList.filter(user => {
       return user[filter.type] === true && user.gender === filter.gender && user.rating == filter.rating ;
     });
     // console.log(results)
     this.setState({ results: results });
   }
+}
 
   render() {
     const { results } = this.state;
     return (
       <div>
-        <NavigationBar />
+      <NavigationBar />
+      <Jumbotron />
         <h1>Choose A Bartender</h1>
         <h4>Let Cocktail Party help you find a Bartender in your area!</h4>
         <input type="search" onChange={this.handleSearch} className="searchbar"placeholder="Search for a Bartender"/>
@@ -81,6 +82,7 @@ class App extends React.Component {
           <option value="standard">Standard</option>
           <option value="flair">Flair</option>
           <option value="mixologist">Mixologist</option>
+          <option value="all">All</option>
         </select>
         <div onChange={this.handleChange}>
           <input type="radio" value="Male" name="gender" ref="maleBtn"/> Male
@@ -97,23 +99,17 @@ class App extends React.Component {
         <ul>
           {results.map((result, i) => {
             return (
-              <table>
-                <tbody>
                 <li key={i}>
-                <tr>
-                <a href={result.location}>
-                  <td>Name: {result.name}</td>
-                  <td>Gender: {result.gender}</td>
-                  <td>Mixologist: {result.mixologist}</td>
-                  <td>Flair: {result.flair}</td>
-                  <td>Standard: {result.standard}</td>
-                  <td>Rating: {result.rating}</td>
-                  <td>Bio: {result.bio}</td>
+
+                <a href={result.location}>Name: {result.name}
+      Gender: {result.gender}
+                Mixologist: {result.mixologist}
+                  Flair: {result.flair}
+              Standard: {result.standard}
+                  Rating: {result.rating}
+                  Bio: {result.bio}
                 </a>
-                </tr>
                 </li>
-              </tbody>
-            </table>
             );
           })}
         </ul>
