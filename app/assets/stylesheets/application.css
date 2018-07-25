@@ -23,7 +23,7 @@
  }
 
 
- video { 
+ video {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -31,9 +31,9 @@
   min-height: 100%;
   z-index: -100;
   transform: translateX(-50%) translateY(-50%);
-background: url('bartender.mp4')center;
-background-size: cover;
-transition: 1s opacity;
+  background: url('bartender.mp4')center;
+  background-size: cover;
+  transition: 1s opacity;
 }
 
 
@@ -56,4 +56,3 @@ select#rating option[value="5"]  {
    background-image: url(images/drink-glass-5.png);
 
  }
-
