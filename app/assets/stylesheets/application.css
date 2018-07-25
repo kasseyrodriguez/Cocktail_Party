@@ -20,7 +20,14 @@
  header,
  #intro {
      height: 100%;
+     margin: 0;
  }
+
+
+
+ #intro {
+     background: url("mint_julep.jpg")no-repeat center center fixed;
+
 
 
  video { 
