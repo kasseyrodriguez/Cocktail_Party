@@ -41,6 +41,8 @@ a {
   color: white;
 }
 
+h2 {
+
 
 .btn-elegant {
   font-size: 15px;
@@ -48,6 +50,7 @@ a {
 
 /*================== Home Page CSS Start =============== */
 #h2-home {
+
   font-family: 'Franklin Gothic Medium';
   font-size: 50px;
   text-shadow:
@@ -59,7 +62,10 @@ a {
   font-size: 50px;
 }
 
+h4 {
+
 #h4-home {
+
   font-family: 'Franklin Gothic Medium';
   font-size: 15px;
   text-shadow:
@@ -68,6 +74,14 @@ a {
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
 }
+
+
+
+
+.btn-elegant {
+  font-size: 15px;
+}
+
 
  video {
   position: fixed;

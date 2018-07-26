@@ -141,6 +141,7 @@ class App extends React.Component {
                   this.setState({ selectedBartender: result });
                 }}
               >
+              <div class="user-bio">
                 Name: {result.name}
                 Gender: {result.gender}
                 Mixologist: {result.mixologist}
@@ -148,6 +149,9 @@ class App extends React.Component {
                 Standard: {result.standard}
                 Rating: {result.rating}
                 Bio: {result.bio}
+                <button type="button" class="btn btn-lg book-btn">Book Now</button>
+                <button type="button" class="btn btn-lg view-profile">View Profile</button>
+              </div>
               </li>
             );
           })}
@@ -170,7 +174,7 @@ class App extends React.Component {
               ref="bartenderName"
             />
           </div>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" class="btn btn-elegant" />
         </form>
       </div>
     );
