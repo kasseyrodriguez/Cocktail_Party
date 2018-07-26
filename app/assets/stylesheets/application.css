@@ -29,6 +29,12 @@ nav {
   margin-top: 0.1%;
 }
 
+.navbar-brand {
+ display: flex;
+ justify-content: flex-start;
+ size: '30x30';
+}
+
 .nav-link {
   color: white;
 }
