@@ -1,17 +1,11 @@
 
 <div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3 mt-4">
   <div class="card">
-    <!-- Card content -->
+  
     <div class="card-body">
       <h4 class="card-title text-center">More information</h4>
 
       <%= form_for(resource, as: resource_name, url: user_registration_path(resource_name), html: {method: :patch}) do |f| %>
-
-        <div class ="field">
-        <%= f.file_field :picture%>
-        <%= f.label :picture, class: "font-weight-light" %>
-        </div>
-
 
         <div class="md-form indigo-text">
           <%= f.text_field :gender, autofocus: true, autocomplete: "gender", class: "form-control", value: current_user.gender %>
@@ -34,8 +28,13 @@
           <%= f.label :travel_radius, class: "font-weight-light" %>
         </div>
    
-        
-    
+         <div class ="field">
+        <%= f.file_field :picture%>
+        <%= f.label :picture, class: "font-weight-light" %>
+        </div>
+
+    <div>
+        Check off the categories of bartending you specialize in:
        <div class="md-form indigo-text">
           <%= f.check_box :standard %>
           <%= f.label :standard %>
@@ -52,6 +51,9 @@
           <%= f.label :mixologist%>
        </div> 
 
+</div>
+<div>
+  What days of the week are you available:
        <div class="md-form indigo-text">
           <%= f.check_box :monday %>
           <%= f.label :monday%>
@@ -84,27 +86,20 @@
           <%= f.label :saturday%>
        </div> 
 
-
-
-
          <div class="md-form indigo-text">
           <%= f.check_box :sunday %>
           <%= f.label :sunday%>
-       </div> 
+         </div> 
 
+</div>
 
-
-
-
-
-
-
-
-   <div class="md-form indigo-text">
-          <%= f.text_field :bio, autofocus: true, autocomplete: "travel_radius", class: "form-control" , value: current_user.bio%>
+<div>
+Write your Bio:
+        <div class="md-form indigo-text">
+          <%= f.text_field :bio, autofocus: true, autocomplete: "bio", class: "form-control" , value: current_user.bio%>
           <%= f.label :bio, class: "font-weight-light" %>
         </div>
-       
+</div>
 
         <div class="text-center mt-4">
           <%= f.submit "Submit", class: 'btn btn-indigo' %>
