@@ -20,9 +20,55 @@
  header,
  #intro {
      height: 100%;
-     margin: 0;
  }
 
+.container {
+height: 120px;
+}
+
+nav {
+  margin-top: 0.1%;
+}
+
+.nav-link {
+  color: white;
+}
+
+.navbar-toggler-icon {
+  background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
+}
+
+a {
+  color: white;
+}
+
+h2 {
+  font-family: 'Franklin Gothic Medium';
+  font-size: 50px;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 50px;
+}
+
+h4 {
+  font-family: 'Franklin Gothic Medium';
+  font-size: 15px;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+
+
+.btn-elegant {
+  font-size: 15px;
+}
 
  video {
   position: fixed;
