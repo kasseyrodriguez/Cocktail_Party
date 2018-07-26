@@ -14,7 +14,6 @@
  *= require_self
  */
 
-
  html,
  body,
  header,
@@ -42,32 +41,32 @@ a {
   color: white;
 }
 
-h2 {
-  font-family: 'Franklin Gothic Medium';
-  font-size: 50px;
-  text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
-  font-family: 'Franklin Gothic Medium';
-  font-size: 50px;
-}
-
-h4 {
-  font-family: 'Franklin Gothic Medium';
-  font-size: 15px;
-  text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
-}
-
-
 
 .btn-elegant {
   font-size: 15px;
+}
+
+/*================== Home Page CSS Start =============== */
+#h2-home {
+  font-family: 'Franklin Gothic Medium';
+  font-size: 50px;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 50px;
+}
+
+#h4-home {
+  font-family: 'Franklin Gothic Medium';
+  font-size: 15px;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
 
  video {
@@ -82,8 +81,12 @@ h4 {
   background-size: cover;
   transition: 1s opacity;
 }
+/* =========== Home Page CSS End  ================ */
 
 
+
+
+/* ============ Media Queries Start==================== */
  .top-nav-collapse {
     background-color: #24355C;
   }
@@ -97,6 +100,9 @@ h4 {
       background-color: #24355C;
     }
   }
+
+/*  ============= Media Queries End ====================== */
+
 
 
 select#rating option[value="5"]  {
