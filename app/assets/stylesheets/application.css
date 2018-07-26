@@ -103,6 +103,7 @@ a {
 
 /*  ============= Media Queries End ====================== */
 
+.cocktail { background-image: url(<%= asset_path 'cocktails_on_deck.jpg' %>) 
 
 
 select#rating option[value="5"]  {
