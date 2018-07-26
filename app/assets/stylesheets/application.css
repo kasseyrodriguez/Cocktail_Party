@@ -14,7 +14,6 @@
  *= require_self
  */
 
-
  html,
  body,
  header,
@@ -43,6 +42,15 @@ a {
 }
 
 h2 {
+
+
+.btn-elegant {
+  font-size: 15px;
+}
+
+/*================== Home Page CSS Start =============== */
+#h2-home {
+
   font-family: 'Franklin Gothic Medium';
   font-size: 50px;
   text-shadow:
@@ -55,6 +63,9 @@ h2 {
 }
 
 h4 {
+
+#h4-home {
+
   font-family: 'Franklin Gothic Medium';
   font-size: 15px;
   text-shadow:
@@ -66,9 +77,11 @@ h4 {
 
 
 
+
 .btn-elegant {
   font-size: 15px;
 }
+
 
  video {
   position: fixed;
@@ -82,8 +95,12 @@ h4 {
   background-size: cover;
   transition: 1s opacity;
 }
+/* =========== Home Page CSS End  ================ */
 
 
+
+
+/* ============ Media Queries Start==================== */
  .top-nav-collapse {
     background-color: #24355C;
   }
@@ -97,6 +114,10 @@ h4 {
       background-color: #24355C;
     }
   }
+
+/*  ============= Media Queries End ====================== */
+
+.cocktail { background-image: url(<%= asset_path 'cocktails_on_deck.jpg' %>) 
 
 
 select#rating option[value="5"]  {
