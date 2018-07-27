@@ -1,10 +1,22 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token,:authenticate_user!
 
   # GET /events
   # GET /events.json
   def index
     @events = Event.all
+    respond_to do |format|
+      format.html
+      format.json do
+        render json:  @events.map do |event|
+                        event.attributes.merge(
+                          bartender: event.bartender.name,
+                          user: event.user.name
+                        )
+                      end
+      end
+    end
   end
 
   # GET /events/1
@@ -69,6 +81,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:location, :confirmed)
+      params.require(:event).permit(:user_id, :location,:confirmed, :bartender_id, :datetime)
     end
 end

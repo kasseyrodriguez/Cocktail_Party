@@ -1,10 +1,17 @@
 import React, { Component } from "react";
+import App from '../App';
 
 class Jumbotron extends Component {
   render() {
     return (
-      <h1>HELLO</h1>
-   );
+      <div class="jumbotron jumbotron-fluid ">
+         <div class="jumbo-container">
+           <img src="https://i.imgur.com/0rf0hmD.jpg" alt="logo" width="100%" className="jumbo-img"/>
+          <h1 class="display-4"></h1>
+           <p class="lead"></p>
+          </div>
+         </div>
+   )
   }
 }
 

@@ -2,60 +2,56 @@
 
     <!--Main Navigation-->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
-
-
+        <nav class="navbar navbar-expand-lg black fixed-top scrolling-navbar">
             <div class="container">
-                <a class="navbar-brand" href="#">
-                    <%= image_tag 'side-view-logo.png', width: "50%", alt: "logo" %>
-                </a>
+                    <img src="/assets/side-view-logo.png" width="50%", alt="logo" >
+                </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon dark-amber-text"></span>
                 </button>
-                 </div>
+
                 <div class="collapse navbar-collapse" id="basicExampleNav">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link"<%= link_to 'Home', root_path %>
-                            <span class="sr-only">(current)</span>
-                            </a>
+                            <%= link_to 'Home', root_path %>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"<%= link_to "Log In", new_session_path(resource_name) %></a>
+                            <%= link_to "Log In", new_session_path(resource_name) %>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link"<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></a>
+                            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
                         </li>
                     </ul>
                 </div>
-
-                </div>
-            </nav>
+        </nav>
               <div class="container d-flex align-items-center justify-content-center h-100">
                     <div>
                         <video id="bgvid" playsinline autoplay muted loop>
                             <source src="bartender.mp4" type="video/mp4">
                         </video>
-                    <div>
+            
+                    </div>
 
                     <div class="row d-flex justify-content-center text-center">
                         <div class="col-md-10">
                             <!-- Heading -->
-                            <h2 class="display-10 font-weight-bold white-text pt-5 mb-2">Hire A Bartender</h2>
+                            <h2 id="h2-home" class="display-10 font-weight-bold white-text pt-5 mb-2">Hire A Bartender</h2>
 
                             <!-- Divider -->
                             <hr class="hr-light">
 
                             <!-- Description -->
-                            <h4 class="white-text my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti consequuntur.</h4>
-                            <button type="button" class="btn btn-elegant waves-effect waves-light"<%= link_to 'Sign Up', registration_path(resource_name) %><i class="fa fa-book ml-2"></i></button>                        </div>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </header>
+                            <h4 class="white-text my-4"> Start here by searching through our list of talented bartenders</h4>
+
+                            <h4 id="h4-home"class="white-text my-4"> Start here by searching through our list of talented bartenders</h4>
+
+                            <button type="button" class="btn btn-elegant waves-effect waves-light"<%= link_to 'Sign Up', registration_path(resource_name) %><i class="fa fa-book ml-2"></i></button>
+                        </div>
+                    </div>
+                 </div>
+        </header>
 
 
  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
