@@ -13,82 +13,51 @@
  *= require_tree .
  *= require_self
  */
-
  html,
  body,
  header,
  #intro {
      height: 100%;
  }
-
 .container {
 height: 120px;
 }
-
 nav {
   margin-top: 0.1%;
 }
-
-.navbar-brand {
- display: flex;
- justify-content: flex-start;
- size: '30x30';
-}
-
 .nav-link {
   color: white;
 }
-
 .navbar-toggler-icon {
   background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
 }
-
 a {
   color: white;
 }
-
-h2 {
-
-
 .btn-elegant {
   font-size: 15px;
 }
-
 /*================== Home Page CSS Start =============== */
 #h2-home {
-
   font-family: 'Franklin Gothic Medium';
   font-size: 50px;
   text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
   font-family: 'Franklin Gothic Medium';
   font-size: 50px;
 }
-
-h4 {
-
 #h4-home {
-
   font-family: 'Franklin Gothic Medium';
   font-size: 15px;
   text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
-
-
-
-
-.btn-elegant {
-  font-size: 15px;
-}
-
-
  video {
   position: fixed;
   top: 50%;
@@ -102,10 +71,6 @@ h4 {
   transition: 1s opacity;
 }
 /* =========== Home Page CSS End  ================ */
-
-
-
-
 /* ============ Media Queries Start==================== */
  .top-nav-collapse {
     background-color: #24355C;
@@ -120,13 +85,7 @@ h4 {
       background-color: #24355C;
     }
   }
-
 /*  ============= Media Queries End ====================== */
-
-.cocktail { background-image: url(<%= asset_path 'cocktails_on_deck.jpg' %>) 
-
-
 select#rating option[value="5"]  {
    background-image: url(images/drink-glass-5.png);
-
  }
