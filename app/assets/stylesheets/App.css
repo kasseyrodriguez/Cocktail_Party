@@ -53,6 +53,10 @@ input[type=radio] {
   color: white;
 }
 
+.navbar {
+  margin-top: 0 auto;
+}
+
 ul {
   margin-left: -40px;
 }
