@@ -15,10 +15,10 @@ gender_selection = ['female', 'male']
     end
     person = RandomUserGenerator.generate
     User.create!({
-      name: person.name.first,
+      name: person.name.first.capitalize,
       email: person.email,
       bartender: [true, false].sample,
-      gender: gender_selection[i],
+      gender: gender_selection[i].capitalize,
       password: "123456",
       password_confirmation: "123456",
       proper_age: rand(21..40),

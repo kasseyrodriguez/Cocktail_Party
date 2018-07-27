@@ -1,10 +1,21 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
   height:100%;
   background: linear-gradient(to bottom right,  #5a302f , black);
   background-repeat: no-repeat;
-   margin: 0;
-   background-attachment: fixed;
- }
+  margin: 0;
+  background-attachment: fixed;
+}
+
+label, h3{
+  color: white;
+  font-size: 18px;
+}
+
+
  
  label, h3{
   color: white;
@@ -24,7 +35,12 @@ body {
  
  .jumbotron-fluid {
   background: none;
- }
+}
+
+.book-btn, .view-profile{
+  float: right;
+}
+
  
  * {
   font-family: 'Roboto', sans-serif;
@@ -32,7 +48,6 @@ body {
  .user-bio {
   background-color: white;
   margin-top: 30px;
-  font-size: 16px;
   font-weight: 300;
   color: black;
   border: 1px solid #E1E4E9;
@@ -51,19 +66,29 @@ body {
  
  input[type=radio] {
   color: white;
- }
+}
+
+.navbar {
+  margin-top: 0 auto;
+}
+
+
  
  .navbar {
   margin-top: 0 auto;
  }
  
  ul {
+
   margin-left: -40px;
  }
  
  li {
   list-style-type: none;
- }
+
+}
+
+
  
  .book-btn, .view-profile {
   float: right;
@@ -135,4 +160,12 @@ body {
  .radio-label {
   color: white;
   margin-left: 5px;
- }
+}
+
+table td {
+  font-size: 16px;
+  font-family: 'Abel', sans-serif;
+}
+
+
+

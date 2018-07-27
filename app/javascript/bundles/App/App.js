@@ -202,25 +202,18 @@ class App extends React.Component {
                 <div className="user-bio">
                   <table>
                     <tbody>
+                      <td>
+                        <tr>Name: {result.name}</tr>
+                        <tr>Rating: {result.rating}</tr>
+                        <tr>Gender: {result.gender}</tr>
+                        <tr>Bio: {result.bio}</tr>
+                      </td>
                       <tr>
-                        <td>
-                          Name: {result.name}
-                          Rating: {result.rating}
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Gender: {result.gender}
-                          Mixologist: {result.mixologist}
-                          Flair: {result.flair}
-                          Standard: {result.standard}
-                          Bio: {result.bio}
-                        </td>
+                      <button type="button" className="btn btn-lg book-btn">Book Now</button>
+                      <button type="button" className="btn btn-lg view-profile">View Profile</button>
                       </tr>
                     </tbody>
                   </table>
-                  <button type="button" className="btn btn-lg book-btn">Book Now</button>
-                  <button type="button" className="btn btn-lg view-profile">View Profile</button>
                 </div>
               </li>
             );
