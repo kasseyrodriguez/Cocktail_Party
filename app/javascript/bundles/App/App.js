@@ -23,7 +23,6 @@ class App extends React.Component {
       bartender: {}
     }
   };
-
   componentDidMount() {
     axios.get("/search.json")
       .then((response) => {
@@ -32,56 +31,47 @@ class App extends React.Component {
       })
       .catch((error) => { console.log(error) } )
   }
-
   handleSearch = (e) => {
     let { event, filters } = this.state;
     filters.searchText = e.target.value
     this.filterResults(event, filters);
   }
-
   handleNameChange = (e) => {
     let { event } = this.state;
     event.name = e.target.value;
     this.setState({ event });
   }
-
   handleLocationChange = (e) => {
     let { event } = this.state;
     event.location = e.target.value;
     this.setState({ event });
   }
-
   handleDateChange = (e) => {
     let { event, filters } = this.state;
     event.date = e.target.value;
     filters.date = e.target.value;
     this.filterResults(event, filters);
   }
-
   handleBartenderTypeChange = (e) => {
     let { event, filters } = this.state;
     filters.bartenderType = e.target.value;
     this.filterResults(event, filters);
   }
-
   handleGenderChange = (e) => {
     let { event, filters } = this.state;
     filters.gender = e.target.value;
     this.filterResults(event, filters);
   }
-
   handleRatingChange = (e) => {
     let { event, filters } = this.state;
     filters.rating = e.target.value;
     this.filterResults(event, filters);
   }
-
   handleBartenderSelect = (result) => {
     let { event } = this.state;
     event.bartender = result;
     this.setState({ event });
   }
-
   filterResults = (event, filters) => {
     let bartenders = this.state.bartenderList;
     if(filters.searchText.trim() !== ""){
@@ -113,7 +103,6 @@ class App extends React.Component {
     }
     this.setState({event, results: bartenders});
   }
-
   createEvent = () => {
     let { event } = this.state;
     axios.post("/events.json", {
@@ -127,13 +116,11 @@ class App extends React.Component {
       .then((response) => { return event.data; })
       .catch((error) => { console.log(error) });
   }
-
   handleSubmit = (e) => {
     e.preventDefault();
     this.createEvent(event);
     Turbolinks.visit(`/users/${this.state.event.bartender.id}`)
   };
-
   render() {
     const { results } = this.state;
     return (
@@ -141,7 +128,6 @@ class App extends React.Component {
         <NavigationBar />
         <Jumbotron />
         <Search handleSearch={this.handleSearch}/>
-
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>Event Name:</label>
@@ -236,7 +222,6 @@ class App extends React.Component {
                   <button type="button" className="btn btn-lg book-btn">Book Now</button>
                   <button type="button" className="btn btn-lg view-profile">View Profile</button>
                 </div>
-
               </li>
             );
           })}
@@ -246,5 +231,4 @@ class App extends React.Component {
     );
   }
 }
-
 export default App;

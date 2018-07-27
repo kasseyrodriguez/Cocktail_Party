@@ -1,17 +1,19 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+
 i = 0
 gender_selection = ['female', 'male']
-
 2.times do
-
   10.times do
-
-
     RandomUserGenerator.configure do |config|
       config.gender = gender_selection[i]
     end
     person = RandomUserGenerator.generate
-
-
     User.create!({
       name: person.name.first,
       email: person.email,
@@ -26,7 +28,6 @@ gender_selection = ['female', 'male']
       standard: nil
     })
   end
-
   User.bartender.each do |bartender|
     bartender.update(
       rate: rand(10..40),
@@ -45,7 +46,5 @@ gender_selection = ['female', 'male']
     )
   end
  i= i +1
-
   end
-
 Event.create(user: User.regular.sample, bartender: User.bartender.sample, location: "FunkyTown", confirmed: false)
