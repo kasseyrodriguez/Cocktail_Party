@@ -140,6 +140,7 @@ class App extends React.Component {
         <NavigationBar />
         <Jumbotron />
         <Search handleSearch={this.handleSearch}/>
+
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>Event Name:</label>
@@ -234,6 +235,7 @@ class App extends React.Component {
                   <button type="button" className="btn btn-lg book-btn">Book Now</button>
                   <button type="button" className="btn btn-lg view-profile">View Profile</button>
                 </div>
+
               </li>
             );
           })}
