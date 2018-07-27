@@ -4,32 +4,32 @@ body {
   background-repeat: no-repeat;
    margin: 0;
    background-attachment: fixed;
-}
-
-label, h3{
+ }
+ 
+ label, h3{
   color: white;
   font-size: 18px;
-}
-.first-header {
+ }
+ .first-header {
   font-family:  'Viga', sans-serif;
   text-transform: uppercase;
   color: white;
   font-size: 50px;
-}
-.jumbo-container {
+ }
+ .jumbo-container {
   background-image: url('https://i.imgur.com/0rf0hmD.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.jumbotron-fluid {
+ }
+ 
+ .jumbotron-fluid {
   background: none;
-}
-
-* {
+ }
+ 
+ * {
   font-family: 'Roboto', sans-serif;
-}
-.user-bio {
+ }
+ .user-bio {
   background-color: white;
   margin-top: 30px;
   font-size: 16px;
@@ -42,51 +42,51 @@ label, h3{
   width: 100%;
   text-align: left;
   max-wid: 100%;
-}
-
-table{
+ }
+ 
+ table{
     table-layout: fixed;
     width: 100%;
-}
-
-input[type=radio] {
+ }
+ 
+ input[type=radio] {
   color: white;
-}
-
-.navbar {
+ }
+ 
+ .navbar {
   margin-top: 0 auto;
-}
-
-ul {
+ }
+ 
+ ul {
   margin-left: -40px;
-}
-
-li {
+ }
+ 
+ li {
   list-style-type: none;
-}
-
-.book-btn, .view-profile {
+ }
+ 
+ .book-btn, .view-profile {
   float: right;
-}
-
-.btn:hover {
+ }
+ 
+ .btn:hover {
   color: white;
-}
-
-.book-btn {
+ }
+ 
+ .book-btn {
   background-color: #381D2A;
   border-radius: 5px;
-}
-
-.view-profile {
+ }
+ 
+ .view-profile {
   background-color: #5E0B15;
   border-radius: 5px;
-}
-
-.search-container {
+ }
+ 
+ .search-container {
   width: 100%;
   position: relative;
-  &:before {
+
     position: absolute;
     top: 0;
     right: 0;
@@ -95,37 +95,32 @@ li {
     line-height: 40px;
     font-family: 'FontAwesome';
     content: '\f002';
-    background: $color;
     text-align: center;
-    color: $iconColor;
     border-radius: 5px;
     -webkit-font-smoothing: subpixel-antialiased;
-    font-smooth: always;
-  }
-}
-.searchbar {
+  
+ }
+ .searchbar {
   border: 1px solid #E1E4E9;
   box-shadow: 0 -2px #f3f3f3 inset;
-  @include box-sizing(border-box);
   width: 100%;
-  border: 5px solid $color;
   padding: 5px;
   height: 40px;
   border-radius: 5px;
   outline: none;
   border-bottom: 2px solid #c18f74;
-}
-
-.search-icon{
+ }
+ 
+ .search-icon{
   position: relative;
   float: right;
   width: 75px;
   height: 75px;
   top: -60px;
   right: -15px;
-}
-
-.search-input {
+ }
+ 
+ .search-input {
   color: #7D6962;
   border: 0;
   border-style: none;
@@ -135,9 +130,9 @@ li {
   width: 50%;
   padding: 0.5em 0;
   border-radius: 5px;
-}
-
-.radio-label {
+ }
+ 
+ .radio-label {
   color: white;
   margin-left: 5px;
-}
+ }
