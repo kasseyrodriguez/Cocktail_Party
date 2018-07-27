@@ -131,6 +131,7 @@ class App extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.createEvent(event);
+    Turbolinks.visit(`/users/${this.state.event.bartender.id}`)
   };
 
   render() {
