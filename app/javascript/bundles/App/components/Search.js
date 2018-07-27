@@ -11,6 +11,9 @@ const Search = (props) => {
     <form className="search-container">
     <input onChange={props.handleSearch} type="search" className="searchbar" placeholder="Search for a Bartender" />  <a href="#"><img src={'http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png'} className="search-icon"/></a>
     </form>
+    <div className="search-container">
+      <input onChange={props.handleSearch} type="search" className="searchbar" placeholder="Search for a Bartender" />  <a href="#"><img src={'http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png'} className="search-icon"/></a>
+    </div>
     </div>
   )
 }

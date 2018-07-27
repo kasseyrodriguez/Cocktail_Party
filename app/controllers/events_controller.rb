@@ -36,8 +36,7 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    @event = Event.new(event_params)
-
+    @event = Event.new(event_params.merge(user: current_user))
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
@@ -81,6 +80,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:user_id, :location,:confirmed, :bartender_id, :datetime)
+      params.require(:event).permit(:user_id, :location, :name, :date, :confirmed, :bartender_id)
     end
 end
