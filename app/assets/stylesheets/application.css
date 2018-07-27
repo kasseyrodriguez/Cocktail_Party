@@ -1,4 +1,3 @@
-
  html,
  body,
  header,
@@ -17,29 +16,32 @@ nav {
 .navbar-toggler-icon {
   background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
 }
-
-h2 {
-  font-family: 'Franklin Gothic Medium';
-  font-size: 50px;
-  text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
-  font-family: 'Franklin Gothic Medium';
-  font-size: 50px;
-}
-h4 {
-  font-family: 'Franklin Gothic Medium';
-  font-size: 15px;
-  text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
+a {
+  color: white;
 }
 .btn-elegant {
   font-size: 15px;
+}
+/*================== Home Page CSS Start =============== */
+#h2-home {
+  font-family: 'Franklin Gothic Medium';
+  font-size: 50px;
+  text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 50px;
+}
+#h4-home {
+  font-family: 'Franklin Gothic Medium';
+  font-size: 15px;
+  text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
  video {
   position: fixed;
@@ -53,6 +55,8 @@ h4 {
   background-size: cover;
   transition: 1s opacity;
 }
+/* =========== Home Page CSS End  ================ */
+/* ============ Media Queries Start==================== */
  .top-nav-collapse {
     background-color: #24355C;
   }
@@ -66,6 +70,7 @@ h4 {
       background-color: #24355C;
     }
   }
+/*  ============= Media Queries End ====================== */
 select#rating option[value="5"]  {
    background-image: url(images/drink-glass-5.png);
  }
