@@ -4,6 +4,19 @@
     
 }
 .bform {
-    width: 100%;
-    
+    width: 100%;   
+}
+
+.days-of-week {
+    display: inline-block;
+    position: relative;
+}
+
+.md-form label {
+    display: inline;
+    position: static;
+}
+
+.col-md-4 {
+    padding:0
 }
