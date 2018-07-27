@@ -6,95 +6,130 @@ import moment from 'moment';
 import Search from './components/Search';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      possibleResults: [],
-      results: [],
-      bartenderList: [],
-      value: "",
-      filters: [],
-      selectedBartender: {},
-      newDate: ""
-    };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  state = {
+    results: [],
+    bartenderList: [],
+    filters:  {
+                bartenderType: "all",
+                gender: "all",
+                rating: "all",
+                searchText: "",
+                date: ""
+              },
+    event: {
+      name: "",
+      location: "",
+      date: "",
+      bartender: {}
+    }
+  };
 
   componentDidMount() {
-    axios
-      .get("/search.json")
-      .then(response => {
-        let bartenders = response.data.filter(user => {
-          return user.bartender === true;
-        });
-        this.setState({ bartenderList: bartenders, results: bartenders });
+    axios.get("/search.json")
+      .then((response) => {
+        let bartenders = response.data;
+        this.setState({ bartenderList: bartenders, results: bartenders })
       })
-      .catch(error => {
-        console.log(error);
-      });
+      .catch((error) => { console.log(error) } )
   }
 
-  handleSearch = (event) => {
-    const searchText = event.target.value;
-    const regexp = new RegExp(searchText, "i");
-    let results = [];
-    if (searchText.trim() !== "") {
-      results = this.state.bartenderList.filter(result => {
-        return regexp.test(result.name);
-      });
-      this.setState({ results });
-    } else {
-      this.setState({ results: [] });
-    }
-  };
-
-  handleChange = (event) => {
-    let results = [];
-
-    let filter = {
-      type: this.refs.dropdown.value,
-      gender: this.refs.maleBtn.checked ? "male" : "female",
-      rating: this.refs.ratingNumber.value
-    };
-
-    if (filter.type === "all") {
-      this.setState({ results: this.state.bartenderList });
-    } else {
-      results = this.state.bartenderList.filter(user => {
-        return (
-          user[filter.type] === true &&
-          user.gender === filter.gender &&
-          user.rating == filter.rating
-        );
-      });
-
-      this.setState({ results: results });
-    }
-  };
-
-  createEvent(event) {
-    axios
-      .post("/events.json", { event })
-      .then(response => {
-        return event.data;
-      })
-      .catch(error => {
-        console.log(error);
-      });
+  handleSearch = (e) => {
+    let { event, filters } = this.state;
+    filters.searchText = e.target.value
+    this.filterResults(event, filters);
   }
 
-  handleSubmit = e => {
+  handleNameChange = (e) => {
+    let { event } = this.state;
+    event.name = e.target.value;
+    this.setState({ event });
+  }
+
+  handleLocationChange = (e) => {
+    let { event } = this.state;
+    event.location = e.target.value;
+    this.setState({ event });
+  }
+
+  handleDateChange = (e) => {
+    let { event, filters } = this.state;
+    event.date = e.target.value;
+    filters.date = e.target.value;
+    this.filterResults(event, filters);
+  }
+
+  handleBartenderTypeChange = (e) => {
+    let { event, filters } = this.state;
+    filters.bartenderType = e.target.value;
+    this.filterResults(event, filters);
+  }
+
+  handleGenderChange = (e) => {
+    let { event, filters } = this.state;
+    filters.gender = e.target.value;
+    this.filterResults(event, filters);
+  }
+
+  handleRatingChange = (e) => {
+    let { event, filters } = this.state;
+    filters.rating = e.target.value;
+    this.filterResults(event, filters);
+  }
+
+  handleBartenderSelect = (result) => {
+    let { event } = this.state;
+    event.bartender = result;
+    this.setState({ event });
+  }
+
+  filterResults = (event, filters) => {
+    let bartenders = this.state.bartenderList;
+    if(filters.searchText.trim() !== ""){
+      const regexp = new RegExp(filters.searchText, 'i');
+      bartenders = bartenders.filter((bartender) => {
+        return regexp.test(bartender.name);
+      })
+    }
+    if(filters.date !== ""){
+      const day = moment(filters.date).format("dddd").toLowerCase();
+      bartenders = bartenders.filter((bartender) => {
+        return day === "invalid date" || bartender[day];
+      })
+    }
+    if(filters.gender !== "all"){
+      bartenders = bartenders.filter((bartender) => {
+        return bartender.gender === filters.gender;
+      })
+    }
+    if(filters.rating !== "all"){
+      bartenders = bartenders.filter((bartender) => {
+        return bartender.rating >= parseInt(filters.rating);
+      })
+    }
+    if(filters.bartenderType !== "all"){
+      bartenders = bartenders.filter((bartender) => {
+        return bartender[filters.bartenderType];
+      })
+    }
+    this.setState({event, results: bartenders});
+  }
+
+  createEvent = () => {
+    let { event } = this.state;
+    axios.post("/events.json", {
+        event: {
+          name: event.name,
+          date: event.date,
+          location: event.location,
+          bartender_id: event.bartender.id
+        }
+      })
+      .then((response) => { return event.data; })
+      .catch((error) => { console.log(error) });
+  }
+
+  handleSubmit = (e) => {
     e.preventDefault();
-    let eventDate = this.refs.newEventDate.value;
-    eventDate = moment(eventDate).format("dddd");
-    this.setState({ newDate: eventDate });
-    let event = {
-      user_id: this.props.user.id,
-      location: this.refs.eventTitle.value,
-      bartender_id: this.state.selectedBartender.id
-    };
     this.createEvent(event);
   };
 
@@ -105,73 +140,107 @@ class App extends React.Component {
         <NavigationBar />
         <Jumbotron />
         <Search handleSearch={this.handleSearch}/>
-          <label>Date:</label>
-          <div> <input type="date" ref="newEventDate" className="search-input"/></div>
-            <form onSubmit={this.handleSubmit}>
-              <label>Event:</label>
-              <div>
-                <input type="text" defaultValue="Birthday" ref="eventTitle" className="search-input" />
-              </div>
-              <label>Bartender:</label>
-              <div>
-                <input
-                  type="text"
-                  value={this.state.selectedBartender.name}
-                  ref="bartenderName" className="search-input"
-                />
-              </div>
-            </form>
-        <label>Bartender Type:</label>
-        <select name="type" onChange={this.handleChange} ref="dropdown">
-          <option value="all">All</option>
-          <option value="standard">Standard</option>
-          <option value="flair">Flair</option>
-          <option value="mixologist">Mixologist</option>
-        </select>
-        <div onChange={this.handleChange}>
-          <input type="radio" value="Male" name="gender" ref="maleBtn" /><span class="radio-label">Male</span>
-          <input type="radio" value="Female" name="gender"/> <span class="radio-label">Female</span>
-        </div>
-        <label>Ratings:</label>
-        <select name="rating" onChange={this.handleChange} ref="ratingNumber">
-          <option value="5">5</option>
-          <option value="4">4</option>
-          <option value="3">3</option>
-          <option value="2">2</option>
-          <option value="1">1</option>
-        </select>
-        <input type="submit" value="Submit" class="btn btn-elegant" />
+
+        <form onSubmit={this.handleSubmit}>
+          <div>
+            <label>Event Name:</label>
+            <input
+              type="text"
+              className="search-input"
+              value={this.state.event.name}
+              onChange={this.handleNameChange}
+            />
+          </div>
+          <div>
+            <label>Location:</label>
+            <input
+              type="text"
+              className="search-input"
+              value={this.state.event.location}
+              onChange={this.handleLocationChange}
+            />
+          </div>
+          <div>
+            <label>Date:</label>
+            <input
+              type="date"
+              className="search-input"
+              value={this.state.event.date}
+              onChange={this.handleDateChange}
+            />
+          </div>
+          <div>
+            <label>Bartender:</label>
+            <input
+              disabled
+              type="text"
+              value={this.state.event.bartender.name}
+              className="search-input"
+            />
+          </div>
+          <div>
+            <label>Bartender Type:</label>
+            <select name="type" value={this.state.filters.bartenderType} onChange={this.handleBartenderTypeChange}>
+              <option value="standard">Standard</option>
+              <option value="flair">Flair</option>
+              <option value="mixologist">Mixologist</option>
+              <option value="all">All</option>
+            </select>
+          </div>
+          <div>
+            <label>Gender:</label>
+            <select name="type" value={this.state.filters.gender} onChange={this.handleGenderChange}>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="all">All</option>
+            </select>
+          </div>
+          <div>
+            <label>Ratings:</label>
+            <select name="rating" value={this.state.filters.rating} onChange={this.handleRatingChange}>
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+              <option value="all">All</option>
+            </select>
+          </div>
+          <input type="submit" value="Submit" className="btn btn-elegant" onClick={this.handleSubmit} />
+        </form>
         <ul>
           {results.map((result, i) => {
             return (
-              <li
-                key={i}
-                onClick={() => {
-                  this.setState({ selectedBartender: result });
-                }}
-              >
-              <div class="user-bio">
-              <table>
-                <tbody>
-                <tr>Name: {result.name}</tr>
-                <tr>Rating: {result.rating}</tr>
-                <tr>Gender: {result.gender}</tr>
+              <li key={i} onClick={ () => this.handleBartenderSelect(result) } >
+                <div className="user-bio">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>
+                          Name: {result.name}
+                          Rating: {result.rating}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Gender: {result.gender}
+                          Mixologist: {result.mixologist}
+                          Flair: {result.flair}
+                          Standard: {result.standard}
+                          Bio: {result.bio}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <button type="button" className="btn btn-lg book-btn">Book Now</button>
+                  <button type="button" className="btn btn-lg view-profile">View Profile</button>
+                </div>
 
-                <tr>Mixologist: {result.mixologist}</tr>
-                <tr>Flair: {result.flair}</tr>
-                <tr>Standard: {result.standard}</tr>
-                <tr>Bio: {result.bio}</tr>
-                <button type="button" class="btn btn-lg book-btn">Book Now</button>
-                <button type="button" class="btn btn-lg view-profile">View Profile</button>
-              </tbody>
-            </table>
-            </div>
               </li>
             );
           })}
         </ul>
         {results.length === 0 && <p>No Results</p>}
-
       </div>
     );
   }
