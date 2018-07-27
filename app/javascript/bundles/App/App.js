@@ -50,6 +50,7 @@ class App extends React.Component {
     }
   };
 
+<<<<<<< HEAD
   handleChange = (event) => {
     let results = [];
 
@@ -61,6 +62,34 @@ class App extends React.Component {
 
     if (filter.type === "all") {
       this.setState({ results: this.state.bartenderList });
+=======
+  setGender = event => {
+    if (event.target.value === "Male") {
+      let maleBartenders = this.state.bartenderList.filter(user => {
+        return user.gender === "male";
+      });
+      this.setState({ results: maleBartenders });
+    } else {
+      let femaleBartenders = this.state.bartenderList.filter(user => {
+        return user.gender === "female";
+      });
+      this.setState({ results: femaleBartenders });
+    }
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+    if (event.target.value === "flair" && this.setGender === "Male") {
+      let maleflairBartenders = this.state.bartenderList.filter(user => {
+        return user.flair === true;
+      });
+      this.setState({ results: maleflairBartenders });
+    } else if (event.target.value === "mixologist" && this.setGender === "Female") {
+      let femaleMixologist = this.state.bartenderList.filter(user => {
+        return user.mixologist === true;
+      });
+      this.setState({ results: femaleMixologist });
+>>>>>>> Some changes
     } else {
       results = this.state.bartenderList.filter(user => {
         return (
@@ -74,6 +103,7 @@ class App extends React.Component {
     }
   };
 
+<<<<<<< HEAD
   createEvent(event) {
     axios
       .post("/events.json", { event })
@@ -84,6 +114,8 @@ class App extends React.Component {
         console.log(error);
       });
   }
+=======
+>>>>>>> Some changes
 
   handleSubmit = e => {
     e.preventDefault();
