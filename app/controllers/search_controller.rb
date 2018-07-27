@@ -3,11 +3,9 @@ class SearchController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        results = User.all
+        results = User.bartender
         @results = results.map do |result|
-          result.attributes.merge(
-            location: send("#{result.class.name.downcase}_path", result)
-          )
+          result.attributes.merge(location: user_path(result))
         end
         render json: @results
       end
