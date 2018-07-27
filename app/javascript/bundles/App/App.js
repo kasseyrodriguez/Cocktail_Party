@@ -105,6 +105,22 @@ class App extends React.Component {
         <NavigationBar />
         <Jumbotron />
         <Search handleSearch={this.handleSearch}/>
+          <label>Date:</label>
+          <div> <input type="date" ref="newEventDate" className="search-input"/></div>
+            <form onSubmit={this.handleSubmit}>
+              <label>Event:</label>
+              <div>
+                <input type="text" defaultValue="Birthday" ref="eventTitle" className="search-input" />
+              </div>
+              <label>Bartender:</label>
+              <div>
+                <input
+                  type="text"
+                  value={this.state.selectedBartender.name}
+                  ref="bartenderName" className="search-input"
+                />
+              </div>
+            </form>
         <label>Bartender Type:</label>
         <select name="type" onChange={this.handleChange} ref="dropdown">
           <option value="standard">Standard</option>
@@ -116,14 +132,6 @@ class App extends React.Component {
           <input type="radio" value="Male" name="gender" ref="maleBtn" /> Male
           <input type="radio" value="Female" name="gender" /> Female
         </div>
-        <label>Availability:</label>
-        <input type="checkbox" value="monday" name="day"/>Monday
-        <input type="checkbox" value="tuesday" name="day"/>Tuesday
-        <input type="checkbox" value="wednesday" name="day"/>Wednesday
-        <input type="checkbox" value="thursday" name="day"/>Thursday
-        <input type="checkbox" value="friday" name="day"/>Friday
-        <input type="checkbox" value="saturday" name="day"/>Saturday
-        <input type="checkbox" value="sunday" name="day"/>Sunday
         <label>Ratings:</label>
         <select name="rating" onChange={this.handleChange} ref="ratingNumber">
           <option value="5">5</option>
@@ -132,6 +140,7 @@ class App extends React.Component {
           <option value="2">2</option>
           <option value="1">1</option>
         </select>
+        <input type="submit" value="Submit" class="btn btn-elegant" />
         <ul>
           {results.map((result, i) => {
             return (
@@ -142,40 +151,30 @@ class App extends React.Component {
                 }}
               >
               <div class="user-bio">
+              <table>
+                <tbody>
+                <tr>
                 Name: {result.name}
+                Rating: {result.rating}
+              </tr>
+              <tr>
                 Gender: {result.gender}
                 Mixologist: {result.mixologist}
                 Flair: {result.flair}
                 Standard: {result.standard}
-                Rating: {result.rating}
                 Bio: {result.bio}
+              </tr>
                 <button type="button" class="btn btn-lg book-btn">Book Now</button>
                 <button type="button" class="btn btn-lg view-profile">View Profile</button>
-              </div>
+              </tbody>
+            </table>
+            </div>
               </li>
             );
           })}
         </ul>
         {results.length === 0 && <p>No Results</p>}
-        <form onSubmit={this.handleSubmit}>
-          <label>Event:</label>
-          <div>
-            <input type="text" defaultValue="Birthday" ref="eventTitle" />
-          </div>
-          <label>Date:</label>
-          <div>
-            <input type="date" ref="newEventDate" />
-          </div>
-          <label>Bartender:</label>
-          <div>
-            <input
-              type="text"
-              value={this.state.selectedBartender.name}
-              ref="bartenderName"
-            />
-          </div>
-          <input type="submit" value="Submit" class="btn btn-elegant" />
-        </form>
+
       </div>
     );
   }
