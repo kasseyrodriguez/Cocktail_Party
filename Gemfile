@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 
 gem 'devise'
-
+gem 'random_user_generator'
 gem 'faker', '~> 1.6', '>= 1.6.6'
 gem 'react_on_rails'
 gem 'devise'
