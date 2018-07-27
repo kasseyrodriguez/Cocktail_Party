@@ -11,5 +11,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_one_attached :picture
 
+  
 
 end
