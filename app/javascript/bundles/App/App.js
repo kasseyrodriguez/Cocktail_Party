@@ -123,14 +123,14 @@ class App extends React.Component {
             </form>
         <label>Bartender Type:</label>
         <select name="type" onChange={this.handleChange} ref="dropdown">
+          <option value="all">All</option>
           <option value="standard">Standard</option>
           <option value="flair">Flair</option>
           <option value="mixologist">Mixologist</option>
-          <option value="all">All</option>
         </select>
         <div onChange={this.handleChange}>
-          <input type="radio" value="Male" name="gender" ref="maleBtn" /> Male
-          <input type="radio" value="Female" name="gender" /> Female
+          <input type="radio" value="Male" name="gender" ref="maleBtn" /><span class="radio-label">Male</span>
+          <input type="radio" value="Female" name="gender"/> <span class="radio-label">Female</span>
         </div>
         <label>Ratings:</label>
         <select name="rating" onChange={this.handleChange} ref="ratingNumber">
@@ -153,17 +153,14 @@ class App extends React.Component {
               <div class="user-bio">
               <table>
                 <tbody>
-                <tr>
-                Name: {result.name}
-                Rating: {result.rating}
-              </tr>
-              <tr>
-                Gender: {result.gender}
-                Mixologist: {result.mixologist}
-                Flair: {result.flair}
-                Standard: {result.standard}
-                Bio: {result.bio}
-              </tr>
+                <tr>Name: {result.name}</tr>
+                <tr>Rating: {result.rating}</tr>
+                <tr>Gender: {result.gender}</tr>
+
+                <tr>Mixologist: {result.mixologist}</tr>
+                <tr>Flair: {result.flair}</tr>
+                <tr>Standard: {result.standard}</tr>
+                <tr>Bio: {result.bio}</tr>
                 <button type="button" class="btn btn-lg book-btn">Book Now</button>
                 <button type="button" class="btn btn-lg view-profile">View Profile</button>
               </tbody>
