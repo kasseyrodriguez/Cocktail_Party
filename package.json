@@ -2,8 +2,6 @@
   "name": "cocktail_party",
   "private": true,
   "dependencies": {
-    "@appbaseio/reactivesearch": "^2.6.12",
-    "@material-ui/core": "^1.4.1",
     "@rails/webpacker": "3.5",
     "axios": "^0.18.0",
     "babel-preset-react": "^6.24.1",
