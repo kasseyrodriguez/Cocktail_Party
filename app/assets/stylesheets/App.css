@@ -16,11 +16,14 @@ label, h3{
   color: white;
   font-size: 50px;
 }
-.jumbotron {
+.jumbo-container {
   background-image: url('https://i.imgur.com/0rf0hmD.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
+}
+
+.jumbotron-fluid {
+  background: none;
 }
 
 * {
@@ -29,6 +32,8 @@ label, h3{
 .user-bio {
   background-color: white;
   margin-top: 30px;
+  font-size: 16px;
+  font-weight: 300;
   color: black;
   border: 1px solid #E1E4E9;
   padding: 20px;
@@ -44,6 +49,9 @@ table{
     width: 100%;
 }
 
+input[type=radio] {
+  color: white;
+}
 
 ul {
   margin-left: -40px;
@@ -122,4 +130,10 @@ li {
   transition: border 300ms ease-in-out;
   width: 50%;
   padding: 0.5em 0;
+  border-radius: 5px;
+}
+
+.radio-label {
+  color: white;
+  margin-left: 5px;
 }
