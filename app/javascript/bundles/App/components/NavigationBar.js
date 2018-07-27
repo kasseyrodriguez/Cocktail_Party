@@ -11,18 +11,8 @@ class NavigationBar extends Component {
               <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
+  
 
-              <ul className="navbar-nav nav-flex-icons">
-                  <li className="nav-item">
-                      <a className="nav-link"><i className="fa fa-facebook"></i></a>
-                  </li>
-                  <li className="nav-item">
-                      <a className="nav-link"><i className="fa fa-twitter"></i></a>
-                  </li>
-                  <li className="nav-item">
-                      <a className="nav-link"><i className="fa fa-instagram"></i></a>
-                  </li>
-              </ul>
           </div>
       </nav>
   </header>

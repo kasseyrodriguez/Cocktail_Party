@@ -6,6 +6,17 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+    respond_to do |format|
+      format.html
+      format.json do
+        render json:  @events.map do |event|
+                        event.attributes.merge(
+                          bartender: event.bartender.name,
+                          user: event.user.name
+                        )
+                      end
+      end
+    end
   end
 
   # GET /events/1
