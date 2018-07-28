@@ -115,34 +115,11 @@ label, h3{
  .view-profile {
   background-color: #5E0B15;
   border-radius: 5px;
-<<<<<<< HEAD
 }
 
 .searchbar {
   position: relative;
   top: -500px;
-=======
- }
-
- .search-container {
-  width: 100%;
-  position: relative;
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    font-family: 'FontAwesome';
-    content: '\f002';
-    text-align: center;
-    border-radius: 5px;
-    -webkit-font-smoothing: subpixel-antialiased;
-
- }
- .searchbar {
->>>>>>> 85f31f47405cc8218d077167d87fb16a7f38c3ed
   border: 1px solid #E1E4E9;
   box-shadow: 0 -2px #f3f3f3 inset;
   width: 100%;
