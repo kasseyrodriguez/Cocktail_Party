@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module CocktailParty
   class Application < Rails::Application
+    config.assets.initialize_on_precompile = false
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
     config.assets.enabled = true
