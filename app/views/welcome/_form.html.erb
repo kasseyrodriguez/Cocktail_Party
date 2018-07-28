@@ -9,23 +9,23 @@
 
             <div class="md-form indigo-text">
               <%= f.text_field :gender, autofocus: true, autocomplete: "gender", class: "form-control", value: current_user.gender %>
-              <%= f.label :gender, class: "font-weight-light" %>
+            <label> Gender</label>
             </div>
 
             <div class="md-form indigo-text">
               <%= f.text_field :rate, autofocus: true, autocomplete: "rate", class: "form-control", value: current_user.rate %>
-              <%= f.label :rate, class: "font-weight-light" %>
+            <label>Wage per Hour</label>
             </div>
 
             <div class="md-form indigo-text">
               <%= f.text_field :home_address, autofocus: true, autocomplete: "home_address", class: "form-control", value: current_user.home_address %>
-              <%= f.label :home_address, class: "font-weight-light" %>
+            <label>Home Address</label>
             </div>
 
 
               <div class="md-form indigo-text">
               <%= f.text_field :travel_radius, autofocus: true, autocomplete: "travel_radius", class: "form-control", value: current_user.travel_radius %>
-              <%= f.label :travel_radius, class: "font-weight-light" %>
+            <label>Travel radius</label>
             </div>
       
             <div class ="field">
@@ -103,7 +103,6 @@
     <h5>Write your Bio:</h5>
             <div class="md-form indigo-text">
               <%= f.text_field :bio, autofocus: true, autocomplete: "bio", class: "form-control" , value: current_user.bio%>
-              <%= f.label :bio, class: "font-weight-light" %>
             </div>
     </div>
 
