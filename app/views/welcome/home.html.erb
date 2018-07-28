@@ -35,9 +35,9 @@
 								<!-- Description -->
 								<h4 id="h4-home"class="white-text my-4"> Start here by searching through our list of talented bartenders</h4>
 								<% if current_user %>
-										<%= link_to '<button type="button" >SEARCH</button>'.html_safe, welcome_search_path %>
+										<%= link_to '<button id="search-btn" type="button" >SEARCH</button>'.html_safe, welcome_search_path %>
 								<% else %>
-								<%= link_to '<button type="button" >SIGN IN</button>'.html_safe, user_session_path %>
+								<%= link_to '<button id="sign-in-btn" type="button" >SIGN IN</button>'.html_safe, user_session_path %>
 								<% end %> 
 						</div>
 				</div>
@@ -45,4 +45,4 @@
 		</header>
 
 
-
+<a class="btn btn-search" href="#">earch</a>

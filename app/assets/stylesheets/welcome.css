@@ -47,6 +47,46 @@ a {
    1px 1px 0 #000;
 }
 
+#sign-in-btn {
+	background: transparent;
+	border-color: rgb(243, 172, 18);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right:15px;
+	font-size: 19px;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 10px;
+	transition: all .5s;
+}
+#sign-in-btn:hover,
+#sign-in-btn:visited,
+#sign-in-btn:active {
+	background-color: rgb(243, 172, 18);
+	color: #fff;
+}
+
+#search-btn {
+	background: transparent;
+	border-color: rgb(243, 172, 18);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right:15px;
+	font-size: 19px;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 10px;
+	transition: all .5s;
+}
+
+#search-btn:hover,
+#search-btn:visited,
+#search-btn:active {
+	background-color: rgb(243, 172, 18);
+	color: #fff;
+}
 
 
 
