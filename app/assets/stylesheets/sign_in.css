@@ -6,3 +6,12 @@
 
     color: orange;
 }
+
+
+#hitler {
+    background:
+    linear-gradient(
+        white,
+        orange);
+    box-shadow: 5px 10px #5a302f;
+}
