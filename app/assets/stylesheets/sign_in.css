@@ -4,7 +4,7 @@
 
 #log-in-up-text{
 
-    color: orange;
+    color:orange;
 }
 
 
@@ -13,5 +13,5 @@
     linear-gradient(
         white,
         orange);
-    box-shadow: 5px 10px #5a302f;
+    box-shadow: 5px 10px #AD5E29;
 }
