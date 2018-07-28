@@ -1,6 +1,5 @@
 
-<div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3 mt-4">
-  <div class="card">
+<div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3 mt-4 card">
   
     <div class="card-body">
       <h4 class="card-title text-center">More information</h4>
@@ -34,64 +33,65 @@
             <%= f.label :picture, class: "font-weight-light" %>
             </div>
 
-        <div>
-            Check off the categories of bartending you specialize in:
-          <div class="md-form indigo-text">
+        <div class="types-of-bartenders">
+          <h5>Check off the categories of bartending you specialize in:</h5>
+            <div class="row">
+              <div class="md-form indigo-text col-md-4">
               <%= f.check_box :standard %>
               <%= f.label :standard %>
-            </div>
-        
-
-          <div class="md-form indigo-text">
+              </div>
+  
+              <div class="md-form indigo-text col-md-4">
               <%= f.check_box :flair %>
               <%= f.label :flair%>
-          </div> 
+              </div> 
 
-            <div class="md-form indigo-text">
+            <div class="md-form indigo-text col-md-4">
               <%= f.check_box :mixologist %>
               <%= f.label :mixologist%>
+            </div>
           </div> 
 
     </div>
     <div class="container-fluid">
 
-      <div class="row">
-        What days of the week are you available:
 
-            <div class="md-form indigo-text col-md-4">
+        <h5>What days of the week are you available:</h5>
+    <div class="row">
+            <div class="md-form indigo-text col-md-4-offset-7">
                 <%= f.check_box :monday %>
-                <%= f.label :monday%>
+                <%= f.label :monday, class: "days"%>
             </div>
 
-              <div class="md-form indigo-text col-md-4">
+              <div class="md-form indigo-text col-md-4-offset-6">
                 <%= f.check_box :tuesday %>
-                <%= f.label :tuesday%>
+                <%= f.label :tuesday, class: "days"%>
             </div>
 
-            <div class="md-form indigo-text col-md-4">
+            <div class="md-form indigo-text col-md-4-offset-5">
                 <%= f.check_box :wednesday %>
                 <%= f.label :wednesday, class: "days"%>
             </div>
 
-              <div class="md-form indigo-text col-md-4">
+              <div class="md-form indigo-text col-md-4-offset-4">
                 <%= f.check_box :thursday %>
                 <%= f.label :thursday, class: "days"%>
               </div> 
 
 
-              <div class="md-form indigo-text col-md-4">
+              <div class="md-form indigo-text col-md-4-offset-3">
                 <%= f.check_box :friday %>
                 <%= f.label :friday, class: "days"%>
               </div>
 
 
-              <div class="md-form indigo-text col-md-4">
+              <div class="md-form indigo-text col-md-4-offset-2">
                 <%= f.check_box :saturday %>
                 <%= f.label :saturday, class: "days"%>
             </div>
 
 
-              <div class="md-form indigo-text col-md-4">
+              <div class="md-form indigo-text col-md-4-offset-1">
                 <%= f.check_box :sunday %>
                 <%= f.label :sunday, class: "days"%>
               </div>
@@ -100,7 +100,7 @@
     </div>
 
     <div>
-    Write your Bio:
+    <h5>Write your Bio:</h5>
             <div class="md-form indigo-text">
               <%= f.text_field :bio, autofocus: true, autocomplete: "bio", class: "form-control" , value: current_user.bio%>
               <%= f.label :bio, class: "font-weight-light" %>
@@ -115,6 +115,5 @@
     </div>
   </div>
   <div class="mt-4 text-center indigo-text">
-  </div>
 </div>
 
