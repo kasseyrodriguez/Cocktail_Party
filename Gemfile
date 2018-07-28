@@ -8,6 +8,8 @@ gem 'random_user_generator'
 gem 'faker', '~> 1.6', '>= 1.6.6'
 gem 'react_on_rails'
 gem 'devise'
+gem 'bootstrap', '~> 4.1.3'
+gem 'jquery-rails'
 
 gem 'webpacker', '~> 3.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
