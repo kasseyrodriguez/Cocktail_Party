@@ -111,6 +111,7 @@ li {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
+
 .searchbar {
   display: block;
   margin-right: auto;
@@ -127,7 +128,6 @@ li {
   margin-bottom: 100px;
   float: center;
 }
-
 
 .search-icon{
   position: relative;
