@@ -1,9 +1,7 @@
 * {
   font-family: 'Roboto', sans-serif;
 }
-.first-header {
 
-}
 .jumbo-img {
   position: relative;
   top: -70px;
@@ -22,8 +20,8 @@ label, h3{
   font-size: 18px;
 }
 
-input[type=radio]
-.first-header {
+
+ .first-header {
   font-family:  'Viga', sans-serif;
   text-transform: uppercase;
   color: white;
@@ -36,14 +34,27 @@ input[type=radio]
 
 .jumbotron-fluid {
   background: black;
+ }
 
+ .jumbo-container {
+  background-image: url('https://i.imgur.com/0rf0hmD.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+
+ .jumbotron-fluid {
+  background: none;
 }
 
 .book-btn, .view-profile{
   float: right;
 }
 
-.user-bio {
+
+ * {
+  font-family: 'Roboto', sans-serif;
+ }
+ .user-bio {
   background-color: white;
   margin-top: 30px;
   font-weight: 300;
@@ -55,14 +66,14 @@ input[type=radio]
   width: 100%;
   text-align: left;
   max-wid: 100%;
-}
+ }
 
-table{
+ table{
     table-layout: fixed;
     width: 100%;
-}
+ }
 
-input[type=radio] {
+ input[type=radio] {
   color: white;
 }
 
@@ -70,37 +81,71 @@ input[type=radio] {
   margin-top: 0 auto;
 }
 
-ul {
+
+
+ .navbar {
+  margin-top: 0 auto;
+ }
+
+ ul {
+
   margin-left: -40px;
-}
+ }
 
-li {
+ li {
   list-style-type: none;
+
 }
 
 
-.btn:hover {
+
+ .book-btn, .view-profile {
+  float: right;
+ }
+
+ .btn:hover {
   color: white;
-}
+ }
 
-.book-btn {
+ .book-btn {
   background-color: #381D2A;
   border-radius: 5px;
-}
+ }
 
-.view-profile {
+ .view-profile {
   background-color: #5E0B15;
   border-radius: 5px;
+<<<<<<< HEAD
 }
 
 .searchbar {
   position: relative;
   top: -500px;
+=======
+ }
+
+ .search-container {
+  width: 100%;
+  position: relative;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-family: 'FontAwesome';
+    content: '\f002';
+    text-align: center;
+    border-radius: 5px;
+    -webkit-font-smoothing: subpixel-antialiased;
+
+ }
+ .searchbar {
+>>>>>>> 85f31f47405cc8218d077167d87fb16a7f38c3ed
   border: 1px solid #E1E4E9;
   box-shadow: 0 -2px #f3f3f3 inset;
-  @include box-sizing(border-box);
   width: 100%;
-  border: 5px solid $color;
   padding: 5px;
   height: 40px;
   border-radius: 5px;
@@ -110,6 +155,10 @@ li {
 }
 
 .search-icon{
+
+ }
+
+ .search-icon{
   position: relative;
   float: right;
   width: 75px;
@@ -123,7 +172,9 @@ li {
   text-align: center;
 }
 
-.search-input {
+
+
+ .search-input {
   color: #7D6962;
   border: 0;
   width: 50%;
@@ -134,9 +185,9 @@ li {
   width: 50%;
   padding: 0.5em 0;
   border-radius: 5px;
-}
+ }
 
-.radio-label {
+ .radio-label {
   color: white;
   margin-left: 5px;
 }
