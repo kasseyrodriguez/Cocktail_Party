@@ -2,6 +2,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.jumbo-img {
+  position: relative;
+  top: -70px;
+}
+
 body {
   height:100%;
   background: linear-gradient(to bottom right,  #5a302f , black);
@@ -16,23 +21,27 @@ label, h3{
 }
 
 
- 
- label, h3{
-  color: white;
-  font-size: 18px;
- }
  .first-header {
   font-family:  'Viga', sans-serif;
   text-transform: uppercase;
   color: white;
   font-size: 50px;
+}
+.jumbo-container {
+  background-color: black;
+}
+
+
+.jumbotron-fluid {
+  background: black;
  }
+
  .jumbo-container {
   background-image: url('https://i.imgur.com/0rf0hmD.jpg');
   background-repeat: no-repeat;
   background-size: cover;
  }
- 
+
  .jumbotron-fluid {
   background: none;
 }
@@ -41,7 +50,7 @@ label, h3{
   float: right;
 }
 
- 
+
  * {
   font-family: 'Roboto', sans-serif;
  }
@@ -58,12 +67,12 @@ label, h3{
   text-align: left;
   max-wid: 100%;
  }
- 
+
  table{
     table-layout: fixed;
     width: 100%;
  }
- 
+
  input[type=radio] {
   color: white;
 }
@@ -73,41 +82,48 @@ label, h3{
 }
 
 
- 
+
  .navbar {
   margin-top: 0 auto;
  }
- 
+
  ul {
 
   margin-left: -40px;
  }
- 
+
  li {
   list-style-type: none;
 
 }
 
 
- 
+
  .book-btn, .view-profile {
   float: right;
  }
- 
+
  .btn:hover {
   color: white;
  }
- 
+
  .book-btn {
   background-color: #381D2A;
   border-radius: 5px;
  }
- 
+
  .view-profile {
   background-color: #5E0B15;
   border-radius: 5px;
+<<<<<<< HEAD
+}
+
+.searchbar {
+  position: relative;
+  top: -500px;
+=======
  }
- 
+
  .search-container {
   width: 100%;
   position: relative;
@@ -123,9 +139,10 @@ label, h3{
     text-align: center;
     border-radius: 5px;
     -webkit-font-smoothing: subpixel-antialiased;
-  
+
  }
  .searchbar {
+>>>>>>> 85f31f47405cc8218d077167d87fb16a7f38c3ed
   border: 1px solid #E1E4E9;
   box-shadow: 0 -2px #f3f3f3 inset;
   width: 100%;
@@ -134,8 +151,13 @@ label, h3{
   border-radius: 5px;
   outline: none;
   border-bottom: 2px solid #c18f74;
+  margin-bottom: 100px;
+}
+
+.search-icon{
+
  }
- 
+
  .search-icon{
   position: relative;
   float: right;
@@ -143,11 +165,19 @@ label, h3{
   height: 75px;
   top: -60px;
   right: -15px;
- }
- 
+}
+.filter {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
+
+
+
  .search-input {
   color: #7D6962;
   border: 0;
+  width: 50%;
   border-style: none;
   /* background: none; */
   border-bottom: 2px solid #c18f74;
@@ -156,16 +186,14 @@ label, h3{
   padding: 0.5em 0;
   border-radius: 5px;
  }
- 
+
  .radio-label {
   color: white;
   margin-left: 5px;
 }
 
 table td {
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 1.6;
   font-family: 'Abel', sans-serif;
 }
-
-
-
