@@ -4,13 +4,12 @@ import NavigationBar from './components/NavigationBar';
 import moment from 'moment';
 import Search from './components/Search';
 import Modal from './components/Modal';
-import PropTypes from 'prop-types';
 
 
 class App extends React.Component {
   state = {
     results: [],
-    isOpen: false,
+    show: false,
     bartenderList: [],
     filters:  {
                 bartenderType: "all",
@@ -34,9 +33,7 @@ class App extends React.Component {
       })
       .catch((error) => { console.log(error) } )
   }
-  toggleModal = () => {
-   this.setState({isOpen: !this.state.isOpen});
- }
+
   handleSearch = (e) => {
     let { event, filters } = this.state;
     filters.searchText = e.target.value
@@ -127,6 +124,14 @@ class App extends React.Component {
     this.createEvent(event);
     Turbolinks.visit(`/users/${this.state.event.bartender.id}`)
   };
+
+  showModal = () => {
+    this.setState({ show: true });
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
+  };
   render() {
     const { results } = this.state;
     return (
@@ -214,16 +219,20 @@ class App extends React.Component {
                         <tr>Bio: {result.bio}</tr>
                       </td>
                       <tr>
-                      <button type="button" className="btn btn-lg book-btn" onClick={this.toggleModal}>Book Now</button>
-                      <button type="button" className="btn btn-lg view-profile">View Profile</button>
+                      <button type="button" className="btn btn-lg book-btn">Book Now</button>
+                        <Modal show={this.state.show} handleClose={this.hideModal} >
+                          <img src="https://i.imgur.com/jl6o412.jpg" alt="logo" width="300"/>
+                          Name:<p>{this.state.event.bartender.name}</p>
+                          Gender:<p>{this.state.event.bartender.gender}</p>
+                          Rating:<p>{this.state.event.bartender.rating}</p>
+                          Bio:<p>{this.state.event.bartender.bio}</p>
+                       </Modal>
+                      <button type="button" className="btn btn-lg view-profile" onClick={this.showModal}>
+                        View Profile
+                      </button>
                       </tr>
                     </tbody>
                   </table>
-
-                  <Modal show={this.state.isOpen} onClose={this.toggleModal}>
-                   Here's some content for the modal
-                  </Modal>
-
                 </div>
               </li>
             );
