@@ -1,6 +1,13 @@
 * {
   font-family: 'Roboto', sans-serif;
 }
+.first-header {
+
+}
+.jumbo-img {
+  position: relative;
+  top: -70px;
+}
 
 body {
   height:100%;
@@ -15,6 +22,7 @@ label, h3{
   font-size: 18px;
 }
 
+input[type=radio]
 .first-header {
   font-family:  'Viga', sans-serif;
   text-transform: uppercase;
@@ -22,13 +30,13 @@ label, h3{
   font-size: 50px;
 }
 .jumbo-container {
-  background-image: url('https://i.imgur.com/0rf0hmD.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: black;
 }
 
+
 .jumbotron-fluid {
-  background: none;
+  background: black;
+
 }
 
 .book-btn, .view-profile{
@@ -85,27 +93,9 @@ li {
   border-radius: 5px;
 }
 
-.search-container {
-  width: 100%;
-  position: relative;
-  &:before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    font-family: 'FontAwesome';
-    content: '\f002';
-    background: $color;
-    text-align: center;
-    color: $iconColor;
-    border-radius: 5px;
-    -webkit-font-smoothing: subpixel-antialiased;
-    font-smooth: always;
-  }
-}
 .searchbar {
+  position: relative;
+  top: -500px;
   border: 1px solid #E1E4E9;
   box-shadow: 0 -2px #f3f3f3 inset;
   @include box-sizing(border-box);
@@ -116,6 +106,7 @@ li {
   border-radius: 5px;
   outline: none;
   border-bottom: 2px solid #c18f74;
+  margin-bottom: 100px;
 }
 
 .search-icon{
@@ -126,10 +117,16 @@ li {
   top: -60px;
   right: -15px;
 }
+.filter {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
 
 .search-input {
   color: #7D6962;
   border: 0;
+  width: 50%;
   border-style: none;
   /* background: none; */
   border-bottom: 2px solid #c18f74;
@@ -145,6 +142,7 @@ li {
 }
 
 table td {
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 1.6;
   font-family: 'Abel', sans-serif;
 }

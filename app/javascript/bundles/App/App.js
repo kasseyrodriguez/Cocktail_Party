@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import axios from "axios";
 import NavigationBar from './components/NavigationBar';
-import Jumbotron from './components/Jumbotron';
 import moment from 'moment';
 import Search from './components/Search';
+import Modal from './components/Modal';
+import PropTypes from 'prop-types';
+
 
 class App extends React.Component {
   state = {
     results: [],
+    isOpen: false,
     bartenderList: [],
     filters:  {
                 bartenderType: "all",
@@ -31,6 +34,9 @@ class App extends React.Component {
       })
       .catch((error) => { console.log(error) } )
   }
+  toggleModal = () => {
+   this.setState({isOpen: !this.state.isOpen});
+ }
   handleSearch = (e) => {
     let { event, filters } = this.state;
     filters.searchText = e.target.value
@@ -126,10 +132,9 @@ class App extends React.Component {
     return (
       <div>
         <NavigationBar />
-        <Jumbotron />
         <Search handleSearch={this.handleSearch}/>
         <form onSubmit={this.handleSubmit}>
-          <div>
+          <div class="filter">
             <label>Event Name:</label>
             <input
               type="text"
@@ -138,7 +143,7 @@ class App extends React.Component {
               onChange={this.handleNameChange}
             />
           </div>
-          <div>
+          <div class="filter">
             <label>Location:</label>
             <input
               type="text"
@@ -147,7 +152,7 @@ class App extends React.Component {
               onChange={this.handleLocationChange}
             />
           </div>
-          <div>
+          <div class="filter">
             <label>Date:</label>
             <input
               type="date"
@@ -156,7 +161,7 @@ class App extends React.Component {
               onChange={this.handleDateChange}
             />
           </div>
-          <div>
+          <div class="filter">
             <label>Bartender:</label>
             <input
               disabled
@@ -165,7 +170,7 @@ class App extends React.Component {
               className="search-input"
             />
           </div>
-          <div>
+          <div class="filter">
             <label>Bartender Type:</label>
             <select name="type" value={this.state.filters.bartenderType} onChange={this.handleBartenderTypeChange}>
               <option value="standard">Standard</option>
@@ -174,7 +179,7 @@ class App extends React.Component {
               <option value="all">All</option>
             </select>
           </div>
-          <div>
+          <div class="filter">
             <label>Gender:</label>
             <select name="type" value={this.state.filters.gender} onChange={this.handleGenderChange}>
               <option value="male">Male</option>
@@ -182,7 +187,7 @@ class App extends React.Component {
               <option value="all">All</option>
             </select>
           </div>
-          <div>
+          <div class="filter">
             <label>Ratings:</label>
             <select name="rating" value={this.state.filters.rating} onChange={this.handleRatingChange}>
               <option value="5">5</option>
@@ -209,11 +214,15 @@ class App extends React.Component {
                         <tr>Bio: {result.bio}</tr>
                       </td>
                       <tr>
-                      <button type="button" className="btn btn-lg book-btn">Book Now</button>
+                      <button type="button" className="btn btn-lg book-btn" onClick={this.toggleModal}>Book Now</button>
                       <button type="button" className="btn btn-lg view-profile">View Profile</button>
                       </tr>
                     </tbody>
                   </table>
+
+                  <Modal show={this.state.isOpen} onClose={this.toggleModal}>
+                   Here's some content for the modal
+                  </Modal>
 
                 </div>
               </li>
