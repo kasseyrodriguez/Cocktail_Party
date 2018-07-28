@@ -134,7 +134,10 @@ label, h3{
     -webkit-font-smoothing: subpixel-antialiased;
 
  }
- .searchbar {
+
+.searchbar {
+  position: relative;
+  top: -500px;
   border: 1px solid #E1E4E9;
   box-shadow: 0 -2px #f3f3f3 inset;
   width: 100%;
