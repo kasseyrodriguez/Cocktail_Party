@@ -21,40 +21,24 @@ label, h3{
 }
 
 
- .first-header {
-  font-family:  'Viga', sans-serif;
-  text-transform: uppercase;
-  color: white;
-  font-size: 50px;
-}
 .jumbo-container {
-  background-color: black;
-}
-
-
-.jumbotron-fluid {
-  background: black;
- }
-
- .jumbo-container {
   background-image: url('https://i.imgur.com/0rf0hmD.jpg');
   background-repeat: no-repeat;
   background-size: cover;
  }
 
- .jumbotron-fluid {
-  background: none;
+.jumbotron-fluid {
+  height: 100%;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background: linear-gradient(#434343 , #000000);
 }
 
 .book-btn, .view-profile{
   float: right;
 }
 
-
- * {
-  font-family: 'Roboto', sans-serif;
- }
- .user-bio {
+.user-bio {
   background-color: white;
   margin-top: 30px;
   font-weight: 300;
@@ -68,12 +52,12 @@ label, h3{
   max-wid: 100%;
  }
 
- table{
+table {
     table-layout: fixed;
     width: 100%;
  }
 
- input[type=radio] {
+input[type=radio] {
   color: white;
 }
 
@@ -81,84 +65,71 @@ label, h3{
   margin-top: 0 auto;
 }
 
-
-
- .navbar {
-  margin-top: 0 auto;
- }
-
- ul {
-
+ul {
   margin-left: -40px;
  }
 
- li {
+li {
   list-style-type: none;
-
 }
 
-
-
- .book-btn, .view-profile {
+.book-btn, .view-profile {
   float: right;
  }
 
- .btn:hover {
+.btn:hover {
   color: white;
  }
 
- .book-btn {
+.book-btn {
   background-color: #381D2A;
   border-radius: 5px;
  }
 
- .view-profile {
+.view-profile {
   background-color: #5E0B15;
   border-radius: 5px;
-<<<<<<< HEAD
 }
 
 .searchbar {
   position: relative;
   top: -500px;
-=======
- }
+}
 
- .search-container {
-  width: 100%;
+.search-container {
+  width: 60%;
   position: relative;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-family: 'FontAwesome';
+  content: '\f002';
+  text-align: center;
+  border-radius: 5px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
 
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    font-family: 'FontAwesome';
-    content: '\f002';
-    text-align: center;
-    border-radius: 5px;
-    -webkit-font-smoothing: subpixel-antialiased;
-
- }
- .searchbar {
->>>>>>> 85f31f47405cc8218d077167d87fb16a7f38c3ed
+.searchbar {
+  display: block;
+  margin-right: auto;
+  opacity: 0.9;
+  margin-left: auto;
   border: 1px solid #E1E4E9;
   box-shadow: 0 -2px #f3f3f3 inset;
-  width: 100%;
+  width: 70%;
   padding: 5px;
   height: 40px;
   border-radius: 5px;
   outline: none;
   border-bottom: 2px solid #c18f74;
   margin-bottom: 100px;
+  float: center;
 }
 
+
 .search-icon{
-
- }
-
- .search-icon{
   position: relative;
   float: right;
   width: 75px;
@@ -166,28 +137,33 @@ label, h3{
   top: -60px;
   right: -15px;
 }
+
 .filter {
   display: inline-block;
   width: 30%;
   text-align: center;
 }
 
-
-
- .search-input {
+.search-input {
   color: #7D6962;
+  font-size: 16px;
   border: 0;
   width: 50%;
   border-style: none;
-  /* background: none; */
   border-bottom: 2px solid #c18f74;
   transition: border 300ms ease-in-out;
-  width: 50%;
+  width: 80%;
   padding: 0.5em 0;
   border-radius: 5px;
  }
 
- .radio-label {
+.close-button {
+   background-color: #ad5e29;
+   border-radius: 5px;
+   float: right;
+ }
+
+.radio-label {
   color: white;
   margin-left: 5px;
 }
@@ -195,5 +171,12 @@ label, h3{
 table td {
   font-size: 20px;
   line-height: 1.6;
-  font-family: 'Abel', sans-serif;
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+.first-header {
+  color: white;
+  font-family: 'Viga', sans-serif;
+  text-transform: uppercase;
+  font-size: 50px;
 }
