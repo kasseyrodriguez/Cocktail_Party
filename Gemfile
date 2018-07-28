@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
-gem 'Procfile'
+gem 'pg'
 gem 'random_user_generator'
 gem 'faker', '~> 1.6', '>= 1.6.6'
 gem 'react_on_rails'
@@ -47,7 +47,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'sqlite3'
+  # gem 'sqlite3'
 
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
@@ -57,10 +57,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
+# group :production do
+#   gem 'pg'
+#   gem 'rails_12factor'
+# end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver

@@ -115,13 +115,6 @@ label, h3{
  .view-profile {
   background-color: #5E0B15;
   border-radius: 5px;
-<<<<<<< HEAD
-}
-
-.searchbar {
-  position: relative;
-  top: -500px;
-=======
  }
 
  .search-container {
@@ -142,7 +135,6 @@ label, h3{
 
  }
  .searchbar {
->>>>>>> 85f31f47405cc8218d077167d87fb16a7f38c3ed
   border: 1px solid #E1E4E9;
   box-shadow: 0 -2px #f3f3f3 inset;
   width: 100%;
