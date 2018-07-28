@@ -2,61 +2,47 @@
 
     <!--Main Navigation-->
     <header>
-        <nav class="navbar navbar-expand-lg black fixed-top scrolling-navbar">
-            <div class="container">
-                    <img src="/assets/side-view-logo.png" width="50%", alt="logo" >
-                </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon dark-amber-text"></span>
-                </button>
+			<nav class="navbar navbar-expand-lg black fixed-top scrolling-navbar">
+				<div class="container">
+					<img src="/assets/side-view-logo.png" width="50%", alt="logo" >
+				</div>
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon dark-amber-text"></span>
+				</button>
 
-                <div class="collapse navbar-collapse" id="basicExampleNav">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                        <% if current_user %>
-                            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-                         <% end %> 
-                        </li>
-                        <li class="nav-item">
-                        </li>
-                         <li class="nav-item">
-                   
-                        </li>
-                    </ul>
-                </div>
-        </nav>
-              <div class="container d-flex align-items-center justify-content-center h-100">
-                    <div>
-                        <video id="bgvid" playsinline autoplay muted loop>
-                            <source src="bartender.mp4" type="video/mp4">
-                        </video>
-            
-                    </div>
+				<div class="collapse navbar-collapse" id="basicExampleNav">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item"><% if current_user %><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %><% end %></li>
+						<li class="nav-item"></li>
+						<li class="nav-item"></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="container d-flex align-items-center justify-content-center h-100">
+				<div>
+						<video id="bgvid" playsinline autoplay muted loop><source src="bartender.mp4" type="video/mp4"></video>
+				</div>
+				<div class="row d-flex justify-content-center text-center">
+						<div class="col-md-10">
+								<!-- Heading -->
+								<h2 id="h2-home" class="display-10 font-weight-bold white-text pt-5 mb-2">Hire A Bartender</h2>
 
-                    <div class="row d-flex justify-content-center text-center">
-                        <div class="col-md-10">
-                            <!-- Heading -->
-                            <h2 id="h2-home" class="display-10 font-weight-bold white-text pt-5 mb-2">Hire A Bartender</h2>
+								<!-- Divider -->
+								<hr class="hr-light">
 
-                            <!-- Divider -->
-                            <hr class="hr-light">
-
-                            <!-- Description -->
-
-                            <h4 id="h4-home"class="white-text my-4"> Start here by searching through our list of talented bartenders</h4>
-                       <% if current_user %>
-                            <%= link_to '<button type="button" >SEARCH</button>'.html_safe, welcome_search_path %>
-                        <% else %>
-                        <%= link_to '<button type="button" >SIGN IN</button>'.html_safe, user_session_path %>
-
-                        <% end %> 
-
-
-                        </div>
-                    </div>
-                 </div>
-        </header>
+								<!-- Description -->
+								<h4 id="h4-home"class="white-text my-4"> Start here by searching through our list of talented bartenders</h4>
+								<% if current_user %>
+										<%= link_to '<button type="button" >SEARCH</button>'.html_safe, welcome_search_path %>
+								<% else %>
+								<%= link_to '<button type="button" >SIGN IN</button>'.html_safe, user_session_path %>
+								<% end %> 
+						</div>
+				</div>
+			</div>
+		</header>
 
 
 
