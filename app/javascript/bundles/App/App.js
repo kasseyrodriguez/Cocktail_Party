@@ -177,7 +177,7 @@ class App extends React.Component {
           </div>
           <div class="filter">
             <label>Bartender Type:</label>
-            <select name="type" value={this.state.filters.bartenderType} onChange={this.handleBartenderTypeChange}>
+            <select name="type" value={this.state.filters.bartenderType} onChange={this.handleBartenderTypeChange} className="filter-dropdown">
               <option value="standard">Standard</option>
               <option value="flair">Flair</option>
               <option value="mixologist">Mixologist</option>
@@ -186,7 +186,7 @@ class App extends React.Component {
           </div>
           <div class="filter">
             <label>Gender:</label>
-            <select name="type" value={this.state.filters.gender} onChange={this.handleGenderChange}>
+            <select name="type" value={this.state.filters.gender} onChange={this.handleGenderChange} className="filter-dropdown">
               <option value="male">Male</option>
               <option value="female">Female</option>
               <option value="all">All</option>
@@ -194,7 +194,7 @@ class App extends React.Component {
           </div>
           <div class="filter">
             <label>Ratings:</label>
-            <select name="rating" value={this.state.filters.rating} onChange={this.handleRatingChange}>
+            <select name="rating" value={this.state.filters.rating} onChange={this.handleRatingChange} className="filter-dropdown">
               <option value="5">5</option>
               <option value="4">4</option>
               <option value="3">3</option>
@@ -203,7 +203,6 @@ class App extends React.Component {
               <option value="all">All</option>
             </select>
           </div>
-          <input type="submit" value="Submit" className="btn btn-elegant" onClick={this.handleSubmit} />
         </form>
         <ul>
           {results.map((result, i) => {
@@ -213,19 +212,22 @@ class App extends React.Component {
                   <table>
                     <tbody>
                       <td>
+                        <tr><img src="https://i.imgur.com/jl6o412.jpg" alt="logo" width="300"/></tr>
                         <tr>Name: {result.name}</tr>
                         <tr>Rating: {result.rating}</tr>
                         <tr>Gender: {result.gender}</tr>
                         <tr>Bio: {result.bio}</tr>
                       </td>
                       <tr>
-                      <button type="button" className="btn btn-lg book-btn">Book Now</button>
+                      <button type="button" className="btn btn-lg book-btn" onClick={this.handleSubmit}>Book Now</button>
                         <Modal show={this.state.show} handleClose={this.hideModal} >
-                          <img src="https://i.imgur.com/jl6o412.jpg" alt="logo" width="300"/>
-                          Name:<p>{this.state.event.bartender.name}</p>
-                          Gender:<p>{this.state.event.bartender.gender}</p>
-                          Rating:<p>{this.state.event.bartender.rating}</p>
-                          Bio:<p>{this.state.event.bartender.bio}</p>
+                          <div className="profile-background">
+                          <img src="https://i.imgur.com/jl6o412.jpg"  alt="logo" width="300"/>
+                          </div>
+                          <p>Name: {this.state.event.bartender.name}</p>
+                          <p>Gender: {this.state.event.bartender.gender}</p>
+                          <p>Rating: {this.state.event.bartender.rating}</p>
+                          <p>Bio: {this.state.event.bartender.bio}</p>
                        </Modal>
                       <button type="button" className="btn btn-lg view-profile" onClick={this.showModal}>
                         View Profile

@@ -6,6 +6,7 @@
   height: 100%;
 }
 
+
 .modal{
   padding: 20px;
   font-size: 20px;
@@ -23,9 +24,9 @@
 }
 
 
-
 .modal-main p{
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 2em;
 }
 
 .display-block {
