@@ -29,14 +29,14 @@
     <div class="row">
       <div class="col-xs-12 col-sm-5">
         <div class="bar-picture">
-          <p class="p-bar">
-            <%= image_tag(@user.picture)%>
+          <p class="p-bar img-user">
+            <%= image_tag(@user.picture, :size => "300x350") %>
           </p>
         </div>
       </div>
 
       <div class="col-xs-12 col-sm-7">
-          <div class="bar-profile">
+          <div class="bar-profile title-bar">
             <h1 id="h1-bar">Part-time Bartender</h1>
               <p class="user-name">
                 <%= @user.name %>
@@ -57,19 +57,9 @@
                 <%= @user.rate %>
             </p>
           </div>
-          </div>
 
-
-          <div class="bar-profile">
-            <p class="p-bar">
-              Bio:
-                <%= @user.bio %>
-            </p>
-          </div>
-
-
-      <%# this part not working properly, must fix later%>
-          <div class="bar-profile">
+  
+          <div class="bar-profile info-text">
             <p class="p-bar">
               Type of bartender:
               <%= if @user.standard
@@ -84,6 +74,15 @@
 
             </p>
           </div>
+           </div>
+
+          <div class="bar-profile">
+            <p class="p-bar bio">
+              Bio:
+                <%= @user.bio %>
+            </p>
+          </div>
+
           <div class="bar-profile links-to">
                <%= link_to 'See your events', events_path, style: "color:white;" %> 
               <ul class="links-to-li">
