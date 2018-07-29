@@ -2,6 +2,13 @@
     background: linear-gradient(to right,  #5a302f , black);
 }
 
+#log-in-up-text{
+
+    color:orange;
+}
 
 
-
+ #hitler {
+  
+    box-shadow: 5px 10px #AD5E29;
+} 
