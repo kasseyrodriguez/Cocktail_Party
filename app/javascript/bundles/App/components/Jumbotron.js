@@ -10,7 +10,7 @@ class Jumbotron extends Component {
            <p class="lead"></p>
           </div>
          </div>
-   )
+    )
   }
 }
 
