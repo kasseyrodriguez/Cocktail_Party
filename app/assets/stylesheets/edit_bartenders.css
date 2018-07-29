@@ -1,3 +1,4 @@
+
 /* Body Start ================ */
 
 .more-info {
@@ -58,10 +59,10 @@
 
 
 /* Media Queries */
-@media (min-width: 992px)
+/* @media (min-width: 992px)
 .col-lg-4 {
     max-width: 33.33%;
-}
+} */
 
 
 .types-of-bartenders {
