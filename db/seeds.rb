@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+
+
 i = 0
 gender_selection = ['female', 'male']
 2.times do
@@ -43,6 +46,8 @@ gender_selection = ['female', 'male']
       saturday: [true,false].sample,
       sunday: [true,false].sample,
       bio: "Hi my name is #{bartender.name} and I have been a bartender for 10 years. I currently live in Miami and my rate is #{bartender.rate} Feel free to message me so we can discuss more information."
+
+
     )
   end
  i= i +1

@@ -12,6 +12,13 @@ const Search = (props) => {
            <input onChange={props.handleSearch} type="search" className="searchbar" placeholder="Search for a Bartender" /> <a href="#"><img src={'http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png'} className="search-icon"/></a>
      </div>
   )
+  $.ajax({
+    url: 'https://randomuser.me/api/',
+    dataType: 'json',
+    success: function(data) {
+      console.log(data);
+    }
+  });
 }
 
 export default Search;
