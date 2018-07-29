@@ -5,7 +5,7 @@
 			<nav class="navbar navbar-expand-lg black fixed-top scrolling-navbar">
 				<div class="container">
 					<img src="/assets/side-view-logo.png" width="50%", alt="logo" >
-				</div>
+				</div>r
 				
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
 						aria-expanded="false" aria-label="Toggle navigation">
@@ -27,13 +27,13 @@
 				<div class="row d-flex justify-content-center text-center">
 						<div class="col-md-10">
 								<!-- Heading -->
-								<h2 id="h2-home" class="display-10 font-weight-bold white-text pt-5 mb-2">Hire A Bartender</h2>
+								<h2 class="h2-home" class="display-10 font-weight-bold white-text pt-5 mb-2">Hire A Bartender</h2>
 
 								<!-- Divider -->
 								<hr class="hr-light">
 
 								<!-- Description -->
-								<h4 id="h4-home"class="white-text my-4"> Start here by searching through our list of talented bartenders</h4>
+								<h4 class="h4-home"class="white-text my-4"> Start here by searching through our list of talented bartenders</h4>
 								<% if current_user %>
 										<%= link_to '<button id="search-btn" type="button" >SEARCH</button>'.html_safe, welcome_search_path %>
 								<% else %>
@@ -45,4 +45,4 @@
 		</header>
 
 
-<a class="btn btn-search" href="#">earch</a>
+<a class="btn btn-search" href="#">Search</a>

@@ -12,7 +12,7 @@
     border-style: solid white;
 }
 
-h1, p {
+#h1-bar, .p-bar {
     margin-top: 2rem;
     color: white;
     font-family: 'Franklin Gothic Medium';
@@ -38,13 +38,8 @@ h1, p {
     justify-content: center;
 }
 
-#h1-bar {
-    color: white;
-    font-size: 12px;
-    text-align:center;
-
-}
 .user-name {
+color: white;
 margin-top: 1px;
 font-size:22px;
 }
@@ -79,6 +74,12 @@ font-size:22px;
 
  }
 
- .links-to-li, li{
+ .links-to-li, li {
      display:inline-block;
  }
+
+.links-to-links {
+    font-size: 12px;
+    
+    
+}
