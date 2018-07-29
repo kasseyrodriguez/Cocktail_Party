@@ -1,7 +1,6 @@
 .Event-text-color {
         color: white;
-        background: linear-gradient(to right,#AD5E29 , black);
-        background-color: #3e94ec;
+        background: linear-gradient(to left,  #5a302f , #AD5E29);
         font-size: 16px;
         font-weight: 400;
         text-rendering: optimizeLegibility;
@@ -15,6 +14,7 @@
 }
 
 .myHeading {
+        color: orange;
         text-align: center;
         display: block;
         margin: auto;
@@ -27,7 +27,7 @@
  
 .th {
   color:#D5DDE5;;
-  background:#1b1e24;
+  background:black;
   border-bottom:4px solid #9ea7af;
   border-right: 1px solid #343a45;
   font-size:20px;
@@ -56,7 +56,7 @@
 }
  
 .tr:hover .td {
-  background:#4E5066;
+  background: #5a302f;
   color:#FFFFFF;
   border-top: 1px solid #22262e;
 }
@@ -74,7 +74,7 @@
 }
  
 .tr:nth-child(odd):hover .td {
-  background:#4E5066;
+  background: #5a302f;
 }
 
 .tr:last-child .td:first-child {
