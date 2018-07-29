@@ -56,8 +56,8 @@
 }
  
 .tr:hover .td {
-  background: #5a302f;
-  color:#FFFFFF;
+  /* background: #5a302f; */
+  color: orange;
   border-top: 1px solid #22262e;
 }
  
@@ -73,9 +73,6 @@
   background:#EBEBEB;
 }
  
-.tr:nth-child(odd):hover .td {
-  background: #5a302f;
-}
 
 .tr:last-child .td:first-child {
   border-bottom-left-radius:3px;
