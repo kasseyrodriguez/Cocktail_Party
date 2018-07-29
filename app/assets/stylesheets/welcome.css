@@ -1,3 +1,4 @@
+
 html,
 body,
 header,
@@ -9,9 +10,16 @@ header,
 height: 120px;
 }
 
+.logo-home {
+  width: 50%;
+  display: flex; 
+   justify-content: center;
+  size: 50px;
+}
+/* 
 nav {
  margin-top: 0.1%;
-}
+} */
 
 .nav-link {
  color: white;
@@ -21,31 +29,23 @@ nav {
  background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
 }
 
+
+.navbar-brand {
+  display: flex;
+  justify-content: flex-start;
+  size: '30x30';
+ }
+
+
+.card-body {
+  width: 100%;
+}
+
+ 
 a {
  color: white;
 }
 
-#h2-home {
- font-family: 'Franklin Gothic Medium';
- font-size: 50px;
- text-shadow:
-   -1px -1px 0 #000,
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
-   1px 1px 0 #000;
- font-family: 'Franklin Gothic Medium';
- font-size: 50px;
-}
-
-#h4-home {
- font-family: 'Franklin Gothic Medium';
- font-size: 15px;
- text-shadow:
-   -1px -1px 0 #000,
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
-   1px 1px 0 #000;
-}
 
 #sign-in-btn {
 	background: transparent;
@@ -94,20 +94,6 @@ a {
  font-size: 15px;
 }
 
-video {
- position: fixed;
- top: 50%;
- left: 50%;
- min-width: 100%;
- min-height: 100%;
- z-index: -100;
- transform: translateX(-50%) translateY(-50%);
- background: url('bartender.mp4')center;
- background-size: cover;
- transition: 1s opacity;
-}
-
-
 .top-nav-collapse {
    background-color: #24355C;
  }
@@ -129,26 +115,28 @@ select#rating option[value="5"]  {
 }
 
 /*================== Home Page CSS Start =============== */
-#h2-home {
- font-family: 'Franklin Gothic Medium';
- font-size: 50px;
- text-shadow:
-       -1px -1px 0 #000,
-       1px -1px 0 #000,
-       -1px 1px 0 #000,
-       1px 1px 0 #000;
- font-family: 'Franklin Gothic Medium';
- font-size: 50px;
-}
-#h4-home {
- font-family: 'Franklin Gothic Medium';
- font-size: 15px;
- text-shadow:
-       -1px -1px 0 #000,
-       1px -1px 0 #000,
-       -1px 1px 0 #000,
-       1px 1px 0 #000;
-}
+.h2-home {
+  color: white;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 50px;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+ }
+ 
+ .h4-home {
+  color: white;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 15px;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+ }
+ 
 video {
  position: fixed;
  top: 50%;

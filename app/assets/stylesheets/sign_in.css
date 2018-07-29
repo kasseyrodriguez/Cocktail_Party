@@ -1,16 +1,28 @@
 .background-signing-in-up {
-    background: linear-gradient(to right,  #5a302f , black);
+    background: linear-gradient( #5a302f , #AD5E29);
+
+    /* background: linear-gradient(to right,  #5a302f , black); */
 }
 
 #log-in-up-text{
+
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    font-size: 30px;
+
     color:orange;
 }
 
 
- #hitler {
-    /* background:
-    linear-gradient(
-        white,
-        orange); */
-    box-shadow: 5px 10px #AD5E29;
-}
+
+ #card {
+
+    background: linear-gradient(#eef2f3, black );
+  
+    
+
+    /* box-shadow: 5px 10px #AD5E29; */
+} 

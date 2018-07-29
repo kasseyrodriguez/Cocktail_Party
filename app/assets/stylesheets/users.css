@@ -1,0 +1,90 @@
+.bar-container {
+    margin-top: 180px;
+    width: 100%;
+    height: 100%;
+}
+
+#bar-page {
+    margin-top: 20%;
+    background: url('leather.jpg')no-repeat center;
+    background-size: 100%;
+    box-shadow: 5px 10px #000;
+    border-style: solid white;
+}
+
+#h1-bar, .p-bar {
+    margin-top: 2rem;
+    color: white;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 12px;
+    text-shadow:
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+      text-align: center;
+}
+
+.img {
+    size: 30x30;
+}
+
+
+.bar-profile {
+    width: 50%;
+    margin-bottom: 3rem;
+}
+
+.bar-picture {
+    size: 3px;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.user-name {
+color: white;
+margin-top: 1px;
+font-size:22px;
+}
+
+.info-text {
+    margin-top: -20px;
+    margin-left: 10rem;
+    margin-bottom: -25px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.bar-picture {
+    size: 20px;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+ .links-to {
+     font-family: 'Franklin Gothic Medium'; 
+     margin-top: 100px;
+     color: white;
+     display:flex;
+     justify-content:space-around;
+
+ }
+
+ .links-to-li, li {
+     display:inline-block;
+ }
+
+.links-to-links {
+    font-size: 12px;
+    
+    
+}
