@@ -84,15 +84,16 @@
 
             </p>
           </div>
-
           <div class="bar-profile links-to">
                <%= link_to 'See your events', events_path, style: "color:white;" %> 
               <ul class="links-to-li">
-                <li>
-                  <%= link_to 'Edit', welcome_edit_bartenders_path, style: "color:white;"%>
+                <li class="links-to-links">
+                  <button class= "btn peach-gradient btn-sm" type="button">
+                    <%= link_to 'Edit', welcome_edit_bartenders_path %>
+                  </button>
                 </li>
                 ||
-                <li>
+                <li class="links-to-links">
                   <%= link_to "Back", welcome_search_path(resource_name), style: "color:white;" %>
                 </li>
               </ul>

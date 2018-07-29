@@ -79,6 +79,12 @@ font-size:22px;
 
  }
 
- .links-to-li, li{
+ .links-to-li, li {
      display:inline-block;
  }
+
+.links-to-links {
+    font-size: 12px;
+    
+    
+}
