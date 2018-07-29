@@ -1,67 +1,94 @@
-<%= link_to 'Home', root_path%>
 
-<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+<div class="container">
+   <nav class="navbar navbar-expand-lg black fixed-top scrolling-navbar">
+      <div class="container">
+        <img src="/assets/side-view-logo.png" width="50%", alt="logo" >
+      </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon dark-amber-text"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+            </li>
+
+            <li class="nav-item">
+            </li>
+
+            <li class="nav-item">
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+            </li>
+
+          </ul>
+      </div>
+   </nav>
+  <div id="bar-page">
+  <div class="bar-container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-5">
+        <div class="bar-picture">
+          <p>
+            <%= image_tag(@user.picture)%>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-7">
+          <div class="bar-profile">
+            <h1 id="h1-bar">Part-time Bartender</h1>
+              <p class="user-name">
+                <%= @user.name %>
+              </p>
+          </div>
+          
+          <div class="bar-profile">
+            <p>
+              Gender:
+              <%= @user.gender %>
+            </p>
+          </div>
+
+          <div class="bar-profile">
+            <p>
+              Rate:
+                <%= @user.rate %>
+            </p>
+          </div>
 
 
-<h1>Bartender profile/bio</h1>
-
-<p>
-Name:
-  <%= @user.name %>
-</p>
-
-<p>
-Picture:
-<%= image_tag(@user.picture) %>
-</p>
-
-<p>
-Gender:
-  <%= @user.gender %>
-</p>
-
-<p>
-Rate:
-
-  <%= @user.rate %>
-</p>
+          <div class="bar-profile">
+            <p>
+              Bio:
+                <%= @user.bio %>
+            </p>
+          </div>
 
 
+      <%# this part not working properly, must fix later%>
+          <div class="bar-profile">
+            <p>
+              Type of bartender:
+              <%= if @user.standard
+                  p "standard"
+                  end %>
+              <%= if @user.flair
+                  p "flair"
+                  end %>
+              <%= if @user.mixologist
+                 p "mixologist"
+                  end %>
 
-<p>
-Rating:
+            </p>
+          </div>
 
-  <%= @user.rating %>
-</p>
-
-
-
-
-<p>
-Bio:
-  <%= @user.bio %>
-</p>
-
-
-
-<%# this part not working properly, must fix later%>
-<p>
-Type of bartender:
-
-  <%= if @user.standard
-        p "standard"
-        end    %>
-     <%= if @user.flair
-        p "flair"
-        end %>
-          <%= if @user.mixologist
-       p "mixologist"
-       end
-       %>
-
-</p>
-
-       <%= link_to 'See your events', events_path %> 
-        <%= link_to 'Edit', welcome_edit_bartenders_path%>
-       <%= link_to "Back", welcome_search_path(resource_name) %>
-
+          <div class="bar-profile">
+            <%= link_to 'See your events', events_path %> 
+            <%= link_to 'Edit', welcome_edit_bartenders_path%>
+            <%= link_to "Back", welcome_search_path(resource_name) %>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
