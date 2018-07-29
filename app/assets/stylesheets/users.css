@@ -25,6 +25,11 @@
       text-align: center;
 }
 
+.img {
+    size: 30x30;
+}
+
+
 .bar-profile {
     width: 50%;
     margin-bottom: 3rem;
