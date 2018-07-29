@@ -1,28 +1,110 @@
 .background-signing-in-up {
     background: linear-gradient( #5a302f , #AD5E29);
+    /* display: flex; */
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 
-    /* background: linear-gradient(to right,  #5a302f , black); */
 }
 
 #log-in-up-text{
 
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
-    font-size: 30px;
-
-    color:orange;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    font-size: 20px;
+    font-weight: bold;
+    color: orange;
+    font-size: 40px;
+    /* background: #27ae60; */
+    border-radius: 10px 10px 0 0;
 }
 
 
 
- #card {
+ /* #card {
 
     background: linear-gradient(#eef2f3, black );
-  
-    
 
-    /* box-shadow: 5px 10px #AD5E29; */
-} 
+
+}  */
+
+
+
+
+  
+  #card-form{
+    width: 650px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+  }
+/*     
+    .form-title{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80px;
+      font-size: 20px;
+      font-weight: bold;
+      background: #27ae60;
+      border-radius: 10px 10px 0 0;
+    } */
+    
+    /* .form-body{
+      padding: 10px;
+      
+      .row{
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        
+        input[type="text"]{
+          appearance: none;
+          width: 100%;
+          margin: 0 15px;
+          height: 35px;
+          padding: 5px 15px;
+          border-radius: 5px;
+          outline: none;
+          border: none;
+          background: #e8ebed;
+          color: #576366;
+          font-size: 14px;
+        }
+      }
+    } */
+    
+    /* .rule{
+      height: 2px;
+      background: #e8ebed;
+      margin: 0px 35px;
+    } */
+    
+    /* .form-footer{
+      margin: 0 25px 15px 25px;
+      padding: 15px 10px; */
+      
+      /* a {
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 15px;
+        background: #27ae60;
+        margin-right: 10px;
+        font-size: 14px;
+      } */
+/*       
+      span{
+        margin-left: 8px;
+      }
+    }
+    
+  }
+   */
+  
