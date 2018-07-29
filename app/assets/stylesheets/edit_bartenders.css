@@ -1,22 +1,72 @@
+
+/* Body Start ================ */
+
 .more-info {
     background: url("old-fashioned.jpg") center fixed;
     background-size: 100%;
-    
 }
-.bform {
-    width: 100%;   
+/* Body Finish =============== */
+
+
+/* More Information Form Start ============= */
+.form-control {
+    height: 40px;
+}
+.card {
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.card-body {
+    overflow-y:scroll;
+    position: relative;
+    width:100%;
+    padding: 1.5rem;
+}
+/* More Information Form Finish ============ */
+
+.md-form {
+    position: static;
+    margin-top: 1.5rem;
+    margin-bottom: 1.0rem;
+}
+.md-form label {
+    display: inline-block;
+    position: static;
+    padding: 1.5rem;
+    font-size: 1rem;
+}
+
+.col-md-4 {
+    padding:10;
 }
 
 .days-of-week {
     display: inline-block;
     position: relative;
 }
-
-.md-form label {
-    display: inline;
-    position: static;
+.days {
+    display: flex;
+    justify-content: center;
+    padding: 0.1rem;
+}
+.edit-bartender-form {
+    padding-top: 50px;
+    margin-top:100px;
 }
 
-.col-md-4 {
-    padding:0
+
+
+
+/* Media Queries */
+@media (min-width: 992px)
+.col-lg-4 {
+    max-width: 33.33%;
+}
+
+
+.types-of-bartenders {
+    display: block;
+    padding: 0.5rem;
+
 }
