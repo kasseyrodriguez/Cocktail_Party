@@ -1,5 +1,11 @@
 .Event-text-color {
         color: white;
+        background: linear-gradient(to right,#AD5E29 , black);
+        background-color: #3e94ec;
+        font-size: 16px;
+        font-weight: 400;
+        text-rendering: optimizeLegibility;
+
 }
 
 .myTable {
@@ -11,12 +17,7 @@
 .myHeading {
         text-align: center;
 }
-body {
-  background-color: #3e94ec;
-  font-size: 16px;
-  font-weight: 400;
-  text-rendering: optimizeLegibility;
-}
+
 
 div.table-title {
    display: block;
@@ -26,14 +27,6 @@ div.table-title {
   width: 100%;
 }
 
-.table-title h3 {
-   color: #fafafa;
-   font-size: 30px;
-   font-weight: 400;
-   font-style:normal;
-   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-   text-transform:uppercase;
-}
 
 
 /*** Table Styles **/
@@ -51,12 +44,12 @@ div.table-title {
   animation: float 5s infinite;
 }
  
-th {
+.th {
   color:#D5DDE5;;
   background:#1b1e24;
   border-bottom:4px solid #9ea7af;
   border-right: 1px solid #343a45;
-  font-size:23px;
+  font-size:20px;
   font-weight: 100;
   padding:24px;
   text-align:left;
