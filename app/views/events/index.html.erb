@@ -4,7 +4,7 @@
 
 <table class= "myTable">
   <thead>
-    <tr>
+    <tr class= "tr">
       <th class ="th">Location</th>
       <th class ="th">Confirmed status</th>
       <th class ="th"></th>
@@ -13,17 +13,17 @@
 
   <tbody>
     <% @events.each do |event| %>
-      <tr>
-        <td><%= event.location %></td>
+      <tr class= "tr">
+        <td class = "td"><%= event.location %></td>
         <% if event.confirmed %>
-          <td>Confirmed</td>
+          <td class = "td">Confirmed</td>
           <% else %>
-          <td>Not Confirmed</td>
+          <td class = "td">Not Confirmed</td>
         <% end%>
 
         <%# <td><%= link_to 'Show', event %>
         <%#</td> %>
-        <td><%= link_to 'Confirm Request', edit_event_path(event) %></td>
+        <td class ="td"><%= link_to 'Confirm Request', edit_event_path(event) %></td>
         <%# <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
        <%# </td> %>
       </tr>
