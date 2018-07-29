@@ -1,10 +1,10 @@
 
 <body class= "background-signing-in-up">
 <div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3 mt-4">
-  <div class="card">
+  <div class="card" id= "hitler">
     <!-- Card content -->
     <div class="card-body">
-      <h4 class="card-title text-center">Log In</h4>
+      <h4 class="card-title text-center" id="log-in-up-text">Log In</h4>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="md-form indigo-text">
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
@@ -21,7 +21,7 @@
           </div>
         <% end -%>
         <div class="text-center mt-4">
-          <%= f.submit "Log in", class: 'btn btn-indigo' %>
+          <%= f.submit "Log in", class: 'btn btn-orange' %>
         </div>
       <% end %>
     </div>

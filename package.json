@@ -15,9 +15,6 @@
     "react-modal": "^3.5.1",
     "react-on-rails": "11.0.9"
   },
-  "scripts": {
-    "postinstall": "cd client && npm install"
-  },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
   }
