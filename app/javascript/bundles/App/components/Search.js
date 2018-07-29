@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import App from '../App';
 
 
-
 const Search = (props) => {
   return(
-    <div class="jumbotron jumbotron-fluid ">
+    <div className="jumbotron jumbotron-fluid ">
          <img src="https://i.imgur.com/0rf0hmD.jpg" alt="logo" width="100%" className="jumbo-img"/>
            <h1 className="first-header">Choose A Bartender</h1>
            <h3>Let Cocktail Party help you find a Bartender for your event!</h3>

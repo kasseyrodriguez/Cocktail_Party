@@ -12,9 +12,12 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-modal": "^3.5.1",
     "react-on-rails": "11.0.9"
   },
-  "scripts": { "postinstall": "cd client && npm install" },
+  "scripts": {
+    "postinstall": "cd client && npm install"
+  },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
   }
