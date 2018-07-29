@@ -1,3 +1,4 @@
+
 html,
 body,
 header,
@@ -9,9 +10,16 @@ header,
 height: 120px;
 }
 
+.logo-home {
+  width: 50%;
+  display: flex; 
+   justify-content: center;
+  size: 50px;
+}
+/* 
 nav {
  margin-top: 0.1%;
-}
+} */
 
 .nav-link {
  color: white;
@@ -21,31 +29,23 @@ nav {
  background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
 }
 
+
+.navbar-brand {
+  display: flex;
+  justify-content: flex-start;
+  size: '30x30';
+ }
+
+
+.card-body {
+  width: 100%;
+}
+
+ 
 a {
  color: white;
 }
 
-#h2-home {
- font-family: 'Franklin Gothic Medium';
- font-size: 50px;
- text-shadow:
-   -1px -1px 0 #000,
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
-   1px 1px 0 #000;
- font-family: 'Franklin Gothic Medium';
- font-size: 50px;
-}
-
-#h4-home {
- font-family: 'Franklin Gothic Medium';
- font-size: 15px;
- text-shadow:
-   -1px -1px 0 #000,
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
-   1px 1px 0 #000;
-}
 
 #sign-in-btn {
 	background: transparent;
@@ -113,6 +113,7 @@ section {
 	background:white;
 }
 
+
 .top-nav-collapse {
    background-color: #24355C;
  }
@@ -134,6 +135,7 @@ select#rating option[value="5"]  {
 }
 
 /*================== Home Page CSS Start =============== */
+
 #h2-home {
  font-family: 'Franklin Gothic Medium';
  font-size: 50px;
@@ -196,6 +198,7 @@ ol.carousel-indicators {
 
 .testimonial-caption h4 {
 	color: #129CF3;
+
 }
 
 .testimonial-caption h4 span {

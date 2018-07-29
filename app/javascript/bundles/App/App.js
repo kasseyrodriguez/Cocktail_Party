@@ -10,6 +10,7 @@ class App extends React.Component {
   state = {
     results: [],
     show: false,
+    showBook: false,
     bartenderList: [],
     filters:  {
                 bartenderType: "all",
@@ -122,15 +123,19 @@ class App extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.createEvent(event);
-    Turbolinks.visit(`/users/${this.state.event.bartender.id}`)
+    // Turbolinks.visit(`/users/${this.state.event.bartender.id}`)
   };
 
   showModal = () => {
     this.setState({ show: true });
   };
 
+  showModal2 = () => {
+    this.setState({ showBook: true});
+  };
+
   hideModal = () => {
-    this.setState({ show: false });
+    this.setState({ show: false, showBook: false });
   };
   render() {
     const { results } = this.state;
@@ -187,8 +192,8 @@ class App extends React.Component {
           <div class="filter">
             <label>Gender:</label>
             <select name="type" value={this.state.filters.gender} onChange={this.handleGenderChange} className="filter-dropdown">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
               <option value="all">All</option>
             </select>
           </div>
@@ -216,11 +221,15 @@ class App extends React.Component {
                         <tr>Name: {result.name}</tr>
                         <tr>Rating: {result.rating}</tr>
                         <tr>Gender: {result.gender}</tr>
-                        <tr>Bio: {result.bio}</tr>
                       </td>
                       <tr>
-                      <button type="button" className="btn btn-lg book-btn" onClick={this.handleSubmit}>Book Now</button>
+                        <Modal show={this.state.showBook} handleClose={this.hideModal}>
+                            <p class="confirm">A request has been sent to {this.state.event.bartender.name}</p>
+                            <p class="confirm">You will receive a confirmation in the next 24 hours. Thank you for booking with Cocktail Party!</p>
+                       </Modal>
+                      <button type="button" className="btn btn-lg book-btn" onClick={this.showModal2}>Book Now</button>
                         <Modal show={this.state.show} handleClose={this.hideModal} >
+
                           <div className="profile-background">
                           <img src="https://i.imgur.com/jl6o412.jpg"  alt="logo" width="300"/>
                           </div>
