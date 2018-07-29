@@ -13,6 +13,7 @@
 }
 
 h1, p {
+    margin-top: 2rem;
     color: white;
     font-family: 'Franklin Gothic Medium';
     font-size: 12px;
@@ -44,7 +45,17 @@ h1, p {
 
 }
 .user-name {
+margin-top: 1px;
 font-size:22px;
+}
+
+.info-text {
+    margin-top: -20px;
+    margin-left: 10rem;
+    margin-bottom: -25px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .row {
@@ -54,9 +65,20 @@ font-size:22px;
 
 .bar-picture {
     size: 20px;
-    margin-top: 5rem;
+    margin-top: 6rem;
     margin-bottom: 3rem;
     display: flex;
     justify-content: center;
 }
+ .links-to {
+     font-family: 'Franklin Gothic Medium'; 
+     margin-top: 100px;
+     color: white;
+     display:flex;
+     justify-content:space-around;
 
+ }
+
+ .links-to-li, li{
+     display:inline-block;
+ }

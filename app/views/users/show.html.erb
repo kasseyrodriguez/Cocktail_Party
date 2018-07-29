@@ -44,17 +44,19 @@
           </div>
           
           <div class="bar-profile">
+            <div class="info-text">
             <p>
               Gender:
               <%= @user.gender %>
             </p>
-          </div>
-
-          <div class="bar-profile">
+            </div>
+        
+          <div class="bar-profile info-text">
             <p>
               Rate:
                 <%= @user.rate %>
             </p>
+          </div>
           </div>
 
 
@@ -83,10 +85,17 @@
             </p>
           </div>
 
-          <div class="bar-profile">
-            <%= link_to 'See your events', events_path %> 
-            <%= link_to 'Edit', welcome_edit_bartenders_path%>
-            <%= link_to "Back", welcome_search_path(resource_name) %>
+          <div class="bar-profile links-to">
+               <%= link_to 'See your events', events_path, style: "color:white;" %> 
+              <ul class="links-to-li">
+                <li>
+                  <%= link_to 'Edit', welcome_edit_bartenders_path, style: "color:white;"%>
+                </li>
+                ||
+                <li>
+                  <%= link_to "Back", welcome_search_path(resource_name), style: "color:white;" %>
+                </li>
+              </ul>
           </div>
       </div>
     </div>
