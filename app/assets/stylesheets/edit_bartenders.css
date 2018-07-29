@@ -3,7 +3,15 @@
 
 .more-info {
     background: url("old-fashioned.jpg") center fixed;
-    background-size: 100%;    
+    background-size: 100%;
+}
+/* Body Finish =============== */
+
+
+/* More Information Form Start ============= */
+.form-control {
+    height: 40px;
+    background-size: 100%;
 }
 /* Body Finish =============== */
 
@@ -12,6 +20,7 @@
 .form-control {
     height: 40px;
 }
+
 .card {
     margin-bottom: 50px;
     margin-top: 20px;
@@ -25,6 +34,13 @@
 }
 /* More Information Form Finish ============ */
 
+
+/* Form */
+.edit-bartender-form {
+    padding-top: 50px;
+    margin-top:100px;
+}
+
 .md-form {
     position: static;
     margin-top: 1.5rem;
@@ -37,6 +53,7 @@
     font-size: 1rem;
 }
 
+/* Rows of Text */
 .col-md-4 {
     padding:10;
 }
@@ -48,13 +65,8 @@
 .days {
     display: flex;
     justify-content: center;
-    padding: 0.1rem; 
+    padding: 0.1rem;
 }
-.edit-bartender-form {
-    padding-top: 50px;
-    margin-top:100px;
-}
-
 
 
 
