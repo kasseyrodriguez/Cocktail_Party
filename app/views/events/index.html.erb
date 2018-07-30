@@ -11,20 +11,14 @@
 			<div class="collapse navbar-collapse" id="basicExampleNav">
 				<ul class="navbar-nav mr-auto links-in-nav">
           <li class="nav-item">
-            <button class= "btn orange btn-sm" type="button" style="margin-left:400px;">
-              <%= link_to 'Home', root_path, :style => "color:white; font-size: 7px;"%>
-            </button>
+              <%= link_to 'Home', root_path, :style => "color:white; font-size: 7px;margin-left:400px;", :class =>"btn orange btn-sm" %>
           </li>
            <li class="nav-item">
-            <button class= "btn orange btn-sm" type="button">
-              <%= link_to 'Search',  welcome_search_path, :style => "color:white; font-size: 7px;"%>
-            </button>
+              <%= link_to 'Search',  welcome_search_path, :style => "color:white; font-size: 7px;", :class =>"btn orange btn-sm"%>
           </li>
 					<li class="nav-item">
 							<% if current_user %>
-								<button class= "btn orange btn-sm" type="button">
-									<%= link_to 'Sign Out', destroy_user_session_path, method: :delete,  :style => "color:white; font-size: 7px;" %>
-								</button>
+									<%= link_to 'Sign Out', destroy_user_session_path, method: :delete,  :style => "color:white; font-size: 7px;",  :class =>"btn orange btn-sm" %>
 							<% end %>
 					</li>
 				</ul>

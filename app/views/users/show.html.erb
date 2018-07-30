@@ -11,19 +11,13 @@
         <div class="collapse navbar-collapse" id="basicExampleNav">
           <ul class="navbar-nav mr-auto links-in-nav">
             <li class="nav-item">
-              <button class= "btn orange btn-sm" type="button">
-            <%= link_to 'Home', root_path, :style => "color:white; font-size: 7px; "%>
-              </button>
+              <%= link_to 'Home', root_path, :style => "color:white; font-size: 7px;", :class => "btn orange btn-sm" %>
             </li>
             <li class="nav-item">
-              <button class= "btn orange btn-sm" type="button">
-                <%= link_to 'Search',  welcome_search_path, :style => "color: white; font-size: 7px;" %>
-              </button>
+              <%= link_to 'Search',  welcome_search_path, :style => "color: white; font-size: 7px;",:class => "btn orange btn-sm" %>
             </li>
             <li class="nav-item">
-              <button class= "btn orange btn-sm" type="button">
-                <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, :style => "color:white; font-size: 7px;"%>
-              </button>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, :style => "color:white; font-size: 7px;", :class => "btn orange btn-sm"%>
             </li>
           </ul>
       </div>
@@ -90,23 +84,17 @@
           <div class="bar-profile links-to">
             <ul class="links-to-li">
               <li class="links-to-links">
-                <button class= "btn orange btn-sm" type="button">
-                  <%= link_to 'Edit', welcome_edit_bartenders_path, :style => "color:white; font-size: 15px;"%>
-              </button>
+                  <%= link_to 'Edit', welcome_edit_bartenders_path, :style => "color:white; font-size: 15px;", :class => "btn orange btn-sm" %>
               </li>
               <li class="links-to-links">
-                <button class= "btn orange btn-sm" type="button">
-                  <%= link_to "Back", welcome_search_path(resource_name), :style => "color:white; font-size: 15px;" %>
-                </button>
+                  <%= link_to "Back", welcome_search_path(resource_name), :style => "color:white; font-size: 15px;", :class => "btn orange btn-sm" %>
               </li>
             </ul>
           </div>
       </div>
       <div class="col-xs-12 col-sm-2">
           <div class="events">
-               <button class= "btn orange btn-sm" type="button">
-                  <%= link_to 'See your events', events_path, :style => "color:white; font-size: 15px;"%> 
-                </button>
+                  <%= link_to 'See your events', events_path, :style => "color:white; font-size: 15px;", :class => "btn orange btn-sm" %> 
           </div>
       </div>
     </div>
