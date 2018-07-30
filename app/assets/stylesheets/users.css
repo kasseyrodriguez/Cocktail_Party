@@ -123,9 +123,6 @@ display: inline-block;
     display:flex;
     justify-content: space-between;
  }
- 
- 
-
 
  .nav-item {
      padding-right: 40px;
@@ -135,6 +132,10 @@ display: inline-block;
  @media screen and (max-width: 600px) {
     #bar-page, .bar-container {
         width: 100%;
+        position:relative;
     }
-
+    .bar-picture {
+        display: flex;
+        justify-content: center;
+    }
 }
