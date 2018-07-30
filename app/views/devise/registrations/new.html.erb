@@ -6,39 +6,36 @@
 
 <body class= "background-signing-in-up">
 <div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3 mt-4">
-  <div class="card"  id= "card">
+ 
     <!-- Card content -->
-    <div class="card-body">
+    <div class="card-body" id= "card-form-up">
       <h4 class="card-title text-center" id="log-in-up-text">Sign Up</h4>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
            
+      <div id= "form-contain">
 
-         <div class="md-form indigo-text">
-          <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control" %>
-          <%= f.label :name, class: "font-weight-light" %>
-        </div>
-
-        <div class="md-form indigo-text">
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
-          <%= f.label :email, class: "font-weight-light" %>
-        </div>
-        <div class="md-form indigo-text">
-          <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
-          <%= f.label :password, class: "font-weight-light" %>
-        </div>
-        <div class="md-form indigo-text">
-          <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
-          <%= f.label :password_confirmation, class: "font-weight-light" %>
+         <div class="md-form" id="row">
+          <%= f.text_field :name, class: "form-control",  placeholder:"Name" %>
         </div>
 
-       <div class="md-form indigo-text">
+        <div class="md-form" id="row">
+          <%= f.email_field :email, class: "form-control",  placeholder:"Email" %>
+        </div>
+        <div class="md-form" id="row">
+          <%= f.password_field :password, class: "form-control",  placeholder:"Password" %>
+        </div>
+        <div class="md-form" id="row">
+          <%= f.password_field :password_confirmation,  class: "form-control", placeholder:"Password Comfirmation" %>
+        </div>
+
+       <div class="md-form" id="check-boxes">
           <%= f.check_box :bartender %>
         <label for="bartender">I am a Bartender</label>
         </div>
     
 
-       <div class="md-form indigo-text">
+       <div class="md-form" id="check-boxes">
           <%= f.check_box :proper_age %>
         <label for="proper_age">I am 21 or Older</label>
        </div> 
@@ -46,10 +43,11 @@
         <div class="text-center mt-4">
           <%= f.submit "Sign Up", class: 'btn btn-orange' %>
         </div>
+        </div>
       <% end %>
     </div>
-  </div>
-  <div class="mt-4 text-center indigo-text">
+
+  <div class="mt-4 text-center">
     <%= render "devise/shared/links" %>
   </div>
 </div>

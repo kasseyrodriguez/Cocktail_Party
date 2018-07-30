@@ -1,28 +1,34 @@
 
 <body class= "background-signing-in-up">
 <div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3 mt-4">
-  <div class="card" id= "card">
+
     <!-- Card content -->
-    <div class="card-body">
+    <div class="card-body"id= "card-form-in">
       <h4 class="card-title text-center" id="log-in-up-text">Log In</h4>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="md-form indigo-text">
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
-          <%= f.label :email %>
+      <div id= "form-contain">
+        <div class="md-form" id="row" >
+          <%= f.email_field :email, class: "form-control",  placeholder:"Email" %>
+     
+
         </div>
-        <div class="md-form indigo-text">
-          <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
-          <%= f.label :password %>
+        <div class="md-form" id="row">
+          <%= f.password_field :password,  class: "form-control", placeholder: "Password" %>
+      
+
         </div>
 
-        <div class="text-center mt-4">
+        <div class="text-center mt-4" id="move-button">
           <%= f.submit "Log in", class: 'btn btn-orange' %>
+        </div>
         </div>
       <% end %>
     </div>
-  </div>
-  <div class="mt-4 text-center indigo-text">
+ 
+
+  <div class="mt-4 text-center">
     <%= render "devise/shared/links" %>
   </div>
+
 </div>
 </body>

@@ -1,9 +1,12 @@
+@import bootstrap;
+
 
 /* Body Start ================ */
 
 .more-info {
     background: url("old-fashioned.jpg") center fixed;
     background-size: 100%;
+
 }
 /* Body Finish =============== */
 
@@ -55,7 +58,7 @@
 
 /* Rows of Text */
 .col-md-4 {
-    padding:10;
+    padding:5;
 }
 
 .days-of-week {
@@ -81,4 +84,28 @@
     display: block;
     padding: 0.5rem;
 
+    /* padding: 0.5px; */
+
+
+}
+
+#changing-text-one{
+    color:orange;
+    font-weight: bold;
+
+}
+
+
+#changing-text{
+    color:orange;
+
+}
+
+#move-stuff {
+    margin-top: 50px;
+}
+
+
+#padding-pic {
+    padding: 10px;
 }

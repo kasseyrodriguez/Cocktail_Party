@@ -1,4 +1,7 @@
 
+@import bootstrap;
+
+
 html,
 body,
 header,
@@ -12,11 +15,11 @@ height: 120px;
 
 .logo-home {
   width: 50%;
-  display: flex; 
+  display: flex;
    justify-content: center;
   size: 50px;
 }
-/* 
+/*
 nav {
  margin-top: 0.1%;
 } */
@@ -41,7 +44,7 @@ nav {
   width: 100%;
 }
 
- 
+
 a {
  color: white;
 }
@@ -94,6 +97,20 @@ a {
  font-size: 15px;
 }
 
+video {
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ min-width: 100%;
+ min-height: 100%;
+ z-index: -100;
+ transform: translateX(-50%) translateY(-50%);
+ background: url('bartender.mp4')center;
+ background-size: cover;
+ transition: 1s opacity;
+}
+
+
 .top-nav-collapse {
    background-color: #24355C;
  }
@@ -115,41 +132,120 @@ select#rating option[value="5"]  {
 }
 
 /*================== Home Page CSS Start =============== */
+
 .h2-home {
-  color: white;
-  font-family: 'Franklin Gothic Medium';
-  font-size: 50px;
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
- }
- 
- .h4-home {
-  color: white;
-  font-family: 'Franklin Gothic Medium';
-  font-size: 15px;
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
- }
- 
-video {
- position: fixed;
- top: 50%;
- left: 50%;
- min-width: 100%;
- min-height: 100%;
- z-index: -100;
- transform: translateX(-50%) translateY(-50%);
- background: url('bartender.mp4')center;
- background-size: cover;
- transition: 1s opacity;
+ color: white;
+ font-family: 'Franklin Gothic Medium';
+ font-size: 50px;
+ text-shadow:
+       -1px -1px 0 #000,
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+       1px 1px 0 #000;
+ font-family: 'Franklin Gothic Medium';
+ font-size: 50px;
 }
-/* =========== Home Page CSS End  ================ */
+.h4-home {
+ color: white;
+ font-family: 'Franklin Gothic Medium';
+ font-size: 15px;
+ text-shadow:
+       -1px -1px 0 #000,
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
+
+
+/* ========== Features ========== */
+section {
+	width:100%;
+	min-height:480px;
+	background:#fff;
+}
+
+section.features {
+	padding-top: 100px;
+}
+
+.features {
+	background: linear-gradient(black, #AD5E29, #3f2121);
+	background-attachment: fixed;
+	background-repeat: no-repeat;;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.features-overlay {
+	/* background-color: rgba(31, 31, 31, .75); */
+	padding-top: 40px;
+	padding-bottom: 80px;
+}
+
+ol.carousel-indicators {
+	bottom: 40px;
+}
+
+.carousel-inner .carousel-item img {
+	border: 2px solid rgb(243, 172, 18);
+	border-radius: 50%;
+	padding: 3px;
+}
+
+.features-caption {
+	padding-bottom: 70px;
+}
+
+.features-caption h2 {
+	color: rgb(243, 172, 18);
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 30px;
+	margin-top: 25px;
+}
+
+.features-caption h4 {
+	color: rgb(243, 172, 18);
+
+}
+
+.features-caption h4 span {
+	color: Black;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.features-caption p {
+	color: Black;
+	font-size: 18px;
+	line-height: 27px;
+	padding-top: 5px;
+}
+
+img.d-block.w-20 {
+	margin-right: auto;
+  margin-left: auto;
+}
+
+/* .carousel-inner {
+	padding-top: 80px;
+} */
+
+a {
+	transition: all .05s ease-in-out;
+}
+
+a.carousel-control-prev {
+	 display: none;
+ }
+
+a.carousel-control-next {
+	display:none;
+}
+
+
+
 /* ============ Media Queries Start==================== */
 .top-nav-collapse {
    background-color: #24355C;

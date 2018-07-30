@@ -1,5 +1,36 @@
 <%# <p id="notice"><%= notice %>
 <body class ="Event-text-color">
+  		<nav class="navbar navbar-expand-lg black fixed-top scrolling-navbar">
+      		<div class="container">
+        		<img src="/assets/side-view-logo.png" width="50%", alt="logo" >
+      		</div>
+          		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+            			aria-expanded="false" aria-label="Toggle navigation">
+                		<span class="navbar-toggler-icon dark-amber-text"></span>
+          		</button>
+			<div class="collapse navbar-collapse" id="basicExampleNav">
+				<ul class="navbar-nav mr-auto links-in-nav">
+          <li class="nav-item">
+            <button class= "btn orange btn-sm" type="button" style="margin-left:400px;">
+              <%= link_to 'Home', root_path, :style => "color:white; font-size: 7px;"%>
+            </button>
+          </li>
+           <li class="nav-item">
+            <button class= "btn orange btn-sm" type="button">
+              <%= link_to 'Search',  welcome_search_path, :style => "color:white; font-size: 7px;"%>
+            </button>
+          </li>
+					<li class="nav-item">
+							<% if current_user %>
+								<button class= "btn orange btn-sm" type="button">
+									<%= link_to 'Sign Out', destroy_user_session_path, method: :delete,  :style => "color:white; font-size: 7px;" %>
+								</button>
+							<% end %>
+					</li>
+				</ul>
+			</div>
+		</nav>
+<div class="container-fluid event-table">
 <h2 class ="myHeading"> Your Events</h2>
 
 <table class= "myTable">
@@ -23,7 +54,7 @@
 
         <%# <td><%= link_to 'Show', event %>
         <%#</td> %>
-        <td class ="td"><%= link_to 'Confirm Request', edit_event_path(event) %></td>
+        <td class ="td"><%= link_to 'Confirm Request', edit_event_path(event), :class => "td" %></td>
         <%# <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
        <%# </td> %>
       </tr>
@@ -32,8 +63,6 @@
 </table>
 
 <br>
+</div>
 </body>
 <%# <%= link_to 'New Event', new_event_path %> 
-
-<%= link_to 'Home', root_path%>
-

@@ -12,11 +12,10 @@
     border-style: solid white;
 }
 
-#h1-bar, .p-bar {
+#h1-bar, .p-bar .info-text{
     margin-top: 2rem;
     color: white;
     font-family: 'Franklin Gothic Medium';
-    font-size: 12px;
     text-shadow:
      -1px -1px 0 #000,
       1px -1px 0 #000,
@@ -25,42 +24,85 @@
       text-align: center;
 }
 
+#h1-bar {
+    font-size: 35px;
+    display: block;
+}
+
+.p-bar {
+    margin-left:10px;
+}
 .img {
     size: 30x30;
 }
 
+.col-sm-7 {
+    display:block;
+    align-items: center;
+}
 
 .bar-profile {
     width: 50%;
     margin-bottom: 3rem;
+    display: flex; 
+    justify-content: center;
+}
+
+.bar-profile-2 {
+    margin-left: 100px;
 }
 
 .bar-picture {
     size: 3px;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
+    margin-top: 100px;
+    margin-bottom: 5rem;
     display: flex;
     justify-content: center;
 }
 
+.img-user {
+    margin-bottom: 100px;
+}
+
 .user-name {
+font-family: 'Franklin Gothic Medium';
+margin-top: 75px;
+margin-left: 35px;
 color: white;
-margin-top: 1px;
 font-size:22px;
+display: inline-block;
+}
+
+.title-bar{
+    margin-top: 50px;
+    margin-left: 20px;
+    display:flex;
+    justify-content: center;
 }
 
 .info-text {
-    margin-top: -20px;
-    margin-left: 10rem;
-    margin-bottom: -25px;
+    color: white;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+    margin-left: 4rem;
     display:flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+  
 }
 
 .row {
     display: flex;
     align-items: center;
+}
+
+.events {
+    margin-bottom: 500px;
+    margin-right: 400px;
 }
 
 .bar-picture {
@@ -72,19 +114,28 @@ font-size:22px;
 }
  .links-to {
      font-family: 'Franklin Gothic Medium'; 
-     margin-top: 100px;
+     margin-top: 50px;
+     margin-left: 100px;
      color: white;
-     display:flex;
-     justify-content:space-around;
-
  }
 
- .links-to-li, li {
-     display:inline-block;
+ .links-to-li {
+    display:flex;
+    justify-content: space-between;
  }
 
-.links-to-links {
-    font-size: 12px;
-    
-    
+ .nav-item {
+     padding-right: 40px;
+     padding: top 10px bottom 10px;
+
+ }
+ @media screen and (max-width: 600px) {
+    #bar-page, .bar-container {
+        width: 100%;
+        position:relative;
+    }
+    .bar-picture {
+        display: flex;
+        justify-content: center;
+    }
 }
