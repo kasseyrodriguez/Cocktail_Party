@@ -1,26 +1,51 @@
 <%# <p id="notice"><%= notice %>
+<div class="container">
+  <nav class="navbar navbar-expand-lg black fixed-top scrolling-navbar">
+    <div class="container">
+      <img src="/assets/side-view-logo.png" width="50%", alt="logo" >
+    </div>
+    	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+            	aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon dark-amber-text"></span>
+      </button>
+		<div class="collapse navbar-collapse" id="basicExampleNav">
+			<ul class="navbar-nav mr-auto links-in-nav">
+        <li class="nav-item">
+            <%= link_to 'Home', root_path, :style => "color:white; font-size: 7px;margin-left:400px;", :class =>"btn orange btn-sm" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Search',  welcome_search_path, :style => "color:white; font-size: 7px;", :class =>"btn orange btn-sm"%>
+        </li>
+				<li class="nav-item">
+					<% if current_user %>
+						<%= link_to 'Sign Out', destroy_user_session_path, method: :delete,  :style => "color:white; font-size: 7px;",  :class =>"btn orange btn-sm" %>
+					<% end %>
+				</li>
+			</ul>
+		</div>
+	</nav>
+  <div class="events-confirmed">
+    <p class="p-bar">
+      Name:
+      <%= @event.name %>
+    </p>
 
+    <p class="p-bar">
+      <strong>Location:</strong>
+      <%= @event.location %>
+    </p> 
 
+    <p class="p-bar">
+      <strong>Date:</strong>
+      <%= @event.date %>
+    </p> 
 
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
- </p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
- </p> 
-
- <p>
-  <strong>Date:</strong>
-  <%= @event.date %>
- </p> 
-
- <p>
-  <strong>Confirmed:</strong>
-  <%= @event.confirmed %>
- </p> 
+    <p class="p-bar">
+      <strong>Confirmed:</strong>
+      <%= @event.confirmed %>
+    </p> 
 
 <%#= link_to 'Edit', edit_event_path(@event) %> 
-<%#= link_to 'Back', events_path %>
+<%= link_to 'Back', events_path, :style => "color:white;", :class => "btn orange btn-sm" %>
+  </div>
+</div>
