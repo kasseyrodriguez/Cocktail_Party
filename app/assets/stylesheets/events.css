@@ -83,6 +83,7 @@
 }
  
 .td {
+  color: orange;
   background:#FFFFFF;
   padding:20px;
   text-align:left;
@@ -95,4 +96,9 @@
 
 .td:last-child {
   border-right: 0px;
+}
+
+
+.event-table {
+margin-top: 200px;
 }

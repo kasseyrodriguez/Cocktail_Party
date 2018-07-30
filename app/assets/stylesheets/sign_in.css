@@ -1,3 +1,5 @@
+@import bootstrap;
+
 .background-signing-in-up {
     background: linear-gradient(black, #5a302f , #AD5E29);
     /* display: flex; */
@@ -11,7 +13,7 @@
 }
 
 #log-in-up-text{
-    
+
     /* text-shadow: 0 1px orange; */
     width: 100%;
     display: flex;
@@ -28,9 +30,30 @@
 
 
 
+<<<<<<< HEAD
+
+ #card {
+    background: linear-gradient(#eef2f3, black );
+    box-shadow: 5px 10px #AD5E29;
+}
 
 
-  
+
+    /* box-shadow: 5px 10px #AD5E29; */
+
+ /* #card {
+
+    background: linear-gradient(#eef2f3, black );
+
+
+}  */
+
+
+=======
+>>>>>>> 737e3d5aa7d5d86c550247e5c47e57c421e9ec0f
+
+
+
   #card-form-in{
     display: inline-block;
 
@@ -53,19 +76,19 @@
     box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
   }
 
-  
+
   #form-contain{
       padding: 3px;
-     
-  
-    } 
+
+
+    }
     #row {
         display: flex;
         justify-content: space-around;
         padding: 3px;
-        
-       
-      } 
+
+
+      }
 
 
      #input{
@@ -80,7 +103,7 @@
           background: #e8ebed;
           color: #576366;
           font-size: 10px;
-        } 
+        }
 
         #check-boxes {
             display: inline-block;

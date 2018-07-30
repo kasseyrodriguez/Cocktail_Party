@@ -1,9 +1,12 @@
+@import bootstrap;
+
 
 /* Body Start ================ */
 
 .more-info {
     background: url("old-fashioned.jpg") center fixed;
     background-size: 100%;
+
 }
 /* Body Finish =============== */
 
@@ -79,7 +82,10 @@
 
 .types-of-bartenders {
     display: block;
+    padding: 0.5rem;
+
     /* padding: 0.5px; */
+
 
 }
 
