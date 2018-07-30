@@ -65,6 +65,8 @@ label, h3{
   height: 100%;
   width: 100%;
   text-align: left;
+  margin-left: 50px;
+
  }
 
 table {
@@ -86,6 +88,8 @@ ul {
 
 li {
   list-style-type: none;
+  margin-right: 20px;
+  text-align: center;
 }
 
 .btn:hover {
@@ -191,7 +195,10 @@ table td {
   font-size: 20px;
   line-height: 1.6;
   font-family: 'Do Hyeon', sans-serif;
+<<<<<<< HEAD
   text-align: center;
+=======
+>>>>>>> 737e3d5aa7d5d86c550247e5c47e57c421e9ec0f
   margin-left:auto;
   margin-right:auto;
 }
@@ -259,4 +266,9 @@ table {
   flex-direction: column;
   padding: 10px;
   align-items: center;
+}
+
+tr{
+  text-align: left;
+
 }

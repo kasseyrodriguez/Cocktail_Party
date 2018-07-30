@@ -230,6 +230,9 @@ class App extends React.Component {
                             <p class="confirm">A request has been sent to {this.state.event.bartender.name}</p>
                             <p class="confirm">You will receive a confirmation in the next 24 hours. Thank you for booking with Cocktail Party!</p>
                        </Modal>
+
+                       <button type="button" className="btn btn-lg btn-block view-profile mb-2" onClick={this.showModal}>View Profile</button>
+                      <button type="button" className="btn btn-lg btn-block book-btn" onClick={this.showModal2}>Book Now</button>
                         <Modal show={this.state.show} handleClose={this.hideModal} >
                           <table>
                           <tr>

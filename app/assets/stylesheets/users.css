@@ -49,15 +49,19 @@
 }
 
 .bar-profile-2 {
-    margin-left: 20px;
+    margin-left: 100px;
 }
 
 .bar-picture {
     size: 3px;
     margin-top: 100px;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     display: flex;
     justify-content: center;
+}
+
+.img-user {
+    margin-bottom: 100px;
 }
 
 .user-name {
@@ -85,10 +89,7 @@ display: inline-block;
      1px -1px 0 #000,
     -1px 1px 0 #000,
      1px 1px 0 #000;
-    margin-left: 2rem;
-    /* margin-top: -20px;
-    margin-left: 10rem;
-    margin-bottom: -25px; */
+    margin-left: 4rem;
     display:flex;
     justify-content: center;
   
@@ -99,10 +100,9 @@ display: inline-block;
     align-items: center;
 }
 
-.col-sm-1 {
-    margin-right: 50px;
-    margin-bottom: 50px;
-    margin-left: 60rem;
+.events {
+    margin-bottom: 500px;
+    margin-right: 400px;
 }
 
 .bar-picture {
@@ -123,3 +123,19 @@ display: inline-block;
     display:flex;
     justify-content: space-between;
  }
+
+ .nav-item {
+     padding-right: 40px;
+     padding: top 10px bottom 10px;
+
+ }
+ @media screen and (max-width: 600px) {
+    #bar-page, .bar-container {
+        width: 100%;
+        position:relative;
+    }
+    .bar-picture {
+        display: flex;
+        justify-content: center;
+    }
+}
