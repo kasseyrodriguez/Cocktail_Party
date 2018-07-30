@@ -1,5 +1,5 @@
 .background-signing-in-up {
-    background: linear-gradient( #5a302f , #AD5E29);
+    background: linear-gradient(black, #5a302f , #AD5E29);
     /* display: flex; */
     height: 100vh;
     justify-content: center;
@@ -82,4 +82,8 @@
           font-size: 14px;
         } 
 
-  
+  .links{
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+  }
