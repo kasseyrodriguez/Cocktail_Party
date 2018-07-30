@@ -39,7 +39,7 @@
     /* display: inline-block; */
     /* position:fixed; */
 
-    /* left:0.5%; */
+    right: 20%;
     margin-top: 60px;
     width: 700px;
     border-radius: 10px;
@@ -98,7 +98,7 @@
         #movingLinks{
 
           position:fixed;
-          left: 48%;
+          left: 44.5%;
      
         }
 
