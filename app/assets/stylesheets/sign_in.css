@@ -37,7 +37,7 @@
 
   #card-form-in{
     /* display: inline-block; */
-    position:fixed;
+    /* position:fixed; */
     right:30%;
     margin-top: 60px;
     width: 700px;
@@ -48,7 +48,7 @@
   }
 
   #card-form-up{
-    position:fixed;
+    /* position:fixed; */
     right:30%;
     margin-top: 0.5px;
     width: 700px;
