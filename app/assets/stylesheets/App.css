@@ -19,7 +19,8 @@ body{
 
 
 
-label, h3{
+
+.event-label, .moto-header{
   color: white;
   font-size: 18px;
 }
@@ -42,7 +43,7 @@ label, h3{
   float: right;
 }
 
-.user-bio {
+#user-bio {
   position: relative;
   font-size: 20px;
   margin-left: 0 auto;
@@ -55,13 +56,13 @@ label, h3{
   padding: 30px;
   border-radius: 6px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  height: 100%;
-  width: 100%;
+  height: 50%;
+  width: 50%;
   text-align: left;
   margin-left: 50px;
  }
 
-table {
+.bartender-table {
     table-layout: fixed;
     width: 100%;
  }
@@ -74,12 +75,12 @@ input[type=radio] {
   margin-top: 0 auto;
 }
 
-ul {
+.ul {
   margin-left: -50px;
 
  }
 
-li {
+.li {
   list-style-type: none;
   margin-right: 20px;
   text-align: center;
@@ -183,7 +184,7 @@ li {
   margin-left: 5px;
 }
 
-table td {
+.bartender-table .bio-table {
   font-size: 20px;
   line-height: 1.6;
   font-family: 'Do Hyeon', sans-serif;
@@ -242,7 +243,7 @@ h1.first-header {
   font-size: 20px;
 }
 
-form .filter {
+.form .filter {
  position: relative;
  top: -270px;
  left: 50px;
@@ -256,6 +257,6 @@ form .filter {
 
 }
 
-tr{
+.table-row {
   text-align: left;
 }
