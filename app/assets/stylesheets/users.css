@@ -25,7 +25,8 @@
 }
 
 #h1-bar {
-    font-size: 20px;
+    font-size: 35px;
+    display: block;
 }
 
 .p-bar {
@@ -61,10 +62,11 @@
 
 .user-name {
 font-family: 'Franklin Gothic Medium';
-margin-top: 35px;
-margin-left: 10px;
+margin-top: 75px;
+margin-left: 35px;
 color: white;
 font-size:22px;
+display: inline-block;
 }
 
 .title-bar{
@@ -76,7 +78,7 @@ font-size:22px;
 
 .info-text {
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-shadow:
     -1px -1px 0 #000,
@@ -95,6 +97,12 @@ font-size:22px;
 .row {
     display: flex;
     align-items: center;
+}
+
+.col-sm-1 {
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-left: 60rem;
 }
 
 .bar-picture {
