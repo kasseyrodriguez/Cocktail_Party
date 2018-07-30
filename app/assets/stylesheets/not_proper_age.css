@@ -1,0 +1,17 @@
+#age-limit h1 {
+	display: inline-block;
+	color: white;
+	font-family: 'Franklin Gothic Medium';
+	font-size: 50px;
+	font-family: 'Franklin Gothic Medium';
+	font-size: 50px;
+	text-align: center;
+	margin-top: 250px;
+	text-decoration: underline;
+	border: 1px solid red;
+	border-width: 5px;
+	padding-top: 10px;
+	padding-bottom: 40px;
+	width: 500px;
+	margin-left: 35%;
+}

@@ -260,3 +260,8 @@ h1.first-header {
 .table-row {
   text-align: left;
 }
+
+
+#spilled-drink {
+	background-image: url(../images/spilled-drink.jpg);
+}
