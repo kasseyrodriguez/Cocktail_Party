@@ -31,7 +31,11 @@
 }
 
 
+#login-form {
 
+  display:flex;
+  justify-content: center;
+}
 
 
 
@@ -39,19 +43,21 @@
     /* display: inline-block; */
     /* position:fixed; */
 
-    right: 20%;
+    /* right: 5%; */
     margin-top: 60px;
     width: 700px;
     border-radius: 10px;
     background: white;
     box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
     vertical-align: middle;
+
   }
 
   #card-form-up{
     /* position:fixed; */
-    right:30%;
+    /* right:30%; */
     /* margin-top: 0.5px; */
+    margin-top: 50px;
     width: 800px;
     height: 700px;
     border-radius: 10px;
@@ -94,16 +100,17 @@
             position: relative;
 
         }
-
+/* 
         #movingLinks{
 
           position:fixed;
           left: 44.5%;
      
-        }
+        } */
 
 
         #movingLinkstwo{
-          position:fixed;
-          left: 51.5%;
+   
+          /* position:fixed;
+          left: 51.5%; */
         }
