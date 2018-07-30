@@ -5,50 +5,51 @@
 <% end %>
 
 <body class= "background-signing-in-up">
-<div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3 mt-4">
- 
-    <!-- Card content -->
-    <div class="card-body" id= "card-form-up">
-      <h4 class="card-title text-center" id="log-in-up-text">Sign Up</h4>
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+	<div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3 mt-4">
+	
+			<!-- Card content -->
+			<div class="card-body" id= "card-form-up">
+				<h4 class="card-title text-center" id="log-in-up-text">Sign Up</h4>
+				<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
-           
-      <div id= "form-contain">
+						
+				<div id= "form-contain">
 
-         <div class="md-form" id="row">
-          <%= f.text_field :name, class: "form-control",  placeholder:"Name" %>
-        </div>
+					<div class="md-form" id="row">
+						<%= f.text_field :name, class: "form-control",  placeholder:"Name" %>
+					</div>
 
-        <div class="md-form" id="row">
-          <%= f.email_field :email, class: "form-control",  placeholder:"Email" %>
-        </div>
-        <div class="md-form" id="row">
-          <%= f.password_field :password, class: "form-control",  placeholder:"Password" %>
-        </div>
-        <div class="md-form" id="row">
-          <%= f.password_field :password_confirmation,  class: "form-control", placeholder:"Password Comfirmation" %>
-        </div>
+					<div class="md-form" id="row">
+						<%= f.email_field :email, class: "form-control",  placeholder:"Email" %>
+					</div>
+					<div class="md-form" id="row">
+						<%= f.password_field :password, class: "form-control",  placeholder:"Password" %>
+					</div>
+					<div class="md-form" id="row">
+						<%= f.password_field :password_confirmation,  class: "form-control", placeholder:"Password Comfirmation" %>
+					</div>
 
-       <div class="md-form" id="check-boxes">
-          <%= f.check_box :bartender %>
-        <label for="bartender">I am a Bartender</label>
-        </div>
-    
+				<div class="md-form" id="check-boxes">
+						<%= f.check_box :bartender %>
+					<label for="bartender">I am a Bartender</label>
+					</div>
+			
 
-       <div class="md-form" id="check-boxes">
-          <%= f.check_box :proper_age %>
-        <label for="proper_age">I am 21 or Older</label>
-       </div> 
+				<div class="md-form" id="check-boxes">
+						<%= f.check_box :proper_age %>
+					<label for="proper_age">I am 21 or Older</label>
+				</div> 
 
-        <div class="text-center mt-4">
-          <%= f.submit "Sign Up", class: 'btn btn-orange' %>
-        </div>
-        </div>
-      <% end %>
-    </div>
+					<div class="text-center mt-4">
+						<%= f.submit "Sign Up", class: 'btn btn-orange' %>
+					</div>
+					</div>
+				<% end %>
+			</div>
 
-  <div class="mt-4 text-center">
-    <%= render "devise/shared/links" %>
-  </div>
-</div>
+		<div class="mt-4 text-center">
+			<%= render "devise/shared/links" %>
+		</div>
+	</div>
+
 </body>
