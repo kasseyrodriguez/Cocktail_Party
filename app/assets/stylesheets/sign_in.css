@@ -27,6 +27,22 @@
 
 
 
+ #card {
+    background: linear-gradient(#eef2f3, black );
+    box-shadow: 5px 10px #AD5E29;
+}
+
+
+
+    /* box-shadow: 5px 10px #AD5E29; */
+
+ /* #card {
+
+    background: linear-gradient(#eef2f3, black );
+
+
+}  */
+
 
 
 
