@@ -214,7 +214,7 @@ class App extends React.Component {
             return (
               <li key={i} onClick={ () => this.handleBartenderSelect(result) } >
                 <div className="user-bio">
-                  <table>
+                  <table className="bartender-table">
                     <tbody>
                       <td>
                         <tr><img src="https://i.imgur.com/jl6o412.jpg" alt="logo" width="300"/></tr>
