@@ -37,6 +37,10 @@
   box-shadow: 0 2px 14px rgba(0,0,0,.06);
 }
 
+.booked {
+  text-align: center;
+}
+
 .btn.btn-lg.close-button {
   margin-left: 0;
   margin-right: 0;
@@ -45,7 +49,6 @@
 .modal-main p{
   font-size: 16px;
   line-height: 2em;
-  float: right;
 }
 
 .display-block {

@@ -225,7 +225,7 @@ class App extends React.Component {
                         <tr class="table-row">Gender: {result.gender}</tr>
                       </td>
                       <tr class="table-row">
-                        <Modal show={this.state.showBook} handleClose={this.hideModal}>
+                        <Modal show={this.state.showBook} handleClose={this.hideModal} class="booked">
                             <p class="confirm">A request has been sent to {this.state.event.bartender.name}</p>
                             <p class="confirm">You will receive a confirmation in the next 24 hours. Thank you for booking with Cocktail Party!</p>
                        </Modal>
