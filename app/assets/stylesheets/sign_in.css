@@ -50,7 +50,7 @@
   #card-form-up{
     position:fixed;
     right:30%;
-    margin-top: 25px;
+    margin-top: 0.5px;
     width: 700px;
     height: 710px;
     border-radius: 10px;
@@ -98,4 +98,11 @@
           position:fixed;
           left: 20%;
           padding:475px;
+        }
+
+
+        #movingLinkstwo{
+          position:fixed;
+          left: 11.5%;
+          padding:700px;
         }
