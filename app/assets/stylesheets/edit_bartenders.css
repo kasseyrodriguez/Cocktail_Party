@@ -55,7 +55,7 @@
 
 /* Rows of Text */
 .col-md-4 {
-    padding:10;
+    padding:5;
 }
 
 .days-of-week {
@@ -79,14 +79,27 @@
 
 .types-of-bartenders {
     display: block;
-    padding: 0.5rem;
+    /* padding: 0.5px; */
 
 }
+
+#changing-text-one{
+    color:orange;
+    font-weight: bold;
+
+}
+
 
 #changing-text{
     color:orange;
+
 }
 
-#move-pic {
+#move-stuff {
     margin-top: 50px;
+}
+
+
+#padding-pic {
+    padding: 10px;
 }
