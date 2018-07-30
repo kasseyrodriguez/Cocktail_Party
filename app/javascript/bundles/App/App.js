@@ -143,9 +143,9 @@ class App extends React.Component {
       <div>
         <NavigationBar />
         <Search handleSearch={this.handleSearch}/>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="form">
           <div class="filter">
-            <label>Event Name:</label>
+            <label class="event-label">Event Name:</label>
             <input
               type="text"
               className="search-input"
@@ -154,7 +154,7 @@ class App extends React.Component {
             />
           </div>
           <div class="filter">
-            <label>Location:</label>
+            <label class="event-label">Location:</label>
             <input
               type="text"
               className="search-input"
@@ -163,7 +163,7 @@ class App extends React.Component {
             />
           </div>
           <div class="filter">
-            <label>Date:</label>
+            <label class="event-label">Date:</label>
             <input
               type="date"
               className="search-input"
@@ -172,7 +172,7 @@ class App extends React.Component {
             />
           </div>
           <div class="filter">
-            <label>Bartender:</label>
+            <label class="event-label">Bartender:</label>
             <input
               disabled
               type="text"
@@ -181,7 +181,7 @@ class App extends React.Component {
             />
           </div>
           <div class="filter">
-            <label>Bartender Type:</label>
+            <label class="event-label">Bartender Type:</label>
             <select name="type" value={this.state.filters.bartenderType} onChange={this.handleBartenderTypeChange} className="filter-dropdown">
               <option value="standard">Standard</option>
               <option value="flair">Flair</option>
@@ -190,7 +190,7 @@ class App extends React.Component {
             </select>
           </div>
           <div class="filter">
-            <label>Gender:</label>
+            <label class="event-label">Gender:</label>
             <select name="type" value={this.state.filters.gender} onChange={this.handleGenderChange} className="filter-dropdown">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
@@ -198,7 +198,7 @@ class App extends React.Component {
             </select>
           </div>
           <div class="filter">
-            <label>Ratings:</label>
+            <label class="event-label">Ratings:</label>
             <select name="rating" value={this.state.filters.rating} onChange={this.handleRatingChange} className="filter-dropdown">
               <option value="5">5</option>
               <option value="4">4</option>
@@ -209,20 +209,20 @@ class App extends React.Component {
             </select>
           </div>
         </form>
-        <ul>
+        <ul className="ul">
           {results.map((result, i) => {
             return (
-              <li key={i} onClick={ () => this.handleBartenderSelect(result) } >
-                <div className="user-bio">
+              <li key={i} className="li" onClick={ () => this.handleBartenderSelect(result) } >
+                <div id="user-bio">
                   <table className="bartender-table">
                     <tbody>
-                      <td>
-                        <tr><img src="https://i.imgur.com/jl6o412.jpg" alt="logo" width="300"/></tr>
-                        <tr>Name: {result.name}</tr>
-                        <tr>Rating: {result.rating}</tr>
-                        <tr>Gender: {result.gender}</tr>
+                      <td class="bio-table">
+                        <tr class="table-row"><img src="https://i.imgur.com/jl6o412.jpg" alt="logo" width="300"/></tr>
+                        <tr class="table-row">Name: {result.name}</tr>
+                        <tr class="table-row">Rating: {result.rating}</tr>
+                        <tr class="table-row">Gender: {result.gender}</tr>
                       </td>
-                      <tr>
+                      <tr class="table-row">
                         <Modal show={this.state.showBook} handleClose={this.hideModal}>
                             <p class="confirm">A request has been sent to {this.state.event.bartender.name}</p>
                             <p class="confirm">You will receive a confirmation in the next 24 hours. Thank you for booking with Cocktail Party!</p>
