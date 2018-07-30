@@ -36,7 +36,7 @@ end
         elsif resource.bartender
             welcome_edit_bartenders_path 
         else
-            welcome_search_path
+            root_path
         end
     end
 
