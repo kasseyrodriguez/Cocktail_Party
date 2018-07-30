@@ -1,9 +1,0 @@
- @media screen and (max-width: 768px) {
- .access-box {
- max-width: 95%;
- border: rgba(255, 255, 255, 1) 6px solid;
-}
- .access-input, .access-input-lg, .access-btn {
- font-size: 17px;
-}
-}
