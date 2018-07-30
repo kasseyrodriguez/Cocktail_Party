@@ -43,25 +43,25 @@
               </p>
           </div>
           
-          <div class="bar-profile">
+          <div class="bar-profile bar-profile-2">
             <div class="info-text">
+            Gender:
             <p class="p-bar">
-              Gender:
               <%= @user.gender %>
             </p>
             </div>
         
           <div class="info-text">
+            Rate:
             <p class="p-bar">
-              Rate:
-                <%= @user.rate %>
+                <%= @user.rate%>
             </p>
           </div>
 
   
           <div class="info-text">
+            Type of bartender:
             <p class="p-bar">
-              Type of bartender:
               <%= if @user.standard
                   p "standard"
                   end %>
@@ -76,26 +76,31 @@
           </div>
            </div>
 
-          <div class="bar-profile">
+          <div class="bar-profile info-text">
+               Bio:
             <p class="p-bar bio">
-              Bio:
                 <%= @user.bio %>
             </p>
           </div>
 
           <div class="bar-profile links-to">
-               <%= link_to 'See your events', events_path, style: "color:white;" %> 
-              <ul class="links-to-li">
-                <li class="links-to-links">
-                  <button class= "btn peach-gradient btn-sm" type="button">
-                    <%= link_to 'Edit', welcome_edit_bartenders_path %>
-                  </button>
-                </li>
-                ||
-                <li class="links-to-links">
-                  <%= link_to "Back", welcome_search_path(resource_name), style: "color:white;" %>
-                </li>
-              </ul>
+            <ul class="links-to-li">
+              <li>
+                <button class= "btn orange btn-sm" type="button">
+                  <%= link_to 'See your events', events_path, :style => "color:white; font-size: 15px;"%> 
+                </button>
+              </li>
+              <li class="links-to-links">
+                <button class= "btn orange btn-sm" type="button">
+                  <%= link_to 'Edit', welcome_edit_bartenders_path, :style => "color:white; font-size: 15px;"%>
+              </button>
+              </li>
+              <li class="links-to-links">
+                <button class= "btn orange btn-sm" type="button">
+                  <%= link_to "Back", welcome_search_path(resource_name), :style => "color:white; font-size: 15px;" %>
+                </button>
+              </li>
+            </ul>
           </div>
       </div>
     </div>

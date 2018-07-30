@@ -12,11 +12,10 @@
     border-style: solid white;
 }
 
-#h1-bar, .p-bar {
+#h1-bar, .p-bar .info-text{
     margin-top: 2rem;
     color: white;
     font-family: 'Franklin Gothic Medium';
-    font-size: 12px;
     text-shadow:
      -1px -1px 0 #000,
       1px -1px 0 #000,
@@ -25,6 +24,13 @@
       text-align: center;
 }
 
+#h1-bar {
+    font-size: 20px;
+}
+
+.p-bar {
+    margin-left:10px;
+}
 .img {
     size: 30x30;
 }
@@ -41,6 +47,10 @@
     justify-content: center;
 }
 
+.bar-profile-2 {
+    margin-left: 20px;
+}
+
 .bar-picture {
     size: 3px;
     margin-top: 100px;
@@ -51,7 +61,7 @@
 
 .user-name {
 font-family: 'Franklin Gothic Medium';
-margin-top: 30px;
+margin-top: 35px;
 margin-left: 10px;
 color: white;
 font-size:22px;
@@ -65,9 +75,18 @@ font-size:22px;
 }
 
 .info-text {
-    margin-top: -20px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+    margin-left: 2rem;
+    /* margin-top: -20px;
     margin-left: 10rem;
-    margin-bottom: -25px;
+    margin-bottom: -25px; */
     display:flex;
     justify-content: center;
   
@@ -87,19 +106,12 @@ font-size:22px;
 }
  .links-to {
      font-family: 'Franklin Gothic Medium'; 
-     margin-top: 100px;
+     margin-top: 50px;
+     margin-left: 100px;
      color: white;
-     display:flex;
-     justify-content:space-around;
-
  }
 
- .links-to-li, li {
-     display:inline-block;
+ .links-to-li {
+    display:flex;
+    justify-content: space-between;
  }
-
-.links-to-links {
-    font-size: 12px;
-    
-    
-}
