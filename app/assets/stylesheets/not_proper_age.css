@@ -1,12 +1,12 @@
 #age-limit h1 {
 	display: inline-block;
-	color: white;
+	color: rgb(161, 159, 159);
 	font-family: 'Franklin Gothic Medium';
 	font-size: 50px;
 	font-family: 'Franklin Gothic Medium';
 	font-size: 50px;
 	text-align: center;
-	margin-top: 250px;
+	margin-top: 100px;
 	text-decoration: underline;
 	border: 1px solid red;
 	border-width: 5px;
@@ -14,4 +14,10 @@
 	padding-bottom: 40px;
 	width: 500px;
 	margin-left: 35%;
+}
+
+#spilled-drink {
+	background: url("spilled-drink.jpg");
+	background-size: 100% 100%;
+	
 }
