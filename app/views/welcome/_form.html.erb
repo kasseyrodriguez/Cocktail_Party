@@ -2,7 +2,7 @@
 <div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3 mt-4 card">
   
     <div class="card-body">
-      <h4 class="card-title text-center" id="changing-text">More information</h4>
+      <h5 class="card-title text-center" id="changing-text">More information</h5>
 
 
           <%= form_for(resource, as: resource_name, url: user_registration_path(resource_name), html: {method: :patch}) do |f| %>
@@ -15,35 +15,37 @@
               <%= f.text_field :rate, class: "form-control", placeholder: "Wage per Hour", value: current_user.rate %>
             </div>
 
-            <div class="md-form indigo-text">
+            <div class="md-form">
               <%= f.text_field :home_address, class: "form-control",  placeholder: "Home Address",value: current_user.home_address %>
             </div>
 
 
-              <div class="md-form indigo-text">
+              <div class="md-form" >
               <%= f.text_field :travel_radius, class: "form-control",  placeholder: "Travel radius",value: current_user.travel_radius %>
             </div>
       
-                  <h6 id="changing-text">Add your Profile Picture</h6>
+      <div id="move-pic">
+              <h5 id="changing-text">Add your Profile Picture</h5>
 
-            <div class ="field">
+            <div class ="field" >
             <%= f.file_field :picture%>
             </div>
 
+</div>
         <div class="types-of-bartenders">
           <h5 id="changing-text">Check off the categories of bartending you specialize in:</h5>
-            <div class="row">
-              <div class="md-form indigo-text col-md-4">
+            <div class="row" >
+              <div class="md-form col-md-4">
               <%= f.check_box :standard %>
               <%= f.label :standard %>
               </div>
   
-              <div class="md-form indigo-text col-md-4">
+              <div class="md-form col-md-4">
               <%= f.check_box :flair %>
               <%= f.label :flair%>
               </div> 
 
-            <div class="md-form indigo-text col-md-4">
+            <div class="md-form col-md-4">
               <%= f.check_box :mixologist %>
               <%= f.label :mixologist%>
             </div>
