@@ -165,7 +165,7 @@ section.features {
 }
 
 .features {
-	background: linear-gradient(black, #3f2121 , #AD5E29);
+	background: linear-gradient(black, #AD5E29, #3f2121);
 	background-attachment: fixed;
 	background-repeat: no-repeat;;
 	background-size: cover;
