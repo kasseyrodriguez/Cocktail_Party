@@ -117,8 +117,8 @@ class App extends React.Component {
           bartender_id: event.bartender.id
         }
       })
-      .then((response) => { return event.data; })
-      .catch((error) => { console.log(error) });
+      .then((response) => {  this.showModal2();})
+      .catch((error) => { console.log(error.response) });
   }
 
   handleSubmit = (e) => {
@@ -145,7 +145,7 @@ class App extends React.Component {
       <div>
         <NavigationBar />
         <Search handleSearch={this.handleSearch}/>
-        <form onSubmit={this.handleSubmit} className="form">
+        <form className="form">
           <div class="filter">
             <label class="event-label">Event Name:</label>
             <input
@@ -230,7 +230,7 @@ class App extends React.Component {
                             <p class="confirm">You will receive a confirmation in the next 24 hours. Thank you for booking with Cocktail Party!</p>
                        </Modal>
                        <button type="button" className="btn btn-lg btn-block view-profile mb-2" onClick={this.showModal}>View Profile</button>
-                      <button type="button" className="btn btn-lg btn-block book-btn" onSubmit={this.handleSubmit} onClick={this.showModal2}>Book Now</button>
+                      <button type="button" className="btn btn-lg btn-block book-btn" onClick={this.handleSubmit}>Book Now</button>
                         <Modal show={this.state.show} handleClose={this.hideModal} >
                           <div className="profile-background">
                           <img src="https://i.imgur.com/jl6o412.jpg"  alt="logo" width="300"/>
