@@ -1,4 +1,4 @@
-@import bootstrap;
+
 
 
 /* Body Start ================ */
@@ -59,6 +59,8 @@
 /* Rows of Text */
 .col-md-4 {
     padding:5;
+}
+html {
 }
 
 .days-of-week {
