@@ -37,17 +37,17 @@
 
   
   #card-form-in{
-    margin-top: 50px;
-    width: 650px;
+    margin-top: 60px;
+    width: 700px;
     border-radius: 10px;
     background: white;
     box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
   }
 
   #card-form-up{
-    margin-top: 50px;
-    width: 650px;
-    height: 700px;
+    margin-top: 60px;
+    width: 700px;
+    height: 650px;
     border-radius: 10px;
     background: white;
     box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
@@ -55,14 +55,14 @@
 
   
   #form-contain{
-      padding: 10px;
+      padding: 3px;
      
   
     } 
     #row {
         display: flex;
         justify-content: space-around;
-        padding: 5px;
+        padding: 3px;
         
        
       } 
@@ -73,11 +73,17 @@
           width: 100%;
           margin: 0 15px;
           height: 35px;
-          padding: 5px 15px;
+          padding: 5px 10px;
           border-radius: 5px;
           outline: none;
           border: none;
           background: #e8ebed;
           color: #576366;
-          font-size: 14px;
+          font-size: 10px;
         } 
+
+        #check-boxes {
+            display: inline-block;
+            position: relative;
+
+        }
