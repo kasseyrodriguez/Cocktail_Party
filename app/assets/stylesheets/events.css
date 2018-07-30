@@ -102,3 +102,24 @@
 .event-table {
 margin-top: 200px;
 }
+
+.events-confirmed {
+   position: absolute;
+   height: 200px;
+   width: 400px;
+   margin: -100px 0 0 -200px;
+   top: 50%;
+   left: 50%;
+   text-align: center;
+}
+
+.h1-events {
+  font-family: 'Franklin Gothic Medium';
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+}
+
+.box-form {
+  display:block;
+  margin-bottom: 75px;
+}
