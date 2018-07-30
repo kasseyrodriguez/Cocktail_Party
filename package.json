@@ -13,7 +13,8 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-modal": "^3.5.1",
-    "react-on-rails": "11.0.9"
+    "react-on-rails": "11.0.9",
+    "strip-ansi": "^4.0.0"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"

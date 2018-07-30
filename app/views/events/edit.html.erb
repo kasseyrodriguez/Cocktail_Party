@@ -1,10 +1,36 @@
 
 <body class = "Event-text-color">
-<h1 >Confirm your event</h1>
+    <nav class="navbar navbar-expand-lg black fixed-top scrolling-navbar">
+      		<div class="container">
+        		<img src="/assets/side-view-logo.png" width="50%", alt="logo" >
+      		</div>
+          		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+            			aria-expanded="false" aria-label="Toggle navigation">
+                		<span class="navbar-toggler-icon dark-amber-text"></span>
+          		</button>
+			<div class="collapse navbar-collapse" id="basicExampleNav">
+				<ul class="navbar-nav mr-auto links-in-nav">
+          <li class="nav-item">
+              <%= link_to 'Home', root_path, :style => "color:white; font-size: 7px;margin-left:400px;", :class =>"btn orange btn-sm" %>
+          </li>
+           <li class="nav-item">
+              <%= link_to 'Search',  welcome_search_path, :style => "color:white; font-size: 7px;", :class =>"btn orange btn-sm"%>
+          </li>
+					<li class="nav-item">
+							<% if current_user %>
+									<%= link_to 'Sign Out', destroy_user_session_path, method: :delete,  :style => "color:white; font-size: 7px;",  :class =>"btn orange btn-sm" %>
+							<% end %>
+					</li>
+				</ul>
+			</div>
+		</nav>
+    <div class="container-fluid events-confirmed">
 
-<%= render 'form', event: @event %>
-
-<%#= link_to 'Show', @event %> |
-<%#= link_to 'Back', events_path %>
-
+    <h1 class="h1-events">Confirm your event</h1>
+		<div class="box-form">
+			<%= render 'form', event: @event %>
+		</div>
+			<%= link_to 'Show', @event ,  :style => "color:white; font-size: 7px;",  :class =>"btn orange btn-sm"   %> |
+			<%= link_to 'Back', events_path ,  :style => "color:white; font-size: 7px;",  :class =>"btn orange btn-sm"  %>
+    </div>
 </body>

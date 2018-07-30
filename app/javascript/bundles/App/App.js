@@ -120,6 +120,7 @@ class App extends React.Component {
       .then((response) => { return event.data; })
       .catch((error) => { console.log(error) });
   }
+
   handleSubmit = (e) => {
     e.preventDefault();
     this.createEvent(event);
@@ -137,6 +138,7 @@ class App extends React.Component {
   hideModal = () => {
     this.setState({ show: false, showBook: false });
   };
+
   render() {
     const { results } = this.state;
     return (
@@ -218,8 +220,8 @@ class App extends React.Component {
                     <tbody>
                       <td class="bio-table">
                         <tr class="table-row"><img src="https://i.imgur.com/jl6o412.jpg" alt="logo" width="300"/></tr>
-                        <tr class="table-row">Name: {result.name}</tr>
-                        <tr class="table-row">Rating: {result.rating}</tr>
+                        <tr class="table-row">Name:{result.name}</tr>
+                        <tr class="table-row">Rating:{result.rating}</tr>
                         <tr class="table-row">Gender: {result.gender}</tr>
                       </td>
                       <tr class="table-row">
@@ -228,9 +230,8 @@ class App extends React.Component {
                             <p class="confirm">You will receive a confirmation in the next 24 hours. Thank you for booking with Cocktail Party!</p>
                        </Modal>
                        <button type="button" className="btn btn-lg btn-block view-profile mb-2" onClick={this.showModal}>View Profile</button>
-                      <button type="button" className="btn btn-lg btn-block book-btn" onClick={this.showModal2}>Book Now</button>
+                      <button type="button" className="btn btn-lg btn-block book-btn" onSubmit={this.handleSubmit} onClick={this.showModal2}>Book Now</button>
                         <Modal show={this.state.show} handleClose={this.hideModal} >
-
                           <div className="profile-background">
                           <img src="https://i.imgur.com/jl6o412.jpg"  alt="logo" width="300"/>
                           </div>
