@@ -30,7 +30,10 @@
 <table class= "myTable">
   <thead>
     <tr class= "tr">
+      <th class ="th">Name of Employer</th>
+      <th class ="th">Name of Event</th>
       <th class ="th">Location</th>
+      <th class ="th">Date</th>
       <th class ="th">Confirmed status</th>
       <th class ="th"></th>
     </tr>
@@ -39,7 +42,10 @@
   <tbody>
     <% @events.each do |event| %>
       <tr class= "tr">
+        <td class = "td"><%= event.user.name %></td>
+        <td class = "td"><%= event.name %></td>
         <td class = "td"><%= event.location %></td>
+        <td class = "td"><%= event.date %></td>
         <% if event.confirmed %>
           <td class = "td">Confirmed</td>
           <% else %>
@@ -48,7 +54,7 @@
 
         <%# <td><%= link_to 'Show', event %>
         <%#</td> %>
-        <td class ="td"><%= link_to 'Confirm Request', edit_event_path(event), :class => "td" %></td>
+        <td class ="td"><%= link_to 'Confirm Request', edit_event_path(event), :class => "linkForRequest" %></td>
         <%# <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
        <%# </td> %>
       </tr>

@@ -6,6 +6,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+    # @events = current_user.jobs
     respond_to do |format|
       format.html
       format.json do
