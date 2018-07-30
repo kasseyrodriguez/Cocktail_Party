@@ -12,8 +12,8 @@
     border-style: solid white;
 }
 
-h1, p {
-    margin-top: 2rem;
+#h1-bar, .p-bar, .user-name {
+    margin-top: 5rem;
     color: white;
     font-family: 'Franklin Gothic Medium';
     font-size: 12px;
@@ -22,31 +22,25 @@ h1, p {
       1px -1px 0 #000,
      -1px 1px 0 #000,
       1px 1px 0 #000;
-      text-align: center;
 }
 
 .bar-profile {
     width: 50%;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
 }
 
-.bar-picture {
-    size: 3px;
-    margin-top: 5rem;
+.bar-picture { 
     margin-bottom: 3rem;
     display: flex;
     justify-content: center;
 }
 
-#h1-bar {
-    color: white;
-    font-size: 12px;
-    text-align:center;
-
-}
 .user-name {
-margin-top: 1px;
+margin-top: 75px;
 font-size:22px;
+text-align: center;
 }
 
 .info-text {
@@ -58,14 +52,20 @@ font-size:22px;
     align-items: center;
 }
 
+.bio {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-left: 3.5rem;
+   margin-bottom: 1rem;
+}
+
 .row {
     display: flex;
     align-items: center;
 }
 
 .bar-picture {
-    size: 20px;
-    margin-top: 6rem;
     margin-bottom: 3rem;
     display: flex;
     justify-content: center;
@@ -79,6 +79,12 @@ font-size:22px;
 
  }
 
- .links-to-li, li{
+ .links-to-li, li {
      display:inline-block;
  }
+
+.links-to-links {
+    font-size: 12px;
+    
+    
+}

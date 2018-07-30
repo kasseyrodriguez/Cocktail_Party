@@ -1,5 +1,6 @@
 * {
   font-family: 'Roboto', sans-serif;
+
 }
 
 .jumbo-img {
@@ -8,12 +9,19 @@
 }
 
 body {
-  height:100%;
+  height: 100%;
+  width: 80%;
   background: linear-gradient(to bottom right,  #5a302f , black);
   background-repeat: no-repeat;
-  margin: 0;
   background-attachment: fixed;
+  vertical-align: middle;
+  margin-left:auto;
+  margin-right:auto;
 }
+
+html {
+}
+
 
 label, h3{
   color: white;
@@ -40,19 +48,21 @@ label, h3{
 
 .user-bio {
   position: relative;
-  font-size: 30px;
+  font-size: 20px;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
   top: -150px;
   margin-bottom: 20px;
   background-color: white;
   font-weight: 500;
   color: black;
   border: 1px solid #E1E4E9;
-  padding: 20px;
+  padding: 30px;
   border-radius: 6px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 100%;
   width: 100%;
   text-align: left;
-  max-wid: 100%;
  }
 
 table {
@@ -69,16 +79,12 @@ input[type=radio] {
 }
 
 ul {
-  margin-left: -40px;
+  margin-left: -50px;
  }
 
 li {
   list-style-type: none;
 }
-
-.book-btn, .view-profile {
-  float: right;
- }
 
 .btn:hover {
   color: white;
@@ -97,9 +103,15 @@ li {
 .searchbar {
   position: relative;
   top: -500px;
+  font-size: 16px;
+}
+
+.book-btn, .view-profile {
+  text-align: center;
 }
 
 .search-container {
+
   width: 60%;
   position: relative;
   top: 0;
@@ -150,7 +162,7 @@ li {
 
 .search-input {
   border: 3px solid green;
-  color: #7D6962;
+  color: black;
   font-size: 16px;
   border: 0;
   width: 50%;
@@ -177,6 +189,9 @@ table td {
   font-size: 20px;
   line-height: 1.6;
   font-family: 'Do Hyeon', sans-serif;
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 h1.first-header {
@@ -235,4 +250,11 @@ form .filter {
  top: -270px;
  left: 50px;
  /* border: 2px solid green; */
+}
+
+table {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
 }

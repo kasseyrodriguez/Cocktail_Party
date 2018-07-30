@@ -1,4 +1,6 @@
+
 @import bootstrap;
+
 
 html,
 body,
@@ -11,9 +13,16 @@ header,
 height: 120px;
 }
 
+.logo-home {
+  width: 50%;
+  display: flex;
+   justify-content: center;
+  size: 50px;
+}
+/*
 nav {
  margin-top: 0.1%;
-}
+} */
 
 .nav-link {
  color: white;
@@ -23,31 +32,23 @@ nav {
  background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
 }
 
+
+.navbar-brand {
+  display: flex;
+  justify-content: flex-start;
+  size: '30x30';
+ }
+
+
+.card-body {
+  width: 100%;
+}
+
+
 a {
  color: white;
 }
 
-#h2-home {
- font-family: 'Franklin Gothic Medium';
- font-size: 50px;
- text-shadow:
-   -1px -1px 0 #000,
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
-   1px 1px 0 #000;
- font-family: 'Franklin Gothic Medium';
- font-size: 50px;
-}
-
-#h4-home {
- font-family: 'Franklin Gothic Medium';
- font-size: 15px;
- text-shadow:
-   -1px -1px 0 #000,
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
-   1px 1px 0 #000;
-}
 
 #sign-in-btn {
 	background: transparent;
@@ -109,6 +110,12 @@ video {
  transition: 1s opacity;
 }
 
+section {
+	width:100%;
+	min-height:1000px;
+	background:white;
+}
+
 
 .top-nav-collapse {
    background-color: #24355C;
@@ -131,6 +138,7 @@ select#rating option[value="5"]  {
 }
 
 /*================== Home Page CSS Start =============== */
+
 #h2-home {
  font-family: 'Franklin Gothic Medium';
  font-size: 50px;
@@ -151,19 +159,68 @@ select#rating option[value="5"]  {
        -1px 1px 0 #000,
        1px 1px 0 #000;
 }
-video {
- position: fixed;
- top: 50%;
- left: 50%;
- min-width: 100%;
- min-height: 100%;
- z-index: -100;
- transform: translateX(-50%) translateY(-50%);
- background: url('bartender.mp4')center;
- background-size: cover;
- transition: 1s opacity;
+
+
+
+/* ========== Testimonials ========== */
+.testimonial {
+	background-image: url("../images/testimonial-bg.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;;
+	background-size: cover;
+	background-position: 50% 50%;
 }
-/* =========== Home Page CSS End  ================ */
+
+.testimonial-overlay {
+	/* background-color: rgba(31, 31, 31, .75); */
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+ol.carousel-indicators {
+	bottom: -10px;
+}
+
+.carousel-inner .item img {
+	border: 2px solid #129CF3;
+	border-radius: 50%;
+	padding: 3px;
+}
+
+.testimonial-caption {
+	padding-bottom: 70px;
+}
+
+.testimonial-caption h2 {
+	color: #129CF3;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 30px;
+	margin-top: 25px;
+}
+
+.testimonial-caption h4 {
+	color: #129CF3;
+
+}
+
+.testimonial-caption h4 span {
+	color: #D8D8D8;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.testimonial-caption p {
+	color: #D8D8D8;
+	font-size: 18px;
+	line-height: 27px;
+	padding-top: 50px;
+}
+
+
+
+
+
 /* ============ Media Queries Start==================== */
 .top-nav-collapse {
    background-color: #24355C;
