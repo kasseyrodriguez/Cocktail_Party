@@ -219,7 +219,7 @@ class App extends React.Component {
                   <table className="bartender-table">
                     <tbody>
                       <td class="bio-table">
-                        <tr class="table-row"><img src="https://i.imgur.com/jl6o412.jpg" alt="logo" width="300"/></tr>
+                        <tr class="table-row"></tr>
                         <tr class="table-row">Name:{result.name}</tr>
                         <tr class="table-row">Rating:{result.rating}</tr>
                         <tr class="table-row">Gender: {result.gender}</tr>

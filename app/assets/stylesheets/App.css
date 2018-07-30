@@ -41,6 +41,9 @@ body{
 }
 
 #user-bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   font-size: 20px;
   margin-left: 0 auto;
@@ -73,12 +76,17 @@ input[type=radio] {
 }
 
 .ul {
+  width: 50%;
   margin-left: -50px;
+  display: block;
+  float: left;
+
  }
 
 .li {
+  width: 100%;
   list-style-type: none;
-  margin-right: 20px;
+  display: inline-block;
   text-align: center;
 }
 
@@ -247,8 +255,8 @@ h1.first-header {
 }
 
 .bartender-table {
-  display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  flex-direction: row;
   align-items: center;
 }
 
