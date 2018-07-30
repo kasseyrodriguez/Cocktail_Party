@@ -213,7 +213,8 @@ class App extends React.Component {
           {results.map((result, i) => {
             return (
               <li key={i} onClick={ () => this.handleBartenderSelect(result) } >
-                  <table>
+                <div className="user-bio">
+                  <table className="bartender-table">
                     <tbody>
                       <td>
                         <div className="user-bio">

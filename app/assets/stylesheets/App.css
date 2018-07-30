@@ -1,6 +1,5 @@
 * {
   font-family: 'Roboto', sans-serif;
-
 }
 
 .jumbo-img {
@@ -219,12 +218,12 @@ h1.first-header {
   background-color: #3c3b3f;
   color: white;
   font-size: 18px;
-
 }
 
 .filter-items {
   background-color: #381D2A;
 }
+
 .filter-dropdown:after {
   position: absolute;
   content: "";
@@ -244,7 +243,7 @@ h1.first-header {
   cursor: pointer;
 }
 
-h3 {
+.moto-header {
   text-align: center;
   position: relative;
   top: -80px;
@@ -255,10 +254,9 @@ form .filter {
  position: relative;
  top: -270px;
  left: 50px;
- /* border: 2px solid green; */
 }
 
-table {
+.bartender-table {
   display: flex;
   flex-direction: column;
   padding: 10px;
