@@ -41,6 +41,9 @@ body{
 }
 
 #user-bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   font-size: 20px;
   margin-left: 0 auto;
@@ -56,7 +59,7 @@ body{
   height: 50%;
   width: 50%;
   text-align: left;
-  margin-left: 50px;
+  margin-left: 280px;
  }
 
 .bartender-table {
@@ -73,12 +76,17 @@ input[type=radio] {
 }
 
 .ul {
+  width: 50%;
   margin-left: -50px;
+  display: block;
+  float: left;
+
  }
 
 .li {
+  width: 100%;
   list-style-type: none;
-  margin-right: 20px;
+  display: inline-block;
   text-align: center;
 }
 
@@ -98,7 +106,7 @@ input[type=radio] {
 
 .searchbar {
   position: relative;
-  top: -500px;
+  top: -400px;
   font-size: 16px;
 }
 
@@ -144,10 +152,11 @@ input[type=radio] {
   float: right;
   width: 75px;
   height: 75px;
-  top: -660px;
-  right: -10px;
-  left: -120px;
+  top: -760px;
+  right: -180px;
+  left: -150px;
 }
+
 
 .filter {
   display: inline-block;
@@ -246,8 +255,8 @@ h1.first-header {
 }
 
 .bartender-table {
-  display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  flex-direction: row;
   align-items: center;
 }
 

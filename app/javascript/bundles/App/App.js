@@ -219,13 +219,13 @@ class App extends React.Component {
                   <table className="bartender-table">
                     <tbody>
                       <td class="bio-table">
-                        <tr class="table-row"><img src="https://i.imgur.com/jl6o412.jpg" alt="logo" width="300"/></tr>
+                        <tr class="table-row"></tr>
                         <tr class="table-row">Name:{result.name}</tr>
                         <tr class="table-row">Rating:{result.rating}</tr>
                         <tr class="table-row">Gender: {result.gender}</tr>
                       </td>
                       <tr class="table-row">
-                        <Modal show={this.state.showBook} handleClose={this.hideModal}>
+                        <Modal show={this.state.showBook} handleClose={this.hideModal} class="booked">
                             <p class="confirm">A request has been sent to {this.state.event.bartender.name}</p>
                             <p class="confirm">You will receive a confirmation in the next 24 hours. Thank you for booking with Cocktail Party!</p>
                        </Modal>
