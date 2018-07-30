@@ -16,9 +16,7 @@
 				<ul class="navbar-nav mr-auto links-in-nav">
 					<li class="nav-item">
 							<% if current_user %>
-								<button class= "btn orange btn-sm" type="button" style="margin-left:450px;">
-									<%= link_to 'Sign Out', destroy_user_session_path, method: :delete,  :style => "color:white; font-size: 7px;" %>
-								</button>
+									<%= link_to 'Sign Out', destroy_user_session_path, method: :delete,  :style => "color:white; font-size: 7px; margin-left:450px;", :class => "btn orange btn-sm" %>
 							<% end %>
 					</li>
 				</ul>
