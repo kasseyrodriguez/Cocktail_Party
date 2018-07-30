@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-  # skip_before_action :verify_authenticity_token,:authenticate_user!
+  # skip_before_action :authenticate_user!, raise: false
+  skip_before_action :verify_authenticity_token, :authenticate_user!
 
   # GET /events
   # GET /events.json
@@ -39,7 +40,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params.merge(user: current_user))
     respond_to do |format|
-      if @event.save
+      if @event.save!
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
       else
