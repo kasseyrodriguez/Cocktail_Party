@@ -7,9 +7,6 @@
   top: -80px;
 }
 
-
-
-
 body{
   height:100%;
   background: linear-gradient(to bottom right,  #5a302f , black);
@@ -49,7 +46,6 @@ label, h3{
   position: relative;
   font-size: 20px;
   margin-left: 0 auto;
-  margin-right: 0 auto;
   top: -150px;
   margin-bottom: 20px;
   background-color: white;
@@ -63,7 +59,6 @@ label, h3{
   width: 100%;
   text-align: left;
   margin-left: 50px;
-
  }
 
 table {
@@ -81,6 +76,7 @@ input[type=radio] {
 
 ul {
   margin-left: -50px;
+
  }
 
 li {
@@ -114,7 +110,6 @@ li {
 }
 
 .search-container {
-
   width: 60%;
   position: relative;
   top: 0;
@@ -192,7 +187,6 @@ table td {
   font-size: 20px;
   line-height: 1.6;
   font-family: 'Do Hyeon', sans-serif;
-  text-align: center;
   margin-left:auto;
   margin-right:auto;
 }
@@ -259,9 +253,9 @@ form .filter {
   flex-direction: column;
   padding: 10px;
   align-items: center;
+
 }
 
 tr{
   text-align: left;
-
 }
