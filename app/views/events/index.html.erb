@@ -30,6 +30,7 @@
 <table class= "myTable">
   <thead>
     <tr class= "tr">
+      <th class ="th">Name of Employer</th>
       <th class ="th">Name of Event</th>
       <th class ="th">Location</th>
       <th class ="th">Date</th>
@@ -41,6 +42,7 @@
   <tbody>
     <% @events.each do |event| %>
       <tr class= "tr">
+        <td class = "td"><%= event.user.name %></td>
         <td class = "td"><%= event.name %></td>
         <td class = "td"><%= event.location %></td>
         <td class = "td"><%= event.date %></td>
