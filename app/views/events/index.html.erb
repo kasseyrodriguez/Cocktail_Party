@@ -30,7 +30,9 @@
 <table class= "myTable">
   <thead>
     <tr class= "tr">
+      <th class ="th">Name of Event</th>
       <th class ="th">Location</th>
+      <th class ="th">Date</th>
       <th class ="th">Confirmed status</th>
       <th class ="th"></th>
     </tr>
@@ -39,7 +41,9 @@
   <tbody>
     <% @events.each do |event| %>
       <tr class= "tr">
+        <td class = "td"><%= event.name %></td>
         <td class = "td"><%= event.location %></td>
+        <td class = "td"><%= event.date %></td>
         <% if event.confirmed %>
           <td class = "td">Confirmed</td>
           <% else %>

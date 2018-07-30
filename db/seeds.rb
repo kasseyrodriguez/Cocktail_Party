@@ -51,4 +51,4 @@ gender_selection = ['female', 'male']
   end
  i= i +1
   end
-Event.create(user: User.regular.sample, bartender: User.bartender.sample, location: "FunkyTown", confirmed: false)
+Event.create(user: User.regular.sample, bartender: User.bartender.sample, location: "Miami", confirmed: false, name: "Birthdat", date:20180411 )

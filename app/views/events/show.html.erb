@@ -1,16 +1,26 @@
 <%# <p id="notice"><%= notice %>
 
 
-Your request has been confimed!
-<%# <p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event.name %>
+ </p>
+
+<p>
   <strong>Location:</strong>
   <%= @event.location %>
-<%# </p> %> 
+ </p> 
 
-<%# <p>
+ <p>
+  <strong>Date:</strong>
+  <%= @event.date %>
+ </p> 
+
+ <p>
   <strong>Confirmed:</strong>
   <%= @event.confirmed %>
-<%# </p> %> 
+ </p> 
 
 <%#= link_to 'Edit', edit_event_path(@event) %> 
 <%#= link_to 'Back', events_path %>

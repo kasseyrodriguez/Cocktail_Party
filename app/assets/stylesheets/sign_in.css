@@ -38,7 +38,8 @@
   #card-form-in{
     /* display: inline-block; */
     /* position:fixed; */
-    right:30%;
+
+    /* left:0.5%; */
     margin-top: 60px;
     width: 700px;
     border-radius: 10px;
@@ -95,9 +96,10 @@
         }
 
         #movingLinks{
+
           position:fixed;
-          left: 20.8%;
-          padding:475px;
+          left: 48%;
+     
         }
 
 
