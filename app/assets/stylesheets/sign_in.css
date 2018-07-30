@@ -93,3 +93,9 @@
             position: relative;
 
         }
+
+        #movingLinks{
+          position:fixed;
+          left: 20%;
+          padding:475px;
+        }
