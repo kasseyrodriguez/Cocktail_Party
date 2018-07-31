@@ -104,6 +104,8 @@ margin-top: 200px;
 }
 
 .events-confirmed {
+  /* font-weight: bold; */
+  font-size: 50px;
    position: absolute;
    height: 200px;
    width: 400px;
@@ -129,3 +131,6 @@ margin-top: 200px;
   color: orange;
 
 }
+
+
+
