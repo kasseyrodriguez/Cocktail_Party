@@ -1,4 +1,3 @@
-
 .background-signing-in-up {
     background: linear-gradient(black, #5a302f , #AD5E29);
     /* display: flex; */
@@ -39,67 +38,67 @@
 
 
 
-  #card-form-in{
-    /* display: inline-block; */
-    /* position:fixed; */
+#card-form-in{
+	/* display: inline-block; */
+	/* position:fixed; */
 
-    /* right: 5%; */
-    margin-top: 60px;
-    width: 700px;
-    border-radius: 10px;
-    background: white;
-    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
-    vertical-align: middle;
+	/* right: 5%; */
+	margin-top: 60px;
+	margin-left: -26%;
+	width: 700px;
+	border-radius: 10px;
+	background: white;
+	box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+	vertical-align: middle;
+}
 
-  }
-
-  #card-form-up{
-    /* position:fixed; */
-    /* right:30%; */
-    /* margin-top: 0.5px; */
-    margin-top: 50px;
-    width: 800px;
-    height: 700px;
-    border-radius: 10px;
-    background: white;
-    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
-    
-  }
-
-
-  #form-contain{
-      padding: 1px;
+#card-form-up{
+	/* position:fixed; */
+	/* right:30%; */
+	/* margin-top: 0.5px; */
+	margin-top: 50px;
+	width: 800px;
+	height: 700px;
+	border-radius: 10px;
+	background: white;
+	box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+}
 
 
-    }
-    #row {
-        display: flex;
-        justify-content: space-around;
-        padding: 1px;
+#form-contain{
+  padding: 1px;
 
 
-      }
+}
+		
+#row {
+	display: flex;
+	justify-content: space-around;
+	padding: 1px;
+}
 
 
-     #input{
-          appearance: none;
-          width: 100%;
-          margin: 0 15px;
-          height: 15px;
-          padding: 5px 10px;
-          border-radius: 3px;
-          outline: none;
-          border: none;
-          background: #e8ebed;
-          color: #576366;
-          font-size: 10px;
-        }
+#input{
+	appearance: none;
+	width: 100%;
+	margin: 0 15px;
+	height: 15px;
+	padding: 5px 10px;
+	border-radius: 3px;
+	outline: none;
+	border: none;
+	background: #e8ebed;
+	color: #576366;
+	font-size: 10px;
+}
 
-        #check-boxes {
-            display: inline-block;
-            position: relative;
+#check-boxes {
+	display: inline-block;
+	position: relative;
+}
 
-        }
+
+
 /* 
         #movingLinks{
 
