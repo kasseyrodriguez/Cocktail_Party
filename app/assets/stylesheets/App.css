@@ -45,7 +45,7 @@ body{
   position: relative;
   flex-direction: column;
   font-size: 20px;
-  margin-left: 0 auto;
+  margin-left: -50PX;
   top: -150px;
   margin-bottom: 20px;
   background-color: white;
