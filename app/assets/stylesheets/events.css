@@ -1,6 +1,6 @@
 .Event-text-color {
         color: white;
-        background: linear-gradient(to left,  #5a302f , #AD5E29);
+        background: linear-gradient(to left, black,  #5a302f , #AD5E29);
         font-size: 16px;
         font-weight: 400;
         text-rendering: optimizeLegibility;
