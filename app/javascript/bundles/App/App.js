@@ -221,8 +221,8 @@ class App extends React.Component {
                       <td class="bio-table">
                         <tr class="table-row"></tr>
                         <tr class="table-row">Name:{result.name}</tr>
-                        <tr class="table-row">Rating: 5{result.rating}</tr>
-                        <tr class="table-row">Gender: {result.gender}</tr>
+                        <tr class="table-row">Rating:{result.rating}</tr>
+                        <tr class="table-row">Gender:{result.gender}</tr>
                       </td>
                       <tr class="table-row">
                         <Modal show={this.state.showBook} handleClose={this.hideModal} class="booked">
