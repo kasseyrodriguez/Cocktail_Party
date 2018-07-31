@@ -14,11 +14,12 @@
 }
 
 .myHeading {
+        font-weight: bold;
         color: orange;
         text-align: center;
         display: block;
         margin: auto;
-        max-width: 600px;
+        max-width: 900px;
         padding:40px;
         width: 100%;
 }
