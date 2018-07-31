@@ -1,13 +1,14 @@
 
 <body class= "background-signing-in-up">
-<div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3 mt-4" id="login-form">
+<div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3 mt-4">
 
     <!-- Card content -->
     <div class="card-body"id= "card-form-in">
       <h4 class="card-title text-center" id="log-in-up-text">Log In</h4>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div id= "form-contain">
-        <div class="md-form" id="row" >
+        <div class="md-form" id="row" >￼
+
           <%= f.email_field :email, class: "form-control",  placeholder:"Email" %>
      
 
