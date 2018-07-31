@@ -263,7 +263,17 @@ h1.first-header {
   text-align: left;
 }
 
-
+#event-label {
+  color: white;
+  display: block;
+}
+.ratings {
+  text-align: center;
+}
 #spilled-drink {
 	background-image: url(../images/spilled-drink.jpg);
+}
+
+#flexing {
+  display: flex;
 }
