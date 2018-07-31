@@ -147,7 +147,7 @@ class App extends React.Component {
         <Search handleSearch={this.handleSearch}/>
         <form className="form">
           <div class="filter">
-            <label class="event-label">Event Name:</label>
+            <label id="event-label">Event Name:</label>
             <input
               type="text"
               className="search-input"
@@ -156,7 +156,7 @@ class App extends React.Component {
             />
           </div>
           <div class="filter">
-            <label class="event-label">Location:</label>
+            <label id="event-label">Location:</label>
             <input
               type="text"
               className="search-input"
@@ -165,7 +165,7 @@ class App extends React.Component {
             />
           </div>
           <div class="filter">
-            <label class="event-label">Date:</label>
+            <label id="event-label">Date:</label>
             <input
               type="date"
               className="search-input"
@@ -174,7 +174,7 @@ class App extends React.Component {
             />
           </div>
           <div class="filter">
-            <label class="event-label">Bartender:</label>
+            <label id="event-label">Bartender:</label>
             <input
               disabled
               type="text"
@@ -183,7 +183,7 @@ class App extends React.Component {
             />
           </div>
           <div class="filter">
-            <label class="event-label">Bartender Type:</label>
+            <label id="event-label">Bartender Type:</label>
             <select name="type" value={this.state.filters.bartenderType} onChange={this.handleBartenderTypeChange} className="filter-dropdown">
               <option value="standard">Standard</option>
               <option value="flair">Flair</option>
@@ -192,7 +192,7 @@ class App extends React.Component {
             </select>
           </div>
           <div class="filter">
-            <label class="event-label">Gender:</label>
+            <label id="event-label">Gender:</label>
             <select name="type" value={this.state.filters.gender} onChange={this.handleGenderChange} className="filter-dropdown">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
@@ -201,7 +201,7 @@ class App extends React.Component {
           </div>
           <div class="filter">
             <label class="event-label">Ratings:</label>
-            <select name="rating" value={this.state.filters.rating} onChange={this.handleRatingChange} className="filter-dropdown">
+            <select name="rating" value={this.state.filters.rating} onChange={this.handleRatingChange} className="filter-dropdown ratings">
               <option value="5">5</option>
               <option value="4">4</option>
               <option value="3">3</option>
@@ -222,23 +222,34 @@ class App extends React.Component {
                         <tr class="table-row"></tr>
                         <tr class="table-row">Name:{result.name}</tr>
                         <tr class="table-row">Rating:{result.rating}</tr>
-                        <tr class="table-row">Gender: {result.gender}</tr>
+                        <tr class="table-row">Gender:{result.gender}</tr>
                       </td>
                       <tr class="table-row">
                         <Modal show={this.state.showBook} handleClose={this.hideModal} class="booked">
+                          <div className="book-modal">
+                            <img src="https://i.imgur.com/SwcHSiw.png" class="logo-img" alt="logo" width="500"/>
+                            <h3 class="cocktail-banner">Thank you for booking with Cocktail Party!</h3>
                             <p class="confirm">A request has been sent to {this.state.event.bartender.name}</p>
-                            <p class="confirm">You will receive a confirmation in the next 24 hours. Thank you for booking with Cocktail Party!</p>
+                            <p class="confirm">You will receive a confirmation in the next 24 hours.</p>
+                          </div>
                        </Modal>
                        <button type="button" className="btn btn-lg btn-block view-profile mb-2" onClick={this.showModal}>View Profile</button>
                       <button type="button" className="btn btn-lg btn-block book-btn" onClick={this.handleSubmit}>Book Now</button>
                         <Modal show={this.state.show} handleClose={this.hideModal} >
                           <div className="profile-background">
-                          <img src="https://i.imgur.com/jl6o412.jpg"  alt="logo" width="300"/>
+                          <img src="https://i.imgur.com/jl6o412.jpg" class="bio-pic" alt="logo" width="300"/>
                           </div>
-                          <p>Name: {this.state.event.bartender.name}</p>
-                          <p>Gender: {this.state.event.bartender.gender}</p>
-                          <p>Rating: {this.state.event.bartender.rating}</p>
-                          <p>Bio: {this.state.event.bartender.bio}</p>
+                          <div id = "flexing">
+                            <div class="person-bio">
+                            <p>Name: {this.state.event.bartender.name}</p>
+                            <p>Age: 25</p>
+                            <p>Gender: {this.state.event.bartender.gender}</p>
+                            <p>Rating: {this.state.event.bartender.rating}</p>
+                            <p>Bio: Hello my name is {this.state.event.bartender.name} and I have been a bartender for 3 years and 5 years of server experience as well. I can work small or large events. Book me today if you want me at your party! </p>
+                            </div>
+
+                          </div>
+
                        </Modal>
                       </tr>
                     </tbody>
