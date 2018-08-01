@@ -1,8 +1,8 @@
 
 <div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3 mt-4 card">
-  
+
     <div class="card-body">
-      <h1 class="card-title text-center" id="changing-text-one">More information</h1>
+      <h1 class="card-title text-center" id="changing-text-one">More Information</h1>
 
 
           <%= form_for(resource, as: resource_name, url: user_registration_path(resource_name), html: {method: :patch}) do |f| %>
@@ -46,23 +46,23 @@
                 <%= f.check_box :standard %>
                 <%= f.label :standard %>
                 </div>
-    
+
                 <div class="md-form col-md-4">
                 <%= f.check_box :flair %>
                 <%= f.label :flair%>
-                </div> 
+                </div>
 
-              <div class="md-form col-md-4">
+              <div class="md-form col-md-4" id="mixologist">
                 <%= f.check_box :mixologist %>
                 <%= f.label :mixologist%>
               </div>
-            </div> 
+            </div>
           </div>
 
 
 
 
-   
+
     <div class="container-fluid" id= "move-stuff">
 
 
@@ -86,7 +86,7 @@
               <div class="md-form indigo-text col-md-4-offset-4">
                 <%= f.check_box :thursday %>
                 <%= f.label :thursday, class: "days"%>
-              </div> 
+              </div>
 
 
               <div class="md-form indigo-text col-md-4-offset-3">
@@ -113,9 +113,9 @@
     </div>
 
     </div>
-          
-            
-      
+
+
+
 
 
 
@@ -128,4 +128,3 @@
   </div>
   <div class="mt-4 text-center indigo-text">
 </div>
-

@@ -237,7 +237,7 @@ class App extends React.Component {
                       <button type="button" className="btn btn-lg btn-block book-btn" onClick={this.handleSubmit}>Book Now</button>
                         <Modal show={this.state.show} handleClose={this.hideModal} >
                           <div className="profile-background">
-                          <img src="https://i.imgur.com/jl6o412.jpg" class="bio-pic" alt="logo" width="300"/>
+                          <img src="https://i.imgur.com/Vt6Lk9m.png" class="bio-pic" alt="logo" width="300"/>
                           </div>
                           <div id = "flexing">
                             <div class="person-bio">
