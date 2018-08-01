@@ -233,12 +233,12 @@ class App extends React.Component {
                       <button type="button" className="btn btn-lg btn-block book-btn" onClick={this.handleSubmit}>Book Now</button>
                         <Modal show={this.state.show} handleClose={this.hideModal} >
                           <div className="profile-background">
-                          <img src="https://i.imgur.com/jl6o412.jpg"  alt="logo" width="300"/>
+                          <img src="https://i.imgur.com/RqOBKSA.png"  alt="logo" width="300"/>
                           </div>
                           <p>Name: {this.state.event.bartender.name}</p>
                           <p>Gender: {this.state.event.bartender.gender}</p>
                           <p>Rating: {this.state.event.bartender.rating}</p>
-                          <p>Bio: {this.state.event.bartender.bio}</p>
+                          <p>Bio: Hi, my name is {this.state.event.bartender.name} and I've been in the hospitality field for over 5 years. I also make some rad action flicks!</p>
                        </Modal>
                       </tr>
                     </tbody>

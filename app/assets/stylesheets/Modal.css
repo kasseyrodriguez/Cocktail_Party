@@ -27,7 +27,7 @@
   position: fixed;
   background: white;
   width: 80%;
-	height: 80px;
+	height: 120px;
   border: 1px solid lightgray;
   border-radius: 10px;
   height: auto;
@@ -35,6 +35,7 @@
   left:50%;
   transform: translate(-50%,-50%);
   box-shadow: 0 2px 14px rgba(0,0,0,.06);
+  margin-bottom: -40px;
 }
 
 .booked {
