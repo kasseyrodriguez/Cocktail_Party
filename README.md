@@ -1,6 +1,6 @@
 # Cocktail Party
 
-* Technologies used
+ Technologies used
 
 * HTML, CSS, JavaScript
 * React.js Library
@@ -15,18 +15,18 @@
 * As a bartender looking to book events, you don’t need to be fancy to make drinks as long as you have a excellent presentation and a pleasing personality.
 
 
-*Why would you want to request a bartender for an event?
+Why would you want to request a bartender for an event?
 - Relieve the pressure of hosting
 - Engage more with your guests.
 - Open source for bartender selection
 - You want to impress your girlfriends parents? Colleagues? Etc.
 - Learn more from passionate bartenders and their craft
 
-*Why would a bartender want to work for Cocktail Party?
+Why would a bartender want to work for Cocktail Party?
 - Bartenders have typically work flexible hours and sometimes are looking for another gig (ex.  Slow season, extra income, to showcase their craft)
 - Networking
 
-*Why Cocktail Party over other apps that do pretty much the same?
+Why Cocktail Party over other apps that do pretty much the same?
 - It’s community based and gives you more control on who you want to book. Our bartenders are chosen peer-to-peer from a user rating scale. 
 - You don’t need to input credit card info to view the bartenders in your area, only to make requests.
 - You don’t need to be fancy and have a strong knowledge to make drinks. You just need to have a pleasing personality and make people feel welcomed.
