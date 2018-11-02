@@ -1,111 +1,76 @@
-
-
-
-/* Body Start ================ */
-
 .more-info {
-    background: url("old-fashioned.jpg") center fixed;
-    background-size: 100%;
-
+    background: url("old-fashioned.jpg") fixed;
+    background-size: cover;
+    background-position: center;
 }
-/* Body Finish =============== */
 
+.edit-bartender-form {
+    padding: 30px;
+    display:flex;
+}
 
-/* More Information Form Start ============= */
+.nav-cocktail {
+    padding: 75px;
+}
+
 .form-control {
     height: 40px;
     background-size: 100%;
-}
-/* Body Finish =============== */
-
-
-/* More Information Form Start ============= */
-.form-control {
-    height: 40px;
+    font-size: 20px;
 }
 
-.card {
+/* .card {
     margin-bottom: 50px;
     margin-top: 20px;
-}
+} */
 
 .card-body {
-    overflow-y:scroll;
-    position: relative;
+    /* overflow-y:scroll; */
+    /* position: relative; */
     width:100%;
     padding: 1.5rem;
 }
-/* More Information Form Finish ============ */
 
+div.container.card {
+    padding: 20px;
+    height: auto;
+    width: 50%;
+    color:orange;
+    font-weight: bold;
+}
 
-/* Form */
-.edit-bartender-form {
-    padding-top: 50px;
-    margin-top:100px;
+.types {
+    color: rgba(170, 77, 0, 0.473);
+    display:flex;
+    justify-content: center;
+    flex-direction: column;    
+}
+
+.type label {
+    font-size:15px;
+    padding: 5px;
 }
 
 .md-form {
     position: static;
     margin-top: 1.5rem;
     margin-bottom: 1.0rem;
+    font-size: 10px;
 }
 .md-form label {
-    display: inline-block;
+    display: flex;
+    justify-content: space-evenly;
     position: static;
-    padding: 1.5rem;
-    font-size: 1rem;
-}
+    padding: 0.5rem;
+    font-size: 10px;
+} 
 
-/* Rows of Text */
-.col-md-4 {
-    padding:5;
-}
-
-.days-of-week {
-    display: inline-block;
-    position: relative;
-}
 .days {
     display: flex;
     justify-content: center;
     padding: 0.1rem;
 }
 
-
-
-/* Media Queries */
-/* @media (min-width: 992px)
-.col-lg-4 {
-    max-width: 33.33%;
-} */
-
-
-.types-of-bartenders {
-    display: block;
-    padding: 0.5rem;
-
-    /* padding: 0.5px; */
-
-
-}
-
-#changing-text-one{
-    color:orange;
-    font-weight: bold;
-
-}
-
-
-#changing-text{
-    color:orange;
-
-}
-
-#move-stuff {
-    margin-top: 50px;
-}
-
-
-#padding-pic {
-    padding: 10px;
+.submit-btn {
+    margin-top:30px;
 }

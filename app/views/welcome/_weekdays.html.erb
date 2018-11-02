@@ -1,0 +1,42 @@
+<%= form_for(resource, as: resource_name, url: user_registration_path(resource_name), html: {method: :patch}) do |f| %>
+          <div class="types">
+            <div class="type">
+                <%= f.check_box :monday %>
+                <%= f.label :monday %>
+            </div>
+
+            <div class="type">
+                <%= f.check_box :tuesday %>
+                <%= f.label :tuesday %>
+            </div>
+
+            <div class="type">
+                <%= f.check_box :wednesday %>
+                <%= f.label :wednesday %>
+            </div>
+
+            <div class="type">
+                <%= f.check_box :thursday %>
+                <%= f.label :thursday %>
+            </div>
+
+            <div class="type">
+                <%= f.check_box :friday %>
+                <%= f.label :friday %>
+            </div>
+
+            <div class="type">
+                <%= f.check_box :saturday %>
+                <%= f.label :saturday %>
+            </div>
+
+            <div class="type">
+                <%= f.check_box :sunday %>
+                <%= f.label :sunday %>
+            </div>
+      
+            <div class="text-center submit-btn">
+              <%= f.submit "Submit", class: 'btn btn-orange' %>
+            </div>
+            </div>
+<% end %>

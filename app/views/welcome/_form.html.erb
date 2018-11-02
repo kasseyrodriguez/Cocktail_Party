@@ -1,130 +1,14 @@
-
-<div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3 mt-4 card">
-
-    <div class="card-body">
-      <h1 class="card-title text-center" id="changing-text-one">More Information</h1>
-
-
-          <%= form_for(resource, as: resource_name, url: user_registration_path(resource_name), html: {method: :patch}) do |f| %>
-
-            <div class="md-form">
-              <%= f.text_field :gender, class: "form-control", placeholder: "Gender", value: current_user.gender %>
-            </div>
-
-            <div class="md-form">
-              <%= f.text_field :rate, class: "form-control", placeholder: "Wage per Hour", value: current_user.rate %>
-            </div>
-
-            <div class="md-form">
-              <%= f.text_field :home_address, class: "form-control",  placeholder: "Home Address",value: current_user.home_address %>
-            </div>
-
-
-              <div class="md-form" >
-              <%= f.text_field :travel_radius, class: "form-control",  placeholder: "Travel radius",value: current_user.travel_radius %>
-            </div>
-
-            <div id ="move-stuff">
-             <h5 id="changing-text">Write your Bio:</h5>
-            <div class="md-form indigo-text">
-              <%= f.text_field :bio, class: "form-control" , value: current_user.bio%>
-            </div>
-
-            <div id="move-stuff">
-              <h5 id="changing-text">Add your Profile Picture</h5>
-
-            <div class ="field" id= "padding-pic">
-            <%= f.file_field :picture%>
-            </div>
-
-
-
-          <div class="types-of-bartenders" id= "move-stuff">
-            <h5 id="changing-text">Check Off Your Speciality:</h5>
-              <div class="row",id= "move-stuff" >
-                <div class="md-form col-md-4">
-                <%= f.check_box :standard %>
-                <%= f.label :standard %>
-                </div>
-
-                <div class="md-form col-md-4">
-                <%= f.check_box :flair %>
-                <%= f.label :flair%>
-                </div>
-
-              <div class="md-form col-md-4" id="mixologist">
-                <%= f.check_box :mixologist %>
-                <%= f.label :mixologist%>
-              </div>
-            </div>
-          </div>
-
-
-
-
-
-    <div class="container-fluid" id= "move-stuff">
-
-
-    <h5 id="changing-text">Your availablilty:</h5>
-    <div class="row">
-            <div class="md-form indigo-text col-md-4-offset-7">
-                <%= f.check_box :monday %>
-                <%= f.label :monday, class: "days"%>
-            </div>
-
-              <div class="md-form indigo-text col-md-4-offset-6">
-                <%= f.check_box :tuesday %>
-                <%= f.label :tuesday, class: "days"%>
-            </div>
-
-            <div class="md-form indigo-text col-md-4-offset-5">
-                <%= f.check_box :wednesday %>
-                <%= f.label :wednesday, class: "days"%>
-            </div>
-
-              <div class="md-form indigo-text col-md-4-offset-4">
-                <%= f.check_box :thursday %>
-                <%= f.label :thursday, class: "days"%>
-              </div>
-
-
-              <div class="md-form indigo-text col-md-4-offset-3">
-                <%= f.check_box :friday %>
-                <%= f.label :friday, class: "days"%>
-              </div>
-
-
-              <div class="md-form indigo-text col-md-4-offset-2">
-                <%= f.check_box :saturday %>
-                <%= f.label :saturday, class: "days"%>
-            </div>
-
-
-              <div class="md-form indigo-text col-md-4-offset-1">
-                <%= f.check_box :sunday %>
-                <%= f.label :sunday, class: "days"%>
-              </div>
-
-      </div>
-    </div>
-
-
-    </div>
-
-    </div>
-
-
-
-
-
-
-            <div class="text-center mt-4">
-              <%= f.submit "Submit", class: 'btn btn-orange' %>
-            </div>
-
-          <% end %>
-    </div>
+<div class="container card">
+  <div class="card-body">
+    <h4 class="card-title text-center">More Information</h4>
+      <%= render partial: 'bio' %>
   </div>
-  <div class="mt-4 text-center indigo-text">
+  <div class="card-body">
+    <h6 class="card-title text-center">Check Off Your Speciality:</h6>
+      <%= render partial: 'speciality' %>
+  </div>
+  <div class="card-body">
+    <h6 class="card-title text-center">Your availablilty:</h6>
+      <%= render partial: 'weekdays' %>
+  </div>
 </div>

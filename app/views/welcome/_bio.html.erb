@@ -1,0 +1,26 @@
+<%= form_for(resource, as: resource_name, url: user_registration_path(resource_name), html: {method: :patch}) do |f| %>
+    <div class="md-form">
+        <%= f.text_field :gender, class: "form-control", placeholder: "Gender", value: current_user.gender %>
+    </div>
+    <div class="md-form">
+        <%= f.text_field :rate, class: "form-control", placeholder: "Wage per Hour", value: current_user.rate %>
+    </div>
+    <div class="md-form">
+        <%= f.text_field :home_address, class: "form-control",  placeholder: "Home Address",value: current_user.home_address %>
+    </div>
+    <div class="md-form" >
+        <%= f.text_field :travel_radius, class: "form-control",  placeholder: "Travel radius",value: current_user.travel_radius %>
+    </div>
+    <div class="md-form">
+        <h6 class="card-title text-center">Write your Bio:</h6>
+        <div class="md-form indigo-text">
+            <%= f.text_field :bio, class: "form-control" , value: current_user.bio%>
+        </div>
+    </div>
+    <div class="md-form">
+        <h6 class="card-title text-center">Add your Profile Picture</h6>
+        <div class="md-form text-center">
+            <%= f.file_field :picture%>
+        </div>
+    </div>
+<% end %>
